@@ -1,0 +1,385 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.top_page)
+  body.main-page.no-sidebar.no-footer
+    +header-staff()
+
+    .dashboard-container
+      +sidebar('sidebar3_3')
+      section.dashboard-content.top-shop-page
+        .container.container-shop
+          .row
+            .col-md-6.container-box-shop.container-top-shop-page
+              .box-sewn-list.box-item-shop-block
+                .cut-and-sewn-item
+                  .box-header
+                    .profile
+                      .box-images
+                        a(href='#')
+                          img.box-images-img(src='images/logo.svg' alt ='')
+                      .box-profile-content
+                        h3.title 佐藤琢美
+                        .breadcrumb-link 31歳　/　男性　/　東京
+                    .box-header-label
+                      span.label-primary.label-primary--shop.label-primary--gray Tシャツ・カットソー
+                  .box-inner
+                    p.text 一枚だけで存在感のあるTシャツを探しています教えてください。
+                  .box-content
+                    .count-images 提案アイテム (3)
+                    .box-content-images
+                      .item-images-3
+                        .item-images-3__item(style='background-image: url(images/img19.png)')
+                        .item-images-3__item(style='background-image: url(images/img02.png)')
+                        .item-images-3__item(style='background-image: url(images/img03.png)')
+                  .box-footer
+                    .box-like
+                      i.box-like__icon.sty-icon-post-watch
+                      span.text-like 2
+                    .box-comment 0コメント
+
+                .cut-and-sewn-comment
+                  .cut-and-sewn-comment__content
+                    .cut-and-sewn-comment__add
+                      i.cut-and-sewn-comment__icon.cut-and-sewn-comment__active.sty-icon-post-watch
+                      span.cut-and-sewn-comment__text.cut-and-sewn-comment__active ウォッチする
+                    .cut-and-sewn-comment__message
+                      i.cut-and-sewn-comment__icon.sty-icon-post-comment
+                      span.cut-and-sewn-comment__text コメントする
+                  .cut-and-sewn-comment__total
+                    i.js-toggle-cut-and-sewn.cut-and-sewn-comment__total-icon.sty-icon-post-more
+                    ul.cut-and-sewn-comment__box-option
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+
+              .box-sewn-list.box-item-shop-block
+                .cut-and-sewn-item
+                  .box-header
+                    .profile
+                      .box-images
+                        a(href='#')
+                          img.box-images-img(src='images/oval_4.png' alt='')
+                      .box-profile-content
+                        h3.title 佐藤琢美
+                        .breadcrumb-link 31歳　/　男性　/　東京
+                    .box-header-label
+                      span.label-primary.label-primary--shop.label-primary--gray Tシャツ・カットソー
+                  .box-inner
+                    p.text 一枚だけで存在感のあるTシャツを探しています教えてください。湿気の多い夏でも蒸れにくいリネン素材のボーダー柄のTシャツ探しています。
+                    p.text 一枚だけで存在感のあるTシャツを探しています教えてください。湿気の多い夏でも蒸れにくいリネン素材のボーダー柄のTシャツ探しています
+                  .box-content
+                    .count-images 提案アイテム (2)
+                    .box-content-images
+                      .item-images-2
+                        img.item-images(src='images/img04.png' alt='')
+                        img.item-images(src='images/img05.png' alt='')
+                  .box-footer
+                    .box-like
+                      i.box-like__icon.sty-icon-post-watch
+                      span.text-like 169
+                    .box-comment 12コメント
+
+                .cut-and-sewn-comment
+                  .cut-and-sewn-comment__content
+                    .cut-and-sewn-comment__add
+                      i.cut-and-sewn-comment__icon.sty-icon-post-watch
+                      span.cut-and-sewn-comment__text ウォッチする
+                    .cut-and-sewn-comment__message
+                      i.cut-and-sewn-comment__icon.sty-icon-post-comment
+                      span.cut-and-sewn-comment__text コメントする
+                  .cut-and-sewn-comment__total
+                    i.js-toggle-cut-and-sewn.cut-and-sewn-comment__total-icon.sty-icon-post-more
+                    ul.cut-and-sewn-comment__box-option
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+
+              .box-sewn-list.box-item-shop-block
+                .cut-and-sewn-item
+                  .box-header
+                    .profile
+                      .box-images
+                        a(href='#')
+                          img.box-images-img(src='images/oval_5.png' alt ='')
+                      .box-profile-content
+                        h3.title 佐藤琢美
+                        .breadcrumb-link 31歳　/　男性　/　東京
+                    .box-header-label
+                      span.label-primary.label-primary--shop.label-primary--gray Tシャツ・カットソー
+                  .box-inner
+                    p.text 一枚だけで存在感のあるTシャツを探しています教えてください。
+                  .box-content
+                    .count-images 提案アイテム (3)
+                    .box-content-images
+                      .item-images-3
+                        .item-images-3__item(style='background-image: url(images/img19.png)')
+                        .item-images-3__item(style='background-image: url(images/img14.png)')
+                        .item-images-3__item(style='background-image: url(images/img15.png)')
+                  .box-footer
+                    .box-like
+                      i.box-like__icon.sty-icon-post-watch
+                      span.text-like 1258
+                    .box-comment 5コメント
+
+                .cut-and-sewn-comment
+                  .cut-and-sewn-comment__content
+                    .cut-and-sewn-comment__add
+                      i.cut-and-sewn-comment__icon.sty-icon-post-watch
+                      span.cut-and-sewn-comment__text ウォッチする
+                    .cut-and-sewn-comment__message
+                      i.cut-and-sewn-comment__icon.sty-icon-post-comment
+                      span.cut-and-sewn-comment__text コメントする
+                  .cut-and-sewn-comment__total
+                    i.js-toggle-cut-and-sewn.cut-and-sewn-comment__total-icon.sty-icon-post-more
+                    ul.cut-and-sewn-comment__box-option
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+
+              .box-sewn-list.box-item-shop-block
+                .cut-and-sewn-item
+                  .box-header
+                    .profile
+                      .box-images
+                        a(href='#')
+                          img.box-images-img(src='images/oval_4.png' alt='')
+                      .box-profile-content
+                        h3.title 佐藤琢美
+                        .breadcrumb-link 31歳　/　男性　/　東京
+                    .box-header-label
+                      span.label-primary.label-primary--shop.label-primary--gray Tシャツ・カットソー
+                  .box-inner
+                    p.text 一枚だけで存在感のあるTシャツを探しています教えてください。
+                  .box-content
+                    .count-images 提案アイテム (1)
+                    .box-content-images
+                      .item-images-1
+                        img.item-images(src='images/img19.png' alt='')
+                  .box-footer
+                    .box-like
+                      i.box-like__icon.sty-icon-post-watch
+                      span.text-like 169
+                    .box-comment 0コメント
+
+                .cut-and-sewn-comment
+                  .cut-and-sewn-comment__content
+                    .cut-and-sewn-comment__add
+                      i.cut-and-sewn-comment__icon.sty-icon-post-watch
+                      span.cut-and-sewn-comment__text ウォッチする
+                    .cut-and-sewn-comment__message
+                      i.cut-and-sewn-comment__icon.sty-icon-post-comment
+                      span.cut-and-sewn-comment__text コメントする
+                  .cut-and-sewn-comment__total
+                    i.js-toggle-cut-and-sewn.cut-and-sewn-comment__total-icon.sty-icon-post-more
+                    ul.cut-and-sewn-comment__box-option
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+            .col-md-6.container-box-shop.container-top-shop-page
+              .box-sewn-list.box-item-shop-block
+                .cut-and-sewn-item
+                  .box-header
+                    .profile
+                      .box-images
+                        a(href='#')
+                          img.box-images-img(src='images/oval_5.png' alt='')
+                      .box-profile-content
+                        h3.title 佐藤琢美
+                        .breadcrumb-link 31歳　/　男性　/　東京
+                    .box-header-label
+                      span.label-primary.label-primary--shop.label-primary--gray Tシャツ・カットソー
+                  .box-inner
+                    p.text 一枚だけで存在感のあるTシャツを探しています教えてください。湿気の多い夏でも蒸れにくいリネン素材のボーダー柄のTシャツ探しています。
+                    p.text 一枚だけで存在感のあるTシャツを探しています教えてください。湿気の多い夏でも蒸れにくいリネン素材のボーダー柄のTシャツ探しています
+                  .box-footer
+                    .box-like
+                      i.box-like__icon.sty-icon-post-watch
+                      span.text-like 12
+                    .box-comment 0コメント
+
+                .cut-and-sewn-comment
+                  .cut-and-sewn-comment__content
+                    .cut-and-sewn-comment__add
+                      i.cut-and-sewn-comment__icon.sty-icon-post-watch
+                      span.cut-and-sewn-comment__text ウォッチする
+                    .cut-and-sewn-comment__message
+                      i.cut-and-sewn-comment__icon.sty-icon-post-comment
+                      span.cut-and-sewn-comment__text コメントする
+                  .cut-and-sewn-comment__total
+                    i.js-toggle-cut-and-sewn.cut-and-sewn-comment__total-icon.sty-icon-post-more
+                    ul.cut-and-sewn-comment__box-option
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+
+              .box-sewn-list.box-item-shop-block
+                .cut-and-sewn-item
+                  .box-header
+                    .profile
+                      .box-images
+                        a(href='#')
+                          img.box-images-img(src='images/oval_4.png' alt='')
+                      .box-profile-content
+                        h3.title 佐藤琢美
+                        .breadcrumb-link 31歳　/　男性　/　東京
+                    .box-header-label
+                      span.label-primary.label-primary--shop.label-primary--gray Tシャツ・カットソー
+                  .box-inner
+                    p.text 一枚だけで存在感のあるTシャツを探しています教えてください。一枚だけで存在感のあるTシャツを探しています教えてください。一枚だけで存在感のあるTシャツを探しています教えてください。一枚だけで存在感のあるTシャツを探しています教えてください。
+                  .box-content
+                    .count-images 提案アイテム (5)
+                    .box-content-images
+                      .item-images-4
+                        .item-images
+                          img(src='images/img06.png' alt='')
+                        .item-images
+                          img(src='images/img08.png' alt='')
+                        .item-images
+                          img.item-images(src='images/img07.png' alt='')
+                        .item-images
+                          img.item-images(src='images/img09.png' alt='')
+                        .item-images.item-images-count
+                          span.text +1
+                  .box-footer
+                    .box-like
+                      i.box-like__icon.sty-icon-post-watch
+                      span.text-like 102
+                    .box-comment 2コメント
+
+                .cut-and-sewn-comment
+                  .cut-and-sewn-comment__content
+                    .cut-and-sewn-comment__add
+                      i.cut-and-sewn-comment__icon.sty-icon-post-watch
+                      span.cut-and-sewn-comment__text ウォッチする
+                    .cut-and-sewn-comment__message
+                      i.cut-and-sewn-comment__icon.sty-icon-post-comment
+                      span.cut-and-sewn-comment__text コメントする
+                  .cut-and-sewn-comment__total
+                    i.js-toggle-cut-and-sewn.cut-and-sewn-comment__total-icon.sty-icon-post-more
+                    ul.cut-and-sewn-comment__box-option
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+
+              .box-sewn-list.box-item-shop-block
+                .cut-and-sewn-item
+                  .box-header
+                    .profile
+                      .box-images
+                        a(href='#')
+                          img.box-images-img(src='images/oval_4.png' alt='')
+                      .box-profile-content
+                        h3.title 佐藤琢美
+                        .breadcrumb-link 31歳　/　男性　/　東京
+                    .box-header-label
+                      span.label-primary.label-primary--shop.label-primary--gray Tシャツ・カットソー
+                  .box-inner
+                    p.text 一枚だけで存在感のあるTシャツを探しています教えてください。
+                  .box-content
+                    .count-images 提案アイテム (3)
+                    .box-content-images
+                      .item-images-3
+                        img.item-images(src='images/img10.png' alt='')
+                        img.item-images(src='images/img11.png' alt='')
+                        img.item-images(src='images/img12.png' alt='')
+                  .box-footer
+                    .box-like
+                      i.box-like__icon.sty-icon-post-watch
+                      span.text-like 78
+                    .box-comment 0コメント
+
+                .cut-and-sewn-comment
+                  .cut-and-sewn-comment__content
+                    .cut-and-sewn-comment__add
+                      i.cut-and-sewn-comment__icon.sty-icon-post-watch
+                      span.cut-and-sewn-comment__text ウォッチする
+                    .cut-and-sewn-comment__message
+                      i.cut-and-sewn-comment__icon.sty-icon-post-comment
+                      span.cut-and-sewn-comment__text コメントする
+                  .cut-and-sewn-comment__total
+                    i.js-toggle-cut-and-sewn.cut-and-sewn-comment__total-icon.sty-icon-post-more
+                    ul.cut-and-sewn-comment__box-option
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+
+              .box-sewn-list.box-item-shop-block
+                .cut-and-sewn-item
+                  .box-header
+                    .profile
+                      .box-images
+                        a(href='#')
+                          img.box-images-img(src='images/oval_5.png' alt='')
+                      .box-profile-content
+                        h3.title 佐藤琢美
+                        .breadcrumb-link 31歳　/　男性　/　東京
+                    .box-header-label
+                      span.label-primary.label-primary--shop.label-primary--gray Tシャツ・カットソー
+                  .box-inner
+                    p.text 一枚だけで存在感のあるTシャツを探しています教えてください。湿気の多い夏でも蒸れにくいリネン素材のボーダー柄のTシャツ探しています。
+                    p.text 一枚だけで存在感のあるTシャツを探しています教えてください。湿気の多い夏でも蒸れ。
+                  .box-content
+                    .count-images 提案アイテム (3)
+                    .box-content-images
+                      .item-images-3
+                        img.item-images(src='images/img16.png' alt='')
+                        img.item-images(src='images/img17.png' alt='')
+                        img.item-images(src='images/img18.png' alt='')
+                  .box-footer
+                    .box-like
+                      i.box-like__icon.sty-icon-post-watch
+                      span.text-like 169
+                    .box-comment 7コメント
+
+                .cut-and-sewn-comment
+                  .cut-and-sewn-comment__content
+                    .cut-and-sewn-comment__add
+                      i.cut-and-sewn-comment__icon.sty-icon-post-watch
+                      span.cut-and-sewn-comment__text ウォッチする
+                    .cut-and-sewn-comment__message
+                      i.cut-and-sewn-comment__icon.sty-icon-post-comment
+                      span.cut-and-sewn-comment__text コメントする
+                  .cut-and-sewn-comment__total
+                    i.js-toggle-cut-and-sewn.cut-and-sewn-comment__total-icon.sty-icon-post-more
+                    ul.cut-and-sewn-comment__box-option
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+                      li.cut-and-sewn-comment__box-text
+                        a(href="#" class="cut-and-sewn-comment__link") 報告する
+          a(href='#' class='button-add-category' data-toggle='modal' data-target='#top-page-modal')
+            i.button-add-category__icon.sty-icon-post-add
+
+    +modal('top-page-modal', 'modal-lg')(class='modal-suggest-shop modal-nano-scroller')
+      +inject('modal-header')
+        .modal-suggest
+          h4.modal-suggest-title カテゴリー別提案
+          i(class='sty-icon-delete icon-close-modal' data-dismiss='modal')
+      +inject('modal-body')
+        .row.category-list
+          .nano
+            .nano-content
+              each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+                .col-md-3.col-sm-3.category-item
+                  a(href='#' class='category-link') ジャケット・アウター
+      +inject('modal-footer')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

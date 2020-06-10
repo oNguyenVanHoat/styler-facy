@@ -1,0 +1,130 @@
+//
+// Pages :: S53 New Shop Registration
+// --------------------------------------------------
+
+.page-new-shop-registration {
+  .box-item-block {
+    @include respond-to(phone-and-down) {
+      padding: 15px;
+    }
+  }
+}
+
+.registration-intro {
+  text-align: center;
+  padding: 40px;
+  margin-bottom: 40px;
+
+  @include respond-to(smallphone-and-down) {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: $font-size-extra-large;
+    font-weight: $font-weight-bold;
+    color: $black-lighter;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: $font-size-medium;
+    line-height: 32px;
+    color: $black-lighter;
+  }
+}
+
+.registration-form {
+  .field-info {
+    .form-control {
+      height: 80px;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-extra-large;
+    color: $black-lighter;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__group {
+    width: 570px;
+    margin: 0 auto;
+    padding: 45px 0 5px;
+    margin-bottom: 40px;
+
+    @include respond-to(phone-and-down) {
+      width: 100%;
+    }
+
+    .field-wrapper {
+      margin-bottom: 32px;
+    }
+
+    .checkbox-wrapper {
+      display: flex;
+    }
+
+    .registration-form {
+      &__not-warning {
+        margin-bottom: 55px;
+      }
+    }
+  }
+
+  .button-wrapper {
+    button {
+      @include respond-to(smallphone-and-down) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__select-box {
+    width: 170px;
+  }
+
+  &__button {
+    label {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__button-image {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 15px;
+    border: 1px solid $brown;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__button-icon {
+    font-size: $font-size-medium;
+  }
+
+  &__checkboxes {
+    .checkbox-custom {
+      margin-right: 30px;
+    }
+  }
+
+  &__button-group {
+    text-align: center;
+
+    .button {
+      margin: 0 15px;
+
+      @include respond-to(smallphone-and-down) {
+        width: 100%;
+        margin: 0 0 15px;
+      }
+
+      @include respond-to(phone-and-down) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

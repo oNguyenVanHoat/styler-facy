@@ -1,0 +1,42 @@
+//
+// Pages :: S28 Staff List
+// --------------------------------------------------
+.page-staff-list {
+  @include respond-to(smallphone-and-down) {
+    padding: 10px;
+  }
+
+  .two-column-list {
+    .list-item {
+      @include respond-to(smallphone-and-down) {
+        padding: 15px 10px;
+      }
+
+      &__text-quanlity {
+        @include respond-to(smallphone-and-down) {
+          font-size: 30px;
+        }
+      }
+
+      &__img,
+      &__content {
+        @include respond-to(desktop-and-down) {
+          text-align: center;
+        }
+      }
+
+      &__number {
+        @include respond-to(desktop-and-down) {
+          justify-content: space-around;
+          padding-right: 0;
+        }
+      }
+    }
+
+    &__item {
+      @include respond-to(phone-and-down) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

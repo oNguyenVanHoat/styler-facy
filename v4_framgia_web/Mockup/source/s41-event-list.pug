@@ -1,0 +1,40 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s41_event_list)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar()
+
+      section.dashboard-content
+        .row
+          each val in [1, 2, 3, 4, 5, 6]
+            .col-lg-4.col-md-6.col-sm-6
+              .event-item
+                a.event-item__link(href='#')
+                  img.event-item__image(src='images/shop-item-img.png' alt='')
+                .event-item__info
+                  .event-item__desc
+                    h3.event-item__title (2017)スタイラー大忘年会
+                    p.event-item__date 201７/12/14 ~ 201７/12/14
+                  .event-item__other
+                    .event-item__style
+                      img.event-item__icon-shop(src='images/icon-shop-logo.png' alt='')
+                      p.event-item__version STYLER公式
+                    .event-item__review
+                      h3.event-item__number 5
+                      p.event-item__interested 興味あり
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

@@ -1,0 +1,131 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s60_bank_account_filling_edit_profile)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar3_11')
+
+      section.dashboard-content.shop-account-confirmation.bank-account
+        .box-infomation
+          .title-facy-infomation 法人口座登録基本情報
+          .box-item-block.info-facy
+            form.form-customize.registration-form__infor
+              .box-item-block.info-facy
+                .row
+                  .col-lg-3.col-md-4.col-sm-5.col-lg-offset-3.col-md-offset-2.col-sm-offset-1
+                    .field-wrap
+                      +input-field('会社名', '必須', '', 'スタイラー株式会社', '', '', '', '', '17/40')
+                  .col-lg-3.col-md-4.col-sm-5
+                    .field-wrap
+                      +input-field('会社名（カタカナ）', '必須', '', 'スタイラーカブシキガイシャ', '', '', '', '', '17/40')
+                .row
+                  .col-lg-3.col-md-4.col-sm-5.col-lg-offset-3.col-md-offset-2.col-sm-offset-1
+                    .no-notice
+                      +input-field('登記番号(会社法人等番号)', '必須', '', '1234-12-123456', '', '', '', '', '')
+                .row
+                  .col-lg-3.col-md-4.col-sm-5.col-lg-offset-3.col-md-offset-2.col-sm-offset-1
+                   .no-notice
+                      h4.title-field 本店住所
+                      +input-field('郵便番号', '必須', '', '1234567', '', '', '', '', '')
+                .row
+                  .col-lg-3.col-md-4.col-sm-5.col-lg-offset-3.col-md-offset-2.col-sm-offset-1
+                    .no-notice
+                      +selectBox('都道府県', '必須', 'Option A', '', '', 'Option B')
+                .row
+                  .col-lg-3.col-md-4.col-sm-5.col-lg-offset-3.col-md-offset-2.col-sm-offset-1
+                    .field-wrap
+                      +input-field('市区', '必須', '', '渋谷区', '', '', '', '', '17/40')
+                  .col-lg-3.col-md-4.col-sm-5
+                    .field-wrap
+                      +input-field('市区（カタカナ）', '必須', '', 'シブヤク', '', '', '', '', '17/40')
+                .row
+                  .col-lg-3.col-md-4.col-sm-5.col-lg-offset-3.col-md-offset-2.col-sm-offset-1
+                    .field-wrap
+                      +input-field('町村', '必須', '', '神南', '', '', '', '', '17/40')
+                  .col-lg-3.col-md-4.col-sm-5
+                    .field-wrap
+                      +input-field('町村（カタカナ）', '必須', '', 'ジンナン', '', '', '', '', '17/40')
+                .row
+                  .col-lg-3.col-md-4.col-sm-5.col-lg-offset-3.col-md-offset-2.col-sm-offset-1
+                    .field-wrap
+                      +input-field('丁目番地号', '必須', '', '１丁目１０番地６号', '', '', '', '', '17/40')
+                  .col-lg-3.col-md-4.col-sm-5
+                    .field-wrap
+                      +input-field('丁目番地号（カタカナ）', '必須', '', 'イッチョウメジュウバンチロクゴウ', '', '', '', '', '17/40')
+                .row
+                  .col-lg-3.col-md-4.col-sm-5.col-lg-offset-3.col-md-offset-2.col-sm-offset-1
+                    .field-wrap
+                      +input-field('建物情報', '', '', 'バルビゾン９８　４０１', '', '', '', '', '17/40')
+                  .col-lg-3.col-md-4.col-sm-5
+                    .field-wrap
+                      +input-field('建物情報（カタカナ）', '', '', 'バルビゾンキュウジュウハチ　ヨンゼロイチ', '', '', '', '', '17/40')
+                button.btn.button.button--primary.button--primary-md.bank-account__button--change(type='button') 変更
+                .registration-form__button-group
+                  +button('キャンセル')(class='button--cancel button--w270')
+                  +button-icon('保存する', '')(class='button--primary button--w270' data-toggle='modal' data-target='#modal-new-shop-registration')
+        .box-infomation
+          .title-facy-infomation 口座管理基本情報
+          .box-item-block.info-facy
+            .row
+              .col-md-6.col-md-offset-3
+                p.infomation-people
+                  label.label-name 氏名
+                  span.text-name スタイラー太郎
+                p.infomation-people
+                  label.label-name 氏名カナ　
+                  span.text-name スタイラータロウ
+                p.infomation-people
+                  label.label-name 性別　
+                  span.text-name 男
+                p.infomation-people
+                  label.label-name 生年月日　
+                  span.text-name 1978年3月1日
+                p.infomation-people
+                  label.label-name 住所　
+                  span.text-name 〒123-4567 <br> 東京都 渋谷区 神南1丁目10番地6号 バルビゾン98401
+                p.infomation-people
+                  label.label-name 住所カナ 　
+                  span.text-name シブヤク ジンナン イッチョウメジュウバンチロクゴウ <br> バルビゾンキュウジュウハチ　ヨンゼロイチ
+                p.infomation-people
+                  label.label-name メール　
+                  span.text-name info@styler.link
+                p.infomation-people
+                  label.label-name 電話番号
+                  span.text-name 08012345678
+                p.infomation-people-avartar
+                  label.label-name 本人確認
+                  img.shop-account-images(src='images/shop-account.png' alt ='shop-account')
+            button.btn.button.button--bordered.button--primary-md.button--bordered-primary.bank-account__button--change(type='button') 変更
+        .box-infomation
+          .title-facy-infomation 口座情報
+          .box-item-block.info-facy
+            .row
+              .col-md-6.col-md-offset-3
+                p.infomation-people
+                  label.label-name 銀行名
+                  span.text-name スタイラー銀行
+                p.infomation-people
+                  label.label-name 支店名　
+                  span.text-name スタイラー支店
+                p.infomation-people
+                  label.label-name 口座番号
+                  span.text-name ***1234
+                p.infomation-people
+                  label.label-name 口座名義カナ
+                  span.text-name カ）スタイラー
+            button.btn.button.button--bordered.button--primary-md.button--bordered-primary.bank-account__button--change(type='button') 変更
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

@@ -1,0 +1,198 @@
+//
+// Pages :: S33 Account Setting
+// --------------------------------------------------
+
+.page-account-setting {
+  @include respond-to(smallphone-and-down) {
+    padding: 10px;
+  }
+
+  .inner {
+    padding: 40px 0;
+    background: $white;
+    box-shadow: 0 1px 10px rgba($black, .05);
+
+    @include respond-to(smallphone-and-down) {
+      padding: 20px 10px;
+    }
+  }
+
+  .field-wrapper {
+    margin-bottom: 50px;
+
+    @include respond-to(smallphone-and-down) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .account-title {
+    font-size: $font-size-extra-large;
+    color: $black-lighter;
+    line-height: 36px;
+    font-weight: $font-weight-bold;
+    margin-bottom: 45px;
+
+    @include respond-to(smallphone-and-down) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .warning {
+    font-size: $font-size-small;
+    color: $silver;
+    float: right;
+    padding-top: 8px;
+  }
+
+  .gender {
+    overflow: hidden;
+    display: block;
+    max-width: 560px;
+    border: 2px solid $gainsboro;
+    border-radius: $border-radius-base;
+    height: 65px;
+    line-height: 65px;
+    margin-top: 30px;
+
+    label {
+      font-weight: $font-weight-normal;
+    }
+
+    .gender-item {
+      display: inline-block;
+      text-align: center;
+      float: left;
+      width: 50%;
+
+      &__text {
+        display: inline-block;
+        color: $black-lighter;
+      }
+    }
+  }
+
+  .field-info {
+    .form-control {
+      height: 105px;
+    }
+  }
+
+  .accout-avatar {
+    text-align: center;
+    float: right;
+
+    @include respond-to(phone-and-down) {
+      float: none;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      margin-bottom: 30px;
+    }
+
+    &__name {
+      font-size: $font-size-mini;
+      color: $black-lighter;
+      line-height: 20px;
+      font-weight: $font-weight-bold;
+      margin-top: 10px;
+    }
+
+    &__size {
+      font-size: $font-size-mini;
+      color: $gray-light;
+      line-height: 20px;
+    }
+  }
+
+  .accout-avatar-img {
+    width: 170px;
+    height: 170px;
+    margin: auto;
+    border-radius: 100px;
+    background: $gray-gains;
+    position: relative;
+
+    @include respond-to(phone-and-down) {
+      width: 120px;
+      height: 120px;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      width: 170px;
+      height: 170px;
+    }
+
+    .proposal-customize-img {
+      position: absolute;
+      font-size: 36px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .acount-left {
+    @include respond-to(tablet-and-desktop) {
+      display: inline-block;
+      width: 38%;
+      float: left;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      width: 100%;
+    }
+  }
+
+  .acount-right {
+    @include respond-to(tablet-and-desktop) {
+      display: inline-block;
+      width: 60%;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      width: 100%;
+    }
+  }
+
+  .acount-birthday {
+    width: 60%;
+
+    @include respond-to(desktop-and-down) {
+      width: 100%;
+    }
+  }
+
+  .field-birthday {
+    .form-group {
+      max-width: 25%;
+
+      @include respond-to(large-desktop-and-down) {
+        max-width: 20%;
+      }
+
+      @include respond-to(phone-and-down) {
+        max-width: 22%;
+      }
+    }
+  }
+
+  .group-button {
+    @include respond-to(smallphone-and-down) {
+      margin-top: 20px;
+    }
+
+    .button {
+      @include respond-to(phone-and-down) {
+        width: 175px;
+        margin: 0 10px;
+      }
+
+      @include respond-to(smallphone-and-down) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+//
+// Pages :: S11 pick order request selection: remove modal
+// --------------------------------------------------
+.page-pick-order-request-selection-remove-modal {
+  .button--w370 {
+    @include respond-to('smallphone-and-down') {
+      width: 100%;
+    }
+  }
+
+  .picker-banner {
+    &__price {
+      @include respond-to('smallphone-and-down') {
+        font-size: $font-size-extra-large + 6;
+      }
+    }
+  }
+}

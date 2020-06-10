@@ -1,0 +1,55 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s3_inventory_request_not_supported)
+  body.main-page.has-chat
+    +header-guest()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar1_1')
+
+      section.dashboard-content.page-inventory-request-not-support
+        .comment.comment-view
+          +chatHeading()
+          .nano.chat-content
+            .nano-content
+              +userChatMessage()
+              +userChatMessageImgOnly()
+              +userChatMessageTextOnly()
+              +adminChatMessageTextOnly()
+              +adminChatMessage('has-no-bg-color')
+              +adminChatMessage('has-bg-color')
+              +adminChatMessageImgOnly()
+        .comment.comment-form
+          +chatForm()
+
+    +footer()
+
+    +snackbarGuest()
+
+    +import-script()
+
+    //- Modal Request Selection
+    +modal('modal-request-header', 'modal-ip')(class='modal-request-header modal-vertical-middle')
+      +inject('modal-header')
+        .modal-suggest
+          i(class='sty-icon-delete icon-close-modal' data-dismiss='modal')
+      +inject('modal-body')
+        .notification.text-center
+          p 全品送料無料！
+          .notification--down
+            .notification--down__icon
+
+        .text-center
+          p(class='sub-text') FACYアプリではショップ店員さんが
+          p(class='sub-text') 提案してくれたアイテムを購入できます！
+      +inject('modal-footer')
+        .text-center
+          +button('iPhoneアプリを無料ダウンロード')(class='btn button--full')

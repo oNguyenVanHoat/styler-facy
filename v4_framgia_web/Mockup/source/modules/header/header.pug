@@ -1,0 +1,181 @@
+mixin nav()
+  .main-menu.js-main-menu
+    ul.main-menu__list.js-main-menu__list
+      li.main-menu__item.js-main-menu__item
+        a(class='main-menu__text js-main-menu__text' href='#' title='ショップ、') ショップ
+      li.main-menu__item.js-main-menu__item
+        a(class='main-menu__text js-main-menu__text' href='#' title='記事') 記事
+      li.main-menu__item.js-main-menu__item
+        a(class='main-menu__text js-main-menu__text' href='#' title='人気投稿') 人気投稿
+      li.main-menu__item.js-main-menu__item.main-menu__item-active
+        a(class='main-menu__text js-main-menu__text' href='#' title='新着投稿') 新着投稿
+      li.main-menu__item.js-main-menu__item
+        a(class='main-menu__text js-main-menu__text' href='#' title='ランキング') ランキング
+      li.main-menu__item.js-main-menu__item
+        a(class='main-menu__text js-main-menu__text' href='#' title='イベント') イベント
+
+mixin header-staff()
+  header.header.header-staff(role='banner')
+    .header-top
+      .header-top__content_box
+        .logo-flexible.pc-only.js-logo-flexible
+          span.logo-flexible__img.logo-flexible__facylady
+          i.logo-flexible__icon.sty-icon-arrow-down
+          ul.logo-flexible__menu_row
+            li.logo-flexible__menu_item.js-logo-flexible__menu_item.js-logo-facyman
+              a.logo-flexible__menu_link.text-uppercase(href='#') Man
+                i.logo-flexible__menu_icon.sty-icon-gender-categories-checked
+            li.logo-flexible__menu_item.js-logo-flexible__menu_item.logo-flexible__menu_item--actived
+              a.logo-flexible__menu_link.text-uppercase(href='#') Lady
+                i.logo-flexible__menu_icon.sty-icon-gender-categories-checked.logo-flexible__menu_icon--actived
+        .logo-flexible.mobile-only.js-logo-flexible
+          span.logo-flexible__img.logo-flexible__facylady
+          i.logo-flexible__icon.sty-icon-arrow-down
+          ul.logo-flexible__menu_row
+            li.logo-flexible__menu_item.js-logo-flexible__menu_item.js-logo-facyman
+              a.logo-flexible__menu_link.text-uppercase(href='#') Man
+                i.logo-flexible__menu_icon.sty-icon-gender-categories-checked
+            li.logo-flexible__menu_item.js-logo-flexible__menu_item.logo-flexible__menu_item--actived
+              a.logo-flexible__menu_link.text-uppercase(href='#') Lady
+                i.logo-flexible__menu_icon.sty-icon-gender-categories-checked.logo-flexible__menu_icon--actived
+        .user-avatar-trigger
+          img.user-avatar-trigger--img.js-user-avatar-trigger(src='images/avatar.jpg' alt='')
+          i.icon-sidebar.js-icon-sidebar.sty-icon-menu-sidebar
+      .main-nav
+        +nav()
+        .user-menu
+          a.user-avatar(href='#')
+            img(src='images/avatar.jpg' class='user-avatar__image' alt='')
+            span.user-avatar__name.user-menu__text-limit Sho Yamamoto
+          .user-profile
+            a(href='#' class='user-profile__text collapsed' data-toggle='collapse')
+              span(href='#' class='user-profile__link user-menu__text-limit') LINKS LINKS LINKS
+              i.sty-icon-arrow-up.user-profile__icon
+            #profile-menu.profile-menu.collapse
+              ul.profile-menu__list
+                li.profile-menu__item
+                  a(href='#' class='profile-menu__text')
+                    span プロフィール編集
+                li.profile-menu__item
+                  a(href='#' class='profile-menu__text')
+                    span ログイン設定
+                li.profile-menu__item
+                  a(href='#' class='profile-menu__text')
+                    span フォロワーリスト
+                li.profile-menu__item
+                  a(href='#' class='profile-menu__text')
+                    span コメント履歴
+                li.profile-menu__item
+                  a(href='#' class='profile-menu__text')
+                    span ログアウト
+
+mixin header-customer()
+  header.header.header-customer(role='banner')
+    .header-top
+      .header-top__content_box
+        .logo-flexible.pc-only.js-logo-flexible
+          span.logo-flexible__img.logo-flexible__facylady
+          i.logo-flexible__icon.sty-icon-arrow-down
+          ul.logo-flexible__menu_row
+            li.logo-flexible__menu_item.js-logo-flexible__menu_item.js-logo-facyman
+              a.logo-flexible__menu_link.text-uppercase(href='#') Man
+                i.logo-flexible__menu_icon.sty-icon-gender-categories-checked
+            li.logo-flexible__menu_item.js-logo-flexible__menu_item.logo-flexible__menu_item--actived
+              a.logo-flexible__menu_link.text-uppercase(href='#') Lady
+                i.logo-flexible__menu_icon.sty-icon-gender-categories-checked.logo-flexible__menu_icon--actived
+        .logo-flexible.mobile-only.js-logo-flexible
+          span.logo-flexible__img.logo-flexible__facylady
+          i.logo-flexible__icon.sty-icon-arrow-down
+          ul.logo-flexible__menu_row
+            li.logo-flexible__menu_item.js-logo-flexible__menu_item.js-logo-facyman
+              a.logo-flexible__menu_link.text-uppercase(href='#') Man
+                i.logo-flexible__menu_icon.sty-icon-gender-categories-checked
+            li.logo-flexible__menu_item.js-logo-flexible__menu_item.logo-flexible__menu_item--actived
+              a.logo-flexible__menu_link.text-uppercase(href='#') Lady
+                i.logo-flexible__menu_icon.sty-icon-gender-categories-checked.logo-flexible__menu_icon--actived
+        .user-avatar-trigger
+          img.user-avatar-trigger--img.js-user-avatar-trigger(src='images/avatar.jpg' alt='')
+          i.icon-sidebar.js-icon-sidebar.sty-icon-menu-sidebar
+      .main-nav
+        +nav()
+        .user-menu
+          ul.manage-info
+            li.manage-message.manage-info__item
+              a.manage-message__link(href='#')
+                i.manage-message__icon.sty-icon-bell
+                span.manage-message__text 通知
+                span.label-manage-message 0
+            li.manage-message.manage-info__item
+              a.manage-message__link(href='#')
+                i.manage-message__icon.sty-icon-message
+                span.manage-message__text メッセージ
+                span.label-manage-message 12
+            li.manage-favorite.manage-info__item
+              a.manage-favorite__link(href='#')
+                i.manage-favorite__icon.sty-icon-ic-favorite
+                span.manage-favorite__text いいね
+          .user-profile.user-profile-customer
+            a(href='#' class='user-profile__text collapsed' )
+              img(src='images/avatar.jpg' class='user-profile__image')
+              span(href='#' class='user-profile__link user-menu__text-limit') Kazuto Kojima
+              i.sty-icon-arrow-up.user-profile__icon.user-profile-customer__icon
+            #profile-menu.profile-menu.collapse
+              ul.profile-menu__list
+                li.profile-menu__item
+                  a(href='#' class='profile-menu__text')
+                    span 自分の投稿
+                li.profile-menu__item
+                  a(href='#' class='profile-menu__text')
+                    span ウォッチ一覧
+                li.profile-menu__item
+                  a(href='#' class='profile-menu__text')
+                    span いいね一覧
+                li.profile-menu__item
+                  a(href='#' class='profile-menu__text')
+                    span プロフィール変更
+                li.profile-menu__item
+                  a(href='#' class='profile-menu__text')
+                    span 登録情報
+
+mixin header-guest()
+  header.header.header-guest(role='banner')
+    .header-top
+      .header-top__content_box
+        .logo-flexible.pc-only.js-logo-flexible
+          span.logo-flexible__img.logo-flexible__facylady
+          i.logo-flexible__icon.sty-icon-arrow-down
+          ul.logo-flexible__menu_row
+            li.logo-flexible__menu_item.js-logo-flexible__menu_item.js-logo-facyman
+              a.logo-flexible__menu_link.text-uppercase(href='#') Man
+                i.logo-flexible__menu_icon.sty-icon-gender-categories-checked
+            li.logo-flexible__menu_item.js-logo-flexible__menu_item.logo-flexible__menu_item--actived
+              a.logo-flexible__menu_link.text-uppercase(href='#') Lady
+                i.logo-flexible__menu_icon.sty-icon-gender-categories-checked.logo-flexible__menu_icon--actived
+        .logo-flexible.mobile-only.js-logo-flexible
+          span.logo-flexible__img.logo-flexible__facylady
+          i.logo-flexible__icon.sty-icon-arrow-down
+          ul.logo-flexible__menu_row
+            li.logo-flexible__menu_item.js-logo-flexible__menu_item.js-logo-facyman
+              a.logo-flexible__menu_link.text-uppercase(href='#') Man
+                i.logo-flexible__menu_icon.sty-icon-gender-categories-checked
+            li.logo-flexible__menu_item.js-logo-flexible__menu_item.logo-flexible__menu_item--actived
+              a.logo-flexible__menu_link.text-uppercase(href='#') Lady
+                i.logo-flexible__menu_icon.sty-icon-gender-categories-checked.logo-flexible__menu_icon--actived
+        .user-avatar-trigger
+          img.user-avatar-trigger--img.js-user-avatar-trigger(src='images/avatar.jpg' alt='')
+          i.icon-sidebar.js-icon-sidebar.sty-icon-menu-sidebar
+      .main-nav
+        +nav()
+        .user-menu
+          .user-menu__group_btn
+            +button-link('会員登録(無料)')(class='button--primary button--primary-danger button--w145' data-toggle='modal' data-target='#modal-request-header')
+            +button-link('ログイン')(class='button--cancel button--w125')
+            +button-link('加盟店申請')(class='button--bordered-dark button--w125')
+
+mixin header-logo-only()
+  header.header.header-logo-only(role='banner')
+    .header-top.header-top--just-logo
+      .logo
+        span.logo__img
+          a(href='/' class='logo-img__text')
+            img(src='images/logo.png' alt='')

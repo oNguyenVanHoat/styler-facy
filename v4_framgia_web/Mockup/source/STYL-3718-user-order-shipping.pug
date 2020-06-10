@@ -1,0 +1,92 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/media/media
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.STYL_3718_user_order_shipping)
+  body.main-page
+    +header-customer()
+
+    main.dashboard-container(role='main')
+
+      section.dashboard-content.page-user-order.page-user-order-shipping
+        h2.title 配送状況の確認
+        .order-item
+          .order-wrapper
+            .image-wrapper
+              img(src="https://dummyimage.com/300x300/f0f1f2", alt="")
+            h4.order-title NEEDLES
+            p.order-subtitle KNIT BOMBER CAP
+            .order-price ¥14,040（税込）
+            .order-branch
+              img(src="https://dummyimage.com/33x33/f0f1f2", alt="")
+              p EDIFICE 渋谷店
+            .order-info
+              p.order-info-item
+                span.order-info-label サイズ：
+                span L
+              p.order-info-item
+                span.order-info-label カラー：
+                span ゼファ・レッド
+              p.order-info-item
+                span.order-info-label 注文番号：
+                span 0000000-000-0000-00000000
+              p.order-info-item
+                span.order-info-label 注文日：
+                span 2018年 2月 10日
+              p.order-info-item
+                span.order-info-label 合計：
+                span ¥16,300
+
+        .order-shipping
+          .detail-row
+            .row-label 注文状況
+            .row-content
+              p.shipping-date
+                span 2018.02.16
+                span.shipping-status.shipping 発送準備中
+              p.shipping-date
+                span 2018.02.16
+                span.shipping-status.shipping 発送中
+              p.shipping-date
+                span 2018.02.16
+                span.shipping-status.done 配送完了
+          .detail-row
+            .row-label お問い合わせ電話番号
+            .row-content
+              p.phone-number 000000000000
+              p.service-transport
+                span ヤマト運輸
+                a.link(href='#') (配送について)
+          .detail-row
+            .row-label 発送元
+            .row-content.ship-from
+              span EDIFICE 渋谷店
+              p.u-mt10
+                | 〒150-0041
+                br
+                | 東京都渋谷区神南1-10-6
+                br
+                | 090-0000-0000
+          .detail-row
+            .row-label お届け先：オフィス
+            .row-content.addressee
+              span スタイラー　太郎
+              span.styler スタイラー　タロウ
+              p.u-mt10
+                | 〒150-0041
+                br
+                | 東京都渋谷区神南1-10-6
+                br
+                | 090-0000-0000
+
+        .wrap-button
+          +button('メッセージをみる')(class='button--primary button--full')
+
+    +import-script()

@@ -1,0 +1,40 @@
+//
+// Base :: Global
+// --------------------------------------------------
+
+body {
+  position: relative;
+  background-color: $body-background-color;
+  font-family: $font-family-primary;
+
+  &.no-sidebar {
+    .main-left-sidebar {
+      display: none;
+
+      @include respond-to(tablet-and-down) {
+        display: block;
+      }
+    }
+
+    .dashboard-container {
+      @include respond-to(phone-and-down) {
+        background: $white;
+      }
+    }
+
+    .dashboard-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &.no-footer {
+    .footer {
+      display: none;
+    }
+  }
+}
+
+.backdrop-appear {
+  overflow: hidden;
+}

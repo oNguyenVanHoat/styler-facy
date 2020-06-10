@@ -1,0 +1,496 @@
+include ../injected/injected
+
+//-
+//- Elements :: Buttons
+//- @param {string} name - Name of button
+//- @param {string} [iconName] - Name of icon
+//---
+mixin button(name, isSubmit)
+  button(
+    type= typeof isSubmit === 'undefined' || isSubmit === '' ? 'button' : isSubmit
+    class='btn button'
+    role='button'
+    )&attributes(attributes)= name
+
+//-
+//- Elements :: Buttons Icons
+//- @param {string} name - Name of button
+//- @param {string} iconName - Name of icon
+//---
+mixin button-icon(name, iconName, isSubmit)
+  button(
+    type= typeof isSubmit === 'undefined' || isSubmit === '' ? 'button' : isSubmit
+    class='btn button'
+    role='button'
+    )&attributes(attributes)
+    i.icon-common(class= iconName)
+    span.text= name
+
+
+//-
+//- Elements :: Link
+//- @param {string} name - Name of link
+//- @param {string} [iconName] - Name of icon
+//---
+mixin button-link(name)
+  a(class='btn button' role='button' href='#')&attributes(attributes)
+    span.text= name
+
+
+//-
+//- Elements :: Links Icons
+//- @param {string} name - Name of link
+//- @param {string} iconName - Name of icon
+//---
+mixin button-link-icon(name, iconName)
+  a(class='btn button' role='button' href='#')&attributes(attributes)
+    i(class= iconName)
+    span.text= name
+
+
+//-
+//- Elements :: Input field
+//- @param {string} nameLabel - Name of label input field
+//- @param {string} idInput - ID input field, attribute 'for' of label
+//- @param {string} [placeholder] - Placeholder of input field
+//- @param {string} [inputType=text] - Type of input field. Default: 'text'
+//---
+mixin input-field(nameLabel, textInsideLabel , idInput, placeholder, value, inputType, errorMessage, labelRight, minLength)
+  .form-group&attributes(attributes)
+    label(for= idInput)= nameLabel
+      if textInsideLabel
+        span.text= textInsideLabel
+    input(
+      type= typeof inputType === 'undefined' || inputType === '' ? 'text' : inputType,
+      class='form-control',
+      id= idInput,
+      placeholder= placeholder,
+      value= value,
+      onfocus='this.placeholder = ""'
+    )
+    if labelRight
+      label.label-right= labelRight
+
+    if (errorMessage || minLength)
+      .box-warning-error
+        if errorMessage
+          span.error-message= errorMessage
+        if minLength
+          span.warning= minLength
+
+//-
+//- Elements :: Input field addon
+//- @param {string} nameLabel - Name of label input field
+//- @param {string} idInput - ID input field, attribute 'for' of label
+//- @param {string} [placeholder] - Placeholder of input field
+//- @param {string} [inputType=text] - Type of input field. Default: 'text'
+//---
+mixin input-field-addon(nameLabel, idInput, placeholder, value, inputType, inputAddon)
+  .form-group&attributes(attributes)
+    label(for=idInput)= nameLabel
+    .input-group
+      input(
+        type= typeof inputType === 'undefined' || inputType === '' ? 'text' : inputType,
+        class='form-control',
+        id=idInput,
+        placeholder=placeholder,
+        value=value
+      )
+      .input-group-addon
+        i(class=inputAddon)
+
+
+//-
+//- Elements :: Input field no label
+//- @param {string} [placeholder] - Placeholder of input field
+//- @param {string} [inputType=text] - Type of input field. Default: 'text'
+//---
+mixin input-field-no-label(placeholder, inputType, value)
+  input(
+    type= typeof inputType === 'undefined' || inputType === '' ? 'text' : inputType,
+    class='form-control',
+    placeholder=placeholder,
+    value=value
+  )&attributes(attributes)
+
+
+//-
+//- Elements :: Input field small
+//- @param {string} value - Value default of input field
+//- @param {string} [inputType=text] - Type of input field. Default: 'text'
+//---
+mixin input-field-small(value, inputType, iconName)
+  if (typeof iconName !== 'undefined')
+    .input-time-picker
+      input(
+        type= typeof inputType === 'undefined' || inputType === '' ? 'text' : inputType,
+        class='form-control input-small',
+        value=value
+      )
+      i(class=iconName)
+  else
+    input(
+      type= typeof inputType === 'undefined' || inputType === '' ? 'text' : inputType,
+      class='form-control input-small',
+      value=value
+    )
+
+
+//-
+//- Elements :: Input upload file
+//- @param {string} [inputType=text] - Type of input field. Default: 'text'
+//---
+mixin input-upload-file(classInput, idInput, placeholder, inputType, value, multiple)
+  input(
+    type= typeof inputType === 'undefined' || inputType === '' ? 'text' : inputType,
+    class=classInput,
+    id=idInput,
+    placeholder=placeholder,
+    value=value,
+    multiple=multiple
+  )
+
+//-
+//- Elements :: Select Box
+//---
+mixin selectBox(title, textInsideLabel, defaultValue, idSelectBox, errorMessage, ...items)
+  .form-group
+    label(for=idSelectBox)= title
+      if textInsideLabel
+        span.text= textInsideLabel
+    .select-box-style&attributes(attributes)
+      select(id=idSelectBox, class='form-control')
+        option(value='大分類' disabled selected)= defaultValue
+        each item, index in items
+          option(value=index+1)= item
+      if errorMessage
+        p.error-message= errorMessage
+
+//-
+//- Elements :: Radio Buttons
+//- @param {string} nameRadio - Name attribute of radio button
+//- @param {string} nameLabelFor - ID of input field and value of label for attribute
+//- @param {string} nameLabel - Name of label
+//- @param {boolean} [checked] - Status checked of radio button 'true' | 'false'
+//---
+mixin radio-button(nameRadio, nameLabelFor, nameLabel, checked)
+  .radio-button-customize&attributes(attributes)
+    if checked === 'checked'
+      input.with-gap(type='radio', name=nameRadio, id=nameLabelFor, checked='checked')
+    else
+      input.with-gap(type='radio', name=nameRadio, id=nameLabelFor)
+    label(for=nameLabelFor)= nameLabel
+
+//-
+//- Elements :: Radio Buttons Gender
+//---
+mixin radio-button-gender(nameRadio, nameLabelFor, nameLabel, checked)
+  .radio-button-customize&attributes(attributes)
+    if checked === 'checked'
+      input.with-gap.gender-radio(type='radio', name=nameRadio, id=nameLabelFor,  checked='checked')
+    else
+      input.with-gap.gender-radio(type='radio', name=nameRadio, id=nameLabelFor)
+    label(for=nameLabelFor)
+      span= nameLabel
+
+//-
+//- Elements :: Textarea
+//---
+
+
+mixin textarea(textareaName, textareaLabel, textareaPlaceholder, errorMessage, minLength)
+  .form-group&attributes(attributes)
+    label(for= textareaName)= textareaName
+      if textareaLabel
+        span.text= textareaLabel
+    textarea(
+      class='form-control',
+      id= textareaName,
+      placeholder= textareaPlaceholder,
+      onfocus='this.placeholder = ""'
+    )
+    if (errorMessage || minLength)
+      .box-warning-error
+        if errorMessage
+          span.error-message= errorMessage
+        if minLength
+          span.warning= minLength
+
+//-
+//- Elements :: Textarea no label
+//- @param {string} textareaPlaceholder - Placeholder
+//- @param {string} hasNotice
+//---
+mixin textarea-no-label(textareaPlaceholder, textareaNotice)
+  textarea(
+    class='form-control',
+    placeholder= textareaPlaceholder,
+    onfocus='this.placeholder = ""'
+  )
+  if textareaNotice
+    p.textarea-notice.text-right= textareaNotice
+
+//-
+//- Elements :: Input checkbox
+//---
+mixin input-checkbox(name, nameId, nameLabel, checked)
+  .input-checkbox-customize&attributes(attributes)
+    if checked === true
+      input.input-checkbox(type='checkbox', name=name, id=nameId, checked='checked')
+    else
+      input.input-checkbox(type='checkbox', name=name, id=nameId)
+    label(for=nameId)= nameLabel
+
+
+
+//- Elements :: Checkbox Buttons
+//- @param {string} nameCheckbox- Name attribute of checkbox button
+//- @param {string} nameLabelFor - ID of input field and value of label for attribute
+//- @param {string} nameLabel - Name of label
+//- @param {boolean} [checked] - Status checked of radio button 'true' | 'false'
+//- @param {string} [valueName] - Value of radio button
+//---
+mixin checkbox-custom(nameCheckbox, nameLabelFor, nameLabel, checked, valueName)
+  .checkbox-custom&attributes(attributes)
+    if checked === true
+      input.checkbox-custom__input(type='checkbox', name=nameCheckbox, id=nameLabelFor, value=valueName, checked='checked')
+    else
+      input.checkbox-custom__input(type='checkbox', name=nameCheckbox, id=nameLabelFor, value=valueName)
+    label.checkbox-custom__title(for=nameLabelFor)= nameLabel
+
+//-- Chat User Info
+mixin userChatInfo()
+  .user-chat-record
+    .user-chat-record__profile
+      a.user-chat-record__profile--link(href='#')
+        img.user-chat-record__profile--avatar(src='./images/comment-user-avatar.png')
+        span.user-chat-record__profile--text 西村剛さん
+    .user-chat-record__time
+      time(datetime='2017-02-01 18:54') 2017年2月1日 18:54
+
+//-- Chat Admin Info
+mixin adminChatInfo()
+  .admin-chat-record
+    .admin-chat-record__time
+      time(datetime='2017-02-01 18:54') 2017年2月1日 18:54
+    .admin-chat-record__profile
+      a.admin-chat-record__profile--link(href='#')
+        img.admin-chat-record__profile--avatar(src='./images/comment-admin-avatar.png')
+
+//-- Icon Product Size
+mixin labelProductSize(content)
+  span.label-size.text-uppercase= content
+
+//-- Product Items
+mixin productGrid(hasFavoriteIcon, hasLikesCounter)
+  .col-lg-3.col-md-4.col-sm-6
+    figure.product-presents
+      a(href='#' class='product-presents__link')
+        img.product-presents__img(src='images/img-product-present.png' alt='')
+      figcaption.product-presents__captions
+        .user-related
+          a(href='#' class='link-related')
+            img(src='images/comment-admin-avatar.png' alt='' class='avatar-related')
+          p.username-related Kawashima
+        hgroup.group-title
+          h4.title Monster Men
+          h4.subtitle ファティーグ スカート
+        .product-presents__captions--detail
+          p.price-info 17,064円(税込)
+          if hasFavoriteIcon
+            .user-favorite.text-center
+              a(href='#' class='user-favorite__link js-favorite-product-related')
+                i.user-favorite__ic--save
+                span.text いいね
+        if hasLikesCounter
+          p.product-presents__captions--likes
+            |
+            span.inner-text 4
+            |  いいね！
+
+//-- Product Items
+mixin productGridRanking(hasUserInfo)
+  .col-lg-4.col-md-4.col-sm-6.col-xs-6.p-grid-overflow
+    figure.product-presents.product-ranking(class=hasUserInfo && 'has-userinfo')
+      a(href='#' class='product-presents__link')
+        img.product-presents__img(src='images/img-product-present.png' alt='')
+      figcaption.product-presents__captions
+        if hasUserInfo
+          .user-related
+            a(href='#' class='link-related')
+              img(src='images/comment-admin-avatar.png' alt='' class='avatar-related')
+            p.username-related Kawashima
+        hgroup.group-title
+          h4.title.group-title__main_title Monster Men
+          h4.subtitle ファティーグ スカート
+        p.product-presents__captions--price 17,064 円(税込)
+        .product-presents__captions--detail
+          p.like-info
+            |
+            span.like-info__text 15
+            | いいね！
+          .user-favorite.text-center
+            a(href='#' class='user-favorite__link js-favorite-product-related')
+              i.user-favorite__ic--save
+
+//-- User chat message primarily
+mixin userChatMessage()
+  .chat-message-content.js-chat-message-content
+    .row
+      .col-md-6.col-sm-6
+        .user-chat-message
+          a.user-chat-message__link(href='#')
+            img.user-chat-message__img(src='./images/comment-feature-img.png' alt='')
+          .user-chat-message__caption
+            h4.user-chat-message__title.text-uppercase
+              a.user-chat-message__title_link(href='#') Nike
+            p.user-chat-message__short_description.text-uppercase French Trainer 1300FS
+            .user-chat-message__favorite_price
+              p.user-chat-message__pricing ￥21,600（税込）
+              p.user-chat-message__favorites
+                i.user-chat-message__favorites_ic.sty-icon-ic-favorite
+                span.text 29
+        +userChatInfo()
+
+//-- User chat message text only
+mixin userChatMessageTextOnly()
+  .chat-message-content.js-chat-message-content
+    .row
+      .col-md-6.col-sm-6
+        .user-chat-message.text-only
+          p これはエアは付いていますか？
+        +userChatInfo()
+
+//-- User chat message img only
+mixin userChatMessageImgOnly()
+  .chat-message-content.js-chat-message-content
+    .row
+      .col-md-6.col-sm-6
+        .user-chat-message.img-only
+          a.user-chat-message__link(href='#')
+            img.user-chat-message__img(src='./images/comment-feature-img.png' alt='')
+        +userChatInfo()
+
+//-- Admin chat message primarily
+mixin adminChatMessage(bgColor, hasCheckedIconFirst, hasCheckedIconSecond, hasConfirmMessage)
+  .chat-message-content.js-chat-message-content
+    .row
+      .col-md-6.col-sm-6.col-md-offset-6.col-sm-offset-6
+        .admin-chat-message(class= bgColor)
+          ul.list
+            li.list-item
+              .media.chat-media
+                .media-left.media-middle
+                  a(href='#')
+                    img.media-object(src='./images/comment-feature-img.png' alt='')
+                .media-body
+                  h4.media-heading.text-uppercase
+                    a(href='#') Nike
+                  p.media-content.text-uppercase French Trainer 1300FS
+                  .media-footer.chat-media-footer
+                    p.pricing ￥21,600（税込）
+                    p.favorites
+                      i.ic-favorite.sty-icon-ic-favorite
+                      span.text 29
+            if (hasConfirmMessage)
+              li.list-item
+                .confirm-message-text
+                  p お待たせ致しました。
+                  p お問い合わせありがとうございます。
+                  p 上記内容で商品の在庫がございましたので下記ボタンよりお手続きにおすすみください。２４四時間の有効期限なので、ご注意ください。
+            else
+              li.list-item.list-item-highlight 在庫確認内容
+              li.list-item
+                ul.list-inline
+                  li.list-inline-item カラー
+                  li.list-inline-item ブラック/ ホワイト
+              li.list-item
+                ul.list-inline
+                  li.list-inline-item サイズ
+                  li.list-inline-item 25.0cm
+              li.list-item
+                ul.list-inline
+                  li.list-inline-item 購入方法
+                  li.list-inline-item 配送
+              li.list-item.list-item-highlight 在庫状況はどうですか？
+              if (hasCheckedIconFirst)
+                li.list-item.list-item--success
+                  i.sty-icon-check-success.list-item__icon.list-item__icon-succes
+                  p.item-text-highlight 在庫あり
+                li.list-item
+                  p.item-text-highlight 在庫なし
+              else if (hasCheckedIconSecond)
+                li.list-item
+                  p.item-text-highlight 在庫あり
+                li.list-item.list-item--success
+                  i.sty-icon-check-success.list-item__icon.list-item__icon-succes
+                  p.item-text-highlight 在庫なし
+              else
+                li.list-item
+                  p.item-text-highlight 在庫なし
+                li.list-item
+                  p.item-text-highlight 在庫あり
+        +adminChatInfo()
+
+
+//-- Admin chat message text only
+mixin adminChatMessageTextOnly()
+  .chat-message-content.js-chat-message-content
+    .row
+      .col-md-6.col-sm-6.col-md-offset-6.col-sm-offset-6
+        .admin-chat-message.has-bg-color.text-only
+          p この商品には、ついておりません。
+        +adminChatInfo()
+
+//-- Admin chat message img only
+mixin adminChatMessageImgOnly()
+  .chat-message-content.js-chat-message-content
+    .row
+      .col-md-6.col-sm-6.col-md-offset-6.col-sm-offset-6
+        .admin-chat-message.img-only
+          a.admin-chat-message__link(href='#')
+            img.admin-chat-message__img(src='./images/comment-feature-img.png' alt='')
+        +adminChatInfo()
+
+//-- Chat heading
+mixin chatHeading()
+  .chat-heading
+    a.chat-heading__user-profile--link(href='#')
+      img.chat-heading__user-profile--img(src='images/comment-user-avatar.png' alt='')
+      span.chat-heading__user-profile--text 西村剛さん
+
+//-- Chat Form
+mixin chatForm()
+  form(action='' role='form')
+    .comment-upload
+      .comment-upload-item
+        a(href='#' class='comment-upload-item__link')
+          i.sty-icon-ic-clothitem
+          span.comment-upload-item__link--text 他のアイテムを提案する
+      .comment-upload-item
+        +input-upload-file('upload-file-img', 'upload-img', '', 'file', '')
+        .input-file-trigger
+          i.sty-icon-ic-photo
+          span.input-file-trigger__text 写真を送る
+    .comment-content
+      .comment-content__textbox(contentEditable='true')
+      .comment-content__btn
+        +button('送信', 'submit')(class='button--primary')
+
+//-- Chat form has trigger modal
+mixin chatFormHasTriggerModal()
+  form(action='' role='form')
+    .comment-upload
+      .comment-upload-item
+        a(href='#' class='comment-upload-item__link' data-toggle='modal' data-target='#modal-request-suggest')
+          i.sty-icon-ic-clothitem
+          span.comment-upload-item__link--text 他のアイテムを提案する
+      .comment-upload-item
+        +input-upload-file('upload-file-img', 'upload-img', '', 'file', '')
+        .input-file-trigger
+          i.sty-icon-ic-photo
+          span.input-file-trigger__text 写真を送る
+    .comment-content
+      .comment-content__textbox(contentEditable='true')
+      .comment-content__btn
+        +button('送信', 'submit')(class='button--primary')

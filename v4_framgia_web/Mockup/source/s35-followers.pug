@@ -1,0 +1,48 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s35_followers)
+  body
+    +header-staff()
+
+    main.dashboard-container
+      +sidebar()
+      section.dashboard-content.page-followers
+        .two-column-list
+          .row
+            each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+              .col-lg-6.col-md-6.col-sm-6
+                .two-column-list__item
+                  .list-item
+                    .list-item__img
+                      a(href='#')
+                        img.list-item__image(src='images/oval_icon.png' alt='')
+                    .list-item__content
+                      h3.list-item__name
+                        a.list-item__name-text(href='#') 佐藤琢美
+                      p.list-item__link
+                        a.list-item__link-text(href='#') 31歳　/　男性
+                      .list-item__number
+                        .list-item__text
+                          p.list-item__text-quanlity 28
+                          span.list-item__text-des 投稿
+                        .list-item__text
+                          p.list-item__text-quanlity 12
+                          span.list-item__text-des ウォッチ
+                        .list-item__text
+                          p.list-item__text-quanlity 08
+                          span.list-item__text-des いいね！
+                      .list-item__button
+                        +button-icon('メッセージする', 'sty-icon-message')(class='button--primary')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

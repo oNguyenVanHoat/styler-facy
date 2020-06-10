@@ -1,0 +1,95 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s59_bank_account_filling_comfirmation)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar3_11')
+
+      section.dashboard-content.shop-account-confirmation.bank-account
+        .box-infomation
+          .title-facy-infomation 法人口座登録基本情報
+          .box-item-block.info-facy
+            .row
+              .col-md-6.col-md-offset-3
+                p.infomation-people
+                  label.label-name 会社名
+                  span.text-name スタイラー株式会社
+                p.infomation-people
+                  label.label-name 会社名カナ 　
+                  span.text-name スタイラーカブシキガイシャ
+                p.infomation-people
+                  label.label-name 登記番号  　
+                  span.text-name 1234-12-123456
+                p.infomation-people
+                  label.label-name 会社住所  　
+                  span.text-name 〒123-4567 <br> 東京都 渋谷区 神南1丁目10番地6号 バルビゾン98401
+                p.infomation-people
+                  label.label-name 住所カナ  　
+                  span.text-name シブヤク ジンナン イッチョウメジュウバンチロクゴウ <br> バルビゾンキュウジュウハチ　ヨンゼロイチ
+            button.btn.button.button--bordered.button--primary-md.button--bordered-primary.bank-account__button--change(type='button') 変更
+        .box-infomation
+          .title-facy-infomation 口座管理基本情報
+          .box-item-block.info-facy
+            .row
+              .col-md-6.col-md-offset-3
+                p.infomation-people
+                  label.label-name 氏名
+                  span.text-name スタイラー太郎
+                p.infomation-people
+                  label.label-name 氏名カナ　
+                  span.text-name スタイラータロウ
+                p.infomation-people
+                  label.label-name 性別　
+                  span.text-name 男
+                p.infomation-people
+                  label.label-name 生年月日　
+                  span.text-name 1978年3月1日
+                p.infomation-people
+                  label.label-name 住所　
+                  span.text-name 〒123-4567 <br> 東京都 渋谷区 神南1丁目10番地6号 バルビゾン98401
+                p.infomation-people
+                  label.label-name 住所カナ 　
+                  span.text-name シブヤク ジンナン イッチョウメジュウバンチロクゴウ <br> バルビゾンキュウジュウハチ　ヨンゼロイチ
+                p.infomation-people
+                  label.label-name メール　
+                  span.text-name info@styler.link
+                p.infomation-people
+                  label.label-name 電話番号
+                  span.text-name 08012345678
+                p.infomation-people-avartar
+                  label.label-name 本人確認
+                  img.shop-account-images(src='images/shop-account.png' alt ='shop-account')
+            button.btn.button.button--bordered.button--primary-md.button--bordered-primary.bank-account__button--change(type='button') 変更
+        .box-infomation
+          .title-facy-infomation 口座情報
+          .box-item-block.info-facy
+            .row
+              .col-md-6.col-md-offset-3
+                p.infomation-people
+                  label.label-name 銀行名
+                  span.text-name スタイラー銀行
+                p.infomation-people
+                  label.label-name 支店名　
+                  span.text-name スタイラー支店
+                p.infomation-people
+                  label.label-name 口座番号
+                  span.text-name ***1234
+                p.infomation-people
+                  label.label-name 口座名義カナ
+                  span.text-name カ）スタイラー
+            button.btn.button.button--bordered.button--primary-md.button--bordered-primary.bank-account__button--change(type='button') 変更
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

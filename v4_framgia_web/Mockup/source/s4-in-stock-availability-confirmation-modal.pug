@@ -1,0 +1,54 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s4_in_stock_availability_confirmation_modal)
+  body.main-page.has-chat
+    +header-staff()
+    main.dashboard-container(role='main')
+      +sidebar('sidebar1_1')
+      section.dashboard-content.page-in-stock-availability-confirmation-modal
+        .comment.comment-view
+          +chatHeading()
+          .nano.chat-content
+            .nano-content
+              +userChatMessage()
+              +userChatMessageTextOnly()
+              +adminChatMessageTextOnly()
+              +adminChatMessage('has-no-bg-color')
+              +adminChatMessage('has-bg-color')
+        .comment.comment-form
+          form(action='' role='form')
+            .comment-upload
+              .comment-upload-item
+                a(href='#' class='comment-upload-item__link')
+                  i.sty-icon-ic-clothitem
+                  span.comment-upload-item__link--text 他のアイテムを提案する
+              .comment-upload-item
+                +input-upload-file('upload-file-img', 'upload-img', '', 'file', '')
+                .input-file-trigger
+                  i.sty-icon-ic-photo
+                  span.input-file-trigger__text 写真を送る
+            .comment-content
+              .comment-content__textbox(contentEditable='true')
+              .comment-content__btn
+                +button('送信')(class='button--primary' data-toggle='modal' data-target='#modal-request-selection')
+    +footer()
+    +snackbarStaff()
+    +modal('modal-request-selection', 'modal-sm')(class='modal-request-selection modal-vertical-middle')
+      +inject('modal-header')
+      +inject('modal-body')
+        .text-center
+          p.subtitle 内容が確定します
+          p.subtitle よろしいですか？
+      +inject('modal-footer')
+        .text-center
+          +button('キャンセル', '')(class='button--cancel button--w160' data-dismiss='modal')
+          +button('OK')(class='btn button--primary button--w160')
+    +import-script()

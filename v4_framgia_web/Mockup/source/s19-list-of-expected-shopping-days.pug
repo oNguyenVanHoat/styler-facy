@@ -1,0 +1,80 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/media/media
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s19_list_of_expected_shopping_days)
+  body.main-page
+    +header-staff()
+
+    .dashboard-container
+      +sidebar('sidebar2_1')
+
+      .dashboard-content
+        section.page-list-of-expected-shopping-days
+          .shop-store-list
+            each val in [1, 2]
+              .shop-store-item
+                .shop-store-item__product
+                  .shop-store-item__desc
+                    .shop-store-item__img
+                      img(src='images/item-product_01.png' alt='')
+                    .shop-store-item__info
+                      h3.shop-store-item__branch NIKE
+                      p.shop-store-item__title French Trainer 1300FS
+                      h3.shop-store-item__price ￥21,600
+                  .shop-store-item__button
+                    span.label-message-state 未受渡
+                .shop-store-item__order
+                  p.shop-store-item__order-number 注文番号：
+                    span {00000001}-{shop.id}-{user.id}-{MM}
+                .shop-store-item__shipping
+                  .shop-store-item__shipping-item
+                    p.shop-store-item__shipping-title
+                      span.shop-store-item__shipping-name 注文日
+                      span.shop-store-item__shipping-text 2017年12月29日
+                  .shop-store-item__shipping-item
+                    p.shop-store-item__shipping-title
+                      span.shop-store-item__shipping-name 受取先
+                      span.shop-store-item__shipping-text スタイラー渋谷神南店
+                  .shop-store-item__shipping-item
+                    p.shop-store-item__shipping-title
+                      span.shop-store-item__shipping-name 来店予定日
+                      span.shop-store-item__shipping-text 2017年12月29日 17時50分
+              .shop-store-item
+                .shop-store-item__product
+                  .shop-store-item__desc
+                    .shop-store-item__img
+                      img(src='images/item-product_02.png' alt='')
+                    .shop-store-item__info
+                      h3.shop-store-item__branch NIKE
+                      p.shop-store-item__title French Trainer 1300FS
+                      h3.shop-store-item__price ￥21,600
+                  .shop-store-item__button
+                    span.label-message-state 決済確認中
+                .shop-store-item__order
+                  p.shop-store-item__order-number 注文番号：
+                    span {00000001}-{shop.id}-{user.id}-{MM}
+                .shop-store-item__shipping
+                  .shop-store-item__shipping-item
+                    p.shop-store-item__shipping-title
+                      span.shop-store-item__shipping-name 注文日
+                      span.shop-store-item__shipping-text 2017年12月29日
+                  .shop-store-item__shipping-item
+                    p.shop-store-item__shipping-title
+                      span.shop-store-item__shipping-name 受取先
+                      span.shop-store-item__shipping-text スタイラー渋谷神南店
+                  .shop-store-item__shipping-item
+                    p.shop-store-item__shipping-title
+                      span.shop-store-item__shipping-name 来店予定日
+                      span.shop-store-item__shipping-text 2017年12月29日 17時50分
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

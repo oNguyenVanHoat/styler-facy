@@ -1,0 +1,46 @@
+//
+// Pages :: S39 Shop List
+// --------------------------------------------------
+
+.page-shop-list {
+
+  .list-item {
+    &__name-text {
+      font-size: $font-size-average;
+    }
+
+    &__link-text {
+      font-size: $font-size-medium;
+    }
+
+    &__img {
+      @include respond-to(desktop-and-down) {
+        text-align: center;
+      }
+    }
+
+    &__content {
+      @include respond-to(desktop-and-down) {
+        text-align: center;
+      }
+    }
+
+    &__number {
+      @include respond-to(desktop-and-down) {
+        justify-content: space-around;
+        padding-right: 0;
+      }
+    }
+
+    &__image {
+      border-radius: 0;
+    }
+
+    &__button {
+      .button {
+        width: 100%;
+        font-size: $font-size-medium;
+      }
+    }
+  }
+}

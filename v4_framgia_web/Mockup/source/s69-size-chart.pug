@@ -1,0 +1,65 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s69_size_chart)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container
+      +sidebar('sidebar1_1')
+
+      section.dashboard-content.size-chart
+        h3.size-chart__title サイズチャート
+        .size-chart__content
+          .size-chart__row
+            .size-chart__column
+              h4.size-chart__column__title ウェア
+              table.table.table-bordered.table-size-chart
+                thead
+                  tr
+                    th 日本
+                    th US
+                    th EUR
+                    th UK
+                    th ITA
+                tbody
+                  mixin tableRow(rowScope)
+                    tr
+                      td= rowScope
+                      td 32-34
+                      td 32-34
+                      td 32-34
+                      td 32-34
+                  +tableRow('XS')
+                  +tableRow('S')
+                  +tableRow('M')
+                  +tableRow('L')
+                  +tableRow('XL')
+            .size-chart__column
+              h4.size-chart__column__title シューズ
+              table.table.table-bordered.table-size-chart
+                thead
+                  tr
+                    th 日本
+                    th US
+                    th EUR
+                    th UK
+                tbody
+                  each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                    tr
+                      td 24.5
+                      td 24.5
+                      td 24.5
+                      td 24.5
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

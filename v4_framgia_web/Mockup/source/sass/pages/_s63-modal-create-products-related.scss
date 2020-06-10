@@ -1,0 +1,89 @@
+//
+// Pages :: S61 Modal Gallery
+// --------------------------------------------------
+
+.modal-suggest-proposal {
+  margin: 15px;
+
+  &:before {
+    display: none;
+  }
+
+  .modal-dialog {
+    width: 100%;
+
+    @include respond-to(phone-and-down) {
+      margin: 0;
+    }
+
+    .modal-content {
+      padding: 15px;
+    }
+
+    .icon-close-modal {
+      right: 15px;
+      top: 15px;
+    }
+  }
+
+  .modal-body {
+    height: calc(100vh - 170px);
+  }
+
+  .page-created-new-proposal {
+    .inner {
+      box-shadow: none;
+    }
+
+    .proposal-avatar {
+      @include respond-to(smallphone-and-down) {
+        margin-left: 0;
+      }
+
+      &-img {
+        @include respond-to(smallphone-and-down) {
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .field-info {
+    .warning {
+      float: right;
+      margin-top: 10px;
+    }
+  }
+
+  .box-gender-proposal {
+    .gender-item {
+      @include respond-to(smallphone-and-down) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.form-modal-create {
+  .bootstrap-tagsinput {
+    input {
+      color: $black-lighter;
+
+      &:focus {
+        border-color: $black-lighter;
+      }
+    }
+
+    .label-info {
+      min-width: 160px;
+      color: $black-lighter;
+      border-color: $black-lighter;
+    }
+  }
+}
+
+.modal-open {
+  .modal-suggest-proposal {
+    overflow: hidden;
+  }
+}

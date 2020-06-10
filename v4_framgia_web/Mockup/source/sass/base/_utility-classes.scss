@@ -1,0 +1,82 @@
+//
+// Base :: Utility Classes
+// --------------------------------------------------
+
+/// Margin, Padding
+/// Used to override styles on components without need for
+/// additional modifier classes
+///
+/// Usage:
+/// <div class="u-mb0"> // margin-bottom: 0
+/// <div class="u-mt20"> // margin-top: 20px
+
+/// Vertical
+$vertical-property-map: (
+  mt: margin-top,
+  mb: margin-bottom,
+  pt: padding-top,
+  pb: padding-bottom,
+);
+$sizes-list: 5 10 15 20 25 30;
+
+@each $size in $sizes-list {
+  $val: $size + px;
+  @each $keyword, $property in $vertical-property-map {
+    .u-#{$keyword}#{$size} {
+      #{$property}: $val !important;
+    }
+  }
+}
+
+/// Zero
+$zero-property-map: (
+  m: margin,
+  mt: margin-top,
+  mr: margin-right,
+  mb: margin-bottom,
+  ml: margin-left,
+  p: padding,
+  pt: padding-top,
+  pr: padding-right,
+  pb: padding-bottom,
+  pl: padding-left
+);
+
+@each $keyword, $property in $zero-property-map {
+  .u-#{$keyword}0 {
+    #{$property}: 0 !important;
+  }
+}
+
+
+/// Background color
+.bg-white {
+  background-color: $white;
+}
+
+.bg-gray {
+  background-color: $gray;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+
+/// Overflow grid for smartphone device only
+.m-grid-overflow {
+  @include respond-to(smallphone-and-down) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.p-grid-overflow {
+  @include respond-to(phone-and-down) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}

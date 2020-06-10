@@ -1,0 +1,148 @@
+//
+// Pages :: S52 Event content confirmation
+// --------------------------------------------------
+.page-event-content-confirmation {
+  .share-curiousation {
+    display: flex;
+  }
+
+  .heading {
+    &__share {
+      margin-right: 30px;
+
+      &--ic {
+        display: inherit;
+        font-size: $font-size-extra-large;
+        padding-top: 6px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .media-left {
+    float: left;
+
+    @include respond-to(phone-and-down) {
+      float: none;
+    }
+  }
+
+  .media-body {
+    display: inline-block;
+    float: left;
+    width: auto;
+
+    @include respond-to(large-desktop-and-down) {
+      margin-bottom: 20px;
+    }
+
+    @include respond-to(phone-and-down) {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  .media-main {
+    padding: 0;
+
+    @include respond-to(large-desktop-and-down) {
+      padding: 0 15px;
+    }
+  }
+
+  .detail-event {
+    display: inline-block;
+    float: right;
+
+    @include respond-to(large-desktop-and-down) {
+      width: inherit;
+      float: inherit;
+    }
+
+    @include respond-to(desktop-and-down) {
+      margin-top: 16px;
+    }
+
+    .button-event {
+      clear: both;
+      padding-top: 30px;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  .event-details {
+    &__btn {
+      .button {
+        margin: 0 15px;
+
+        @include respond-to(phone-and-down) {
+          margin: 5px 0;
+        }
+      }
+    }
+
+    &__location {
+      .media-left {
+        padding-right: 0;
+        padding-left: 0;
+
+        @include respond-to(desktop-and-down) {
+          text-align: center;
+        }
+      }
+
+      &--title {
+        @include respond-to(desktop-and-down) {
+          text-align: center;
+        }
+      }
+
+      &--logo-img {
+        @include respond-to(large-desktop-and-down) {
+          width: 100%;
+          height: auto;
+        }
+
+        @include respond-to(desktop-and-down) {
+          border: 0;
+        }
+      }
+
+      .media-heading {
+        @include respond-to(desktop-and-down) {
+          margin-top: 16px;
+          justify-content: center;
+        }
+      }
+
+      &--content {
+        @include respond-to(desktop-and-down) {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .details-item {
+    display: block;
+    float: right;
+    width: 100%;
+
+    &__text {
+      margin-right: 0;
+      float: left;
+      text-align: left;
+      width: calc(100% / 3);
+
+      @include respond-to(phone-and-down) {
+        margin-right: 0;
+        float: none;
+        text-align: center;
+        width: calc(100% / 4);
+      }
+    }
+  }
+}

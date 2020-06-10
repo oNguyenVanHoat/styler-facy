@@ -1,0 +1,133 @@
+//
+// Pages :: S50 Create new event
+// --------------------------------------------------
+
+.add-new-event {
+  padding: 40px 0;
+  background: $white;
+  box-shadow: 0 1px 10px rgba($black, .05);
+
+  @include respond-to(phone-and-down) {
+    padding: 15px 0;
+  }
+
+  .field-wrapper {
+    margin-bottom: 45px;
+    position: relative;
+
+    @include respond-to(phone-and-down) {
+      margin-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .account-avatar {
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+
+    @include respond-to(desktop-and-down) {
+      margin-left: 15px;
+    }
+
+    @include respond-to(tablet-and-down) {
+      justify-content: flex-start;
+      margin-left: 30px;
+      margin-bottom: 35px;
+    }
+
+    @include respond-to(phone-and-down) {
+      justify-content: center;
+      margin-left: 0;
+    }
+
+    .account-avatar-text {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+
+      &__name {
+        font-size: $font-size-medium;
+        color: $black-lighter;
+        line-height: 20px;
+        font-weight: $font-weight-bold;
+        margin-top: 10px;
+
+        @include respond-to(large-desktop-and-down) {
+          margin-top: 30px;
+        }
+
+        @include respond-to(phone-and-down) {
+          margin-top: 10px;
+        }
+      }
+
+      &__size {
+        font-size: $font-size-mini;
+        color: $silver;
+        margin-top: 15px;
+      }
+    }
+
+    .ic-customize-img {
+      position: absolute;
+      font-size: $font-size-larger;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .img-responsive {
+      @include respond-to(phone-and-down) {
+        margin: auto;
+      }
+    }
+
+    &-img {
+      width: 370px;
+      height: 370px;
+      background: $gray-gains;
+      position: relative;
+
+      @include respond-to(tablet-and-down) {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    .box-warning-error {
+      width: 100%;
+      bottom: -20px;
+    }
+
+    .error-message {
+      text-align: center;
+    }
+  }
+}
+
+.page-create-new-event {
+  .group-button {
+    margin-top: 40px;
+  }
+
+  .box-warning-error {
+    position: absolute;
+  }
+
+  .box-warning {
+    float: right;
+  }
+}

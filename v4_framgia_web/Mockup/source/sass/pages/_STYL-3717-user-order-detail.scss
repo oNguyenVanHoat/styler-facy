@@ -1,0 +1,254 @@
+//
+// Pages :: STYL-3717 User order detail
+// --------------------------------------------------
+.page-user-order-detail {
+  padding-left: 46px;
+  padding-right: 46px;
+
+  @include respond-to(smallphone-and-down) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .order-wrapper {
+    border: 0;
+    padding-bottom: 0;
+  }
+
+  .order-detail {
+    margin-top: 50px;
+    font-size: 11px;
+    color: $black;
+
+    @include respond-to(smallphone-and-down) {
+      margin-top: 30px;
+    }
+  }
+
+  .detail-row {
+    display: flex;
+
+    @include respond-to(smallphone-and-down) {
+      flex-direction: column;
+    }
+
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+  }
+
+  .row-label {
+    width: 125px;
+    font-weight: 700;
+  }
+
+  .row-content {
+    flex: 1;
+    line-height: 1.27;
+    letter-spacing: .7px;
+
+    @include respond-to(smallphone-and-down) {
+      margin-top: 7px;
+    }
+  }
+
+  .order-status-label {
+    font-size: 13px;
+
+    &.done {
+      color: #ebebeb;
+    }
+
+    &.delivering {
+      color: $red;
+    }
+  }
+
+  .link {
+    color: $blue-darker;
+  }
+
+  .confirm-shipping-status {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .note {
+    color: $color-04;
+    margin-top: 10px;
+  }
+
+  .styler {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 9px;
+  }
+
+  .table-purchase-detail {
+    margin-top: 25px;
+    border-collapse: collapse;
+    border-radius: 4px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px $color-03;
+    overflow: hidden;
+
+    @include respond-to(smallphone-and-down) {
+      table-layout: fixed;
+    }
+
+    > thead > tr > th {
+      text-align: center;
+      background-color: $color-03;
+      color: $white;
+      padding: 11px 8px;
+      letter-spacing: 1px;
+      position: relative;
+    }
+
+    > thead > tr > th,
+    > tbody > tr > td {
+      font-size: 11px;
+      border-color: $color-03;
+      text-align: center;
+    }
+
+    > tbody > tr > td {
+      letter-spacing: .7px;
+
+      &:first-child {
+        font-weight: 700;
+        width: 170px;
+      }
+    }
+
+    > tbody > tr:last-child > td:first-child {
+      border-bottom-left-radius: 10px;
+    }
+
+    .button-open-modal {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+  }
+
+  .wrap-button {
+    padding: 36px 19px 10px;
+
+    @include respond-to(smallphone-and-down) {
+      padding: 20px;
+    }
+
+    .button-full {
+      letter-spacing: .6px;
+    }
+
+    .button--full + .button--full {
+      margin-top: 16px;
+    }
+  }
+}
+
+.modal-cancel-order {
+  .modal-dialog {
+    margin-top: 15%;
+  }
+
+  .modal-content {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 7px 0 rgba(182, 182, 182, .5);
+  }
+
+  .modal-header {
+    background-color: $brown;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    text-align: center;
+  }
+
+  .modal-title {
+    font-size: 14px;
+    color: #828284;
+  }
+
+  .modal-body {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: .6px;
+    line-height: 1.5;
+    color: $black;
+  }
+
+  .modal-footer {
+    padding: 30px 46px 26px;
+  }
+
+  .dismiss-cancel {
+    text-align: center;
+    color: $red;
+    font-size: 14px;
+    margin-top: 10px;
+
+    span {
+      cursor: pointer;
+    }
+  }
+}
+
+.modal-color-size {
+  .modal-content {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 7px 0 rgba(182, 182, 182, .5);
+  }
+
+  .modal-header {
+    background-color: $brown;
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    .button--no-background {
+      height: 37px;
+      padding: 0 10px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .modal-title {
+    font-size: 14px;
+    color: #828284;
+    text-align: center;
+  }
+
+  .modal-body {
+    .modal-header {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  .modal-footer {
+    padding: 0;
+  }
+
+  .form-group-size {
+    margin: 20px 0 0;
+  }
+
+  .radio-button-rectangle {
+    display: inline-block;
+
+    & + .radio-button-rectangle {
+      margin-left: 20px;
+
+      @include respond-to(smallphone-and-down) {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+

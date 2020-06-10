@@ -1,0 +1,87 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/media/media
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.STYL_3716_user_orders)
+  body.main-page
+    +header-customer()
+
+    main.dashboard-container(role='main')
+
+      section.dashboard-content.page-user-order
+        h2.title 購入リスト
+        .list-order
+          .order-item
+            h5.order-status.done 配送完了
+            a.order-wrapper(href="#")
+              .image-wrapper
+                img(src="https://dummyimage.com/300x300/f0f1f2", alt="")
+              h4.order-title NEEDLES
+              p.order-subtitle KNIT BOMBER CAP
+              .order-branch
+                img(src="https://dummyimage.com/33x33/f0f1f2", alt="")
+                p EDIFICE 渋谷店
+              .order-number
+                span 注文番号：
+                span 0000000-000-0000-00000000
+              .order-meta
+                .order-date
+                  span.order-label 注文日：
+                  span 2018年 2月 10日
+                .order-total
+                  span.order-label 合計：
+                  span ¥16,300
+              i.sty-icon-arrow-right-outline
+
+          .order-item
+            h5.order-status.delivering 配送中
+            a.order-wrapper(href="#")
+              .image-wrapper
+                img(src="https://dummyimage.com/300x300/f0f1f2", alt="")
+              h4.order-title NEEDLES
+              p.order-subtitle KNIT BOMBER CAP
+              .order-branch
+                img(src="https://dummyimage.com/33x33/f0f1f2", alt="")
+                p EDIFICE 渋谷店
+              .order-number
+                span 注文番号：
+                span 0000000-000-0000-00000000
+              .order-meta
+                .order-date
+                  span.order-label 注文日：
+                  span 2018年 2月 10日
+                .order-total
+                  span.order-label 合計：
+                  span ¥16,300
+              i.sty-icon-arrow-right-outline
+
+          .order-item
+            h5.order-status.delivering 配送中
+            a.order-wrapper(href="#")
+              .image-wrapper
+                img(src="https://dummyimage.com/300x300/f0f1f2", alt="")
+              h4.order-title NEEDLES
+              p.order-subtitle KNIT BOMBER CAP
+              .order-branch
+                img(src="https://dummyimage.com/33x33/f0f1f2", alt="")
+                p EDIFICE 渋谷店
+              .order-number
+                span 注文番号：
+                span 0000000-000-0000-00000000
+              .order-meta
+                .order-date
+                  span.order-label 注文日：
+                  span 2018年 2月 10日
+                .order-total
+                  span.order-label 合計：
+                  span ¥16,300
+              i.sty-icon-arrow-right-outline
+
+
+    +import-script()

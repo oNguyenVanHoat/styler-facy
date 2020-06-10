@@ -1,0 +1,76 @@
+//
+// Pages :: S69 Size Chart
+// --------------------------------------------------
+
+.size-chart {
+  @include respond-to(phone-and-down) {
+    background: $white;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    text-align: center;
+    color: $black-lighter;
+    font-weight: $font-weight-normal;
+
+    @include respond-to(phone-and-down) {
+      display: none;
+    }
+  }
+
+  &__content {
+    padding: 40px;
+    border-radius: $border-radius-mini;
+    background: $white;
+    box-shadow: 0 1px 10px rgba($black, .05);
+
+    @include respond-to(large-desktop-and-down) {
+      padding: 30px;
+    }
+
+    @include respond-to(phone-and-down) {
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
+  &__row {
+    display: flex;
+
+    @include respond-to(phone-and-down) {
+      flex-direction: column;
+    }
+  }
+
+  &__column {
+    flex: 1;
+
+    @include respond-to(phone-and-down) {
+      margin: 20px 0;
+    }
+
+    &:first-child {
+      padding-right: 15px;
+
+      @include respond-to(phone-and-down) {
+        padding: 0;
+      }
+    }
+
+    &:last-child {
+      padding-left: 15px;
+
+      @include respond-to(phone-and-down) {
+        padding: 0;
+      }
+    }
+
+    &__title {
+      margin-bottom: 16px;
+      color: $black-lighter;
+      font-size: $font-size-medium;
+    }
+  }
+}

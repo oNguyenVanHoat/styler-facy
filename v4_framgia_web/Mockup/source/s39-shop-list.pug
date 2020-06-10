@@ -1,0 +1,49 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s39_shop_list)
+  body.main-page
+    +header-staff()
+
+    .dashboard-container
+      +sidebar()
+
+      section.dashboard-content.page-shop-list
+        .two-column-list
+          .row
+            each val in [1, 2, 3, 4, 5, 6, 7, 8]
+              .col-lg-6.col-md-6.col-sm-6
+                .two-column-list__item
+                  .list-item
+                    .list-item__img
+                      a(href='#')
+                        img.list-item__image(src='images/shop_image.png')
+                    .list-item__content
+                      h3.list-item__name
+                        a.list-item__name-text(href='#') O.N.S原宿店
+                      p.list-item__link
+                        a.list-item__link-text(href='#') 東京都渋谷区神宮前6-14-13
+                      .list-item__number
+                        .list-item__text
+                          p.list-item__text-quanlity 128
+                          span.list-item__text-des アイテム
+                        .list-item__text
+                          p.list-item__text-quanlity 0
+                          span.list-item__text-des イベント
+                        .list-item__text
+                          p.list-item__text-quanlity 1
+                          span.list-item__text-des スタッフ
+                      .list-item__button
+                        +button('ショップ詳細を見る')(class='button--cancel')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

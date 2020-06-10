@@ -1,0 +1,99 @@
+mixin footer()
+  footer.footer(role='contentinfo')
+    .main-footer
+      .footer-about
+        h3.footer__title FACYについて
+        ul.footer__list
+          li.footer__item
+            a(href='#' class='footer__text') 会社概要
+          li.footer__item
+            a(href='#' class='footer__text') 利用規約
+          li.footer__item
+            a(href='#' class='footer__text') 特商法について
+          li.footer__item
+            a(href='#' class='footer__text') プライバシーポリシー
+      .footer-support
+        h3.footer__title FACYをみる
+        ul.footer__list
+          li.footer__item
+            a(href='#' class='footer__text') ヘルプ
+          li.footer__item
+            a(href='#' class='footer__text') FACY MAGAZINE
+          li.footer__item
+            a(href='#' class='footer__text') ROBE
+          li.footer__item
+            a(href='#' class='footer__text') Facebook
+          li.footer__item
+            a(href='#' class='footer__text') Twitter
+          li.footer__item
+            a(href='#' class='footer__text') INSTAGRAM
+          li.footer__item
+            a(href='#' class='footer__text') TAIWAN
+
+  .backdrop-light--invisible.js-backdrop-light--invisible
+
+mixin snackbarGuest()
+  .user-info-minimized
+    .user-info-minimized__profile
+      .user-info-minimized__profile--avatar
+        a.user-info-minimized__profile--link(href='#')
+          img.user-info-minimized__profile--img(src='images/avatar.jpg' alt='')
+      .user-info-minimized__profile--fullinfo
+        p.user-info-minimized__profile--name
+          a(href='#') Sho Yamamoto
+        .user-info-minimized__profile--role ゲストアカウント
+    .user-info-minimized__button
+      +button-link('会員登録(無料)')(class='button--primary button--primary-danger')
+    .user-info-minimized__button
+      +button-link('ログイン')(class='button--cancel')
+    .user-info-minimized__button
+      +button-link('加盟店申請')(class='button--bordered')
+
+mixin snackbarStaff()
+  .user-info-minimized
+    .user-info-minimized__profile
+      .user-info-minimized__profile--avatar
+        a.user-info-minimized__profile--link(href='#')
+          img.user-info-minimized__profile--img(src='images/avatar.jpg' alt='')
+      .user-info-minimized__profile--fullinfo
+        p.user-info-minimized__profile--name
+          a(href='#') Sho Yamamoto
+        p.user-info-minimized__profile--role LINKS LINKS LINK…
+    .user-info-minimized__options
+      ul.user-info-minimized__options_row
+        li.user-info-minimized__options_item
+          a.user-info-minimized__options_text(href='#') プロフィール編集
+        li.user-info-minimized__options_item
+          a.user-info-minimized__options_text(href='#') ログイン設定
+        li.user-info-minimized__options_item
+          a.user-info-minimized__options_text(href='#') フォロワーリスト
+        li.user-info-minimized__options_item
+          a.user-info-minimized__options_text(href='#') コメント履歴
+        li.user-info-minimized__options_item
+          a.user-info-minimized__options_text(href='#') ログアウト
+
+mixin snackbarCustomer()
+  .user-info-minimized
+    .user-info-minimized__profile
+      .user-info-minimized__profile--avatar
+        a.user-info-minimized__profile--link(href='#')
+          img.user-info-minimized__profile--img(src='images/avatar.jpg' alt='')
+      .user-info-minimized__profile--fullinfo
+        p.user-info-minimized__profile--name
+          a(href='#') Kazuto Kojima
+        p.user-info-minimized__profile--role 34歳・男性・東京
+    .user-info-minimized__options
+      ul.user-info-minimized__options_row
+        li.user-info-minimized__options_item
+          a.user-info-minimized__options_text(href='#') メッセージ
+          span.label-manage-message 12
+        li.user-info-minimized__options_item
+          a.user-info-minimized__options_text(href='#') 自分の投稿
+        li.user-info-minimized__options_item
+          a.user-info-minimized__options_text(href='#') ウォッチ一覧
+        li.user-info-minimized__options_item
+          a.user-info-minimized__options_text(href='#') いいね一覧
+        li.user-info-minimized__options_item
+          a.user-info-minimized__options_text(href='#') プロフィール変更
+        li.user-info-minimized__options_item
+          a.user-info-minimized__options_text(href='#') 登録情報

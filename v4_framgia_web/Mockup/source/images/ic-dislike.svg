@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="26px" height="24px" viewBox="0 0 26 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_dislike</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="base" transform="translate(-2099.000000, -1393.000000)" fill="#9B9B9B">
+            <path d="M2111.99678,1395.35803 C2109.9596,1393.73901 2108.30895,1392.70567 2105.5234,1393.09021 C2102.21364,1393.54712 2099.29449,1395.91052 2099.01808,1399.75 C2098.63785,1405.03178 2104.2958,1409.47083 2111.99678,1417 C2119.737,1409.39099 2125.42139,1405.02745 2124.97547,1399.75 C2124.65544,1395.9624 2121.78954,1393.44263 2118.48613,1393 C2115.66687,1393 2114.05882,1393.37708 2111.99678,1395.35803 Z" id="icon_dislike"></path>
+        </g>
+    </g>
+</svg>

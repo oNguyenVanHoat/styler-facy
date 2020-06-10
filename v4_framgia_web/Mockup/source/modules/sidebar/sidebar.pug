@@ -1,0 +1,103 @@
+mixin linkActive(nameCallActive, nameActive, nameMenu, number)
+  a(href='#' class=nameCallActive == nameActive ? 'item-content__text--active' : '').item-content__text.item-content
+    | #{nameMenu}
+    if (typeof number !== 'undefined')
+      span.item-notification__number= number
+
+mixin sidebar(classActive)
+  aside.main-left-sidebar(role='complementary')
+    h3.title-sidebar ショップ管理メニュー
+    .group-styler-sidebar
+      ul(class='collapsible' data-collapsible='expandable')
+        li.group-sidebar
+          .sidebar-items.sidebar-items--this-page
+            a(href='#sidebar-item-message' class='item-header item-header--with-notification' data-toggle='collapse')
+              i.item-header__icon-left.sty-icon-message
+              span.item-header__title メッセージ
+              span.item-header__notification 12
+              i.item-header__icon-right.collapsed-icon.sty-icon-arrow-up
+            #sidebar-item-message.sidebar-item-order.collapse.in
+              .item-content
+                ul.item-content__list
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar1_1', 'ALL', 6)
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar1_2', '在庫依頼未対応', 3)
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar1_3', '引取依頼未対応', 2)
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar1_4', 'キャンセル承認', 1)
+        li.group-sidebar
+          .sidebar-items
+            a(href='#sidebar-item-order' class='item-header js-item-header item-header__first' data-toggle='collapse')
+              i.item-header__icon-left.item-header__no-color.sty-icon-list
+              span.item-header__title.item-header__no-color 注文リスト
+              i.item-header__icon-right.collapsed-icon.sty-icon-arrow-up
+            #sidebar-item-order.sidebar-item-order.panel-collapse.collapse.in
+              .item-content
+                ul.item-content__list
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar2_1', '来店予定日リスト')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar2_2', '来店取引リスト')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar2_3', '配送取引リスト')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar2_4', '過去提案リスト')
+        li.group-sidebar
+          .sidebar-items
+            a(href='#sidebar-item-category' class='item-header js-item-header' data-toggle='collapse')
+              i.item-header__icon-left.item-header__no-color.sty-icon-category
+              span.item-header__title.item-header__no-color カテゴリー別提案
+              i.item-header__icon-right.collapsed-icon.sty-icon-arrow-up
+            #sidebar-item-category.panel-collapse.collapse
+              .item-content
+                ul.item-content__list
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar3_1', 'ジャケット・アウター')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar3_2', 'シャツ・ブラウス')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar3_3', 'Tシャツ・カットソー')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar3_4', 'ニット・スウェット')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar3_5', 'パンツ')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar3_6', 'シューズ')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar3_7', 'アクセサリー・時計')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar3_8', 'バッグ')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar3_9', '財布・小物')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar3_10', 'その他')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar3_11', '過去提案リスト')
+        li.group-sidebar
+          .sidebar-items
+            a(href='#sidebar-item-event' class='item-header js-item-header' data-toggle='collapse')
+              i.item-header__icon-left.item-header__no-color.sty-icon-event
+              span.item-header__title.item-header__no-color イベント
+              i.item-header__icon-right.collapsed-icon.sty-icon-arrow-up
+            #sidebar-item-event.panel-collapse.collapse
+              .item-content
+                ul.item-content__list
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar4_1', '在庫依頼未対応')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar4_2', '引取依頼未対応')
+        li.group-sidebar
+          .sidebar-items
+            a(href='#sidebar-item-setting' class='item-header js-item-header' data-toggle='collapse')
+              i.item-header__icon-left.item-header__no-color.sty-icon-event
+              span.item-header__title.item-header__no-color ショップ設定
+              i.item-header__icon-right.collapsed-icon.sty-icon-arrow-up
+            #sidebar-item-setting.panel-collapse.collapse
+              .item-content
+                ul.item-content__list
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar5_1', '在庫依頼未対応')
+                  li.item-content__child
+                    +linkActive(classActive, 'sidebar5_2', '引取依頼未対応')

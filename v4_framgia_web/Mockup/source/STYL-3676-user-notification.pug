@@ -1,0 +1,33 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.STYL_3676_user_notification)
+  body(class='main-page')
+    +header-customer()
+    main(class='dashboard-container' role='main')
+      section(class='dashboard-content page-user-power')
+        h2(class='title text-center') 通知詳細
+        .content
+          each value in [1, 2, 3, 4]
+            a(class='content__item' href='#')
+              span(class='item__inner')
+                span(class='item__image-container')
+                  span(class='item__image-link')
+                    img(class='item__image' src='images/avatar.jpg' alt='')
+                    if value === 1 || value === 4
+                      span(class='item__image--has-circle')
+                span.item__des
+                  span(class='item__des-title')
+                    span(class='item__des-link' href='#')
+                      if value === 1 || value === 4
+                        span(class='item__des-label') 提案
+                      span(class='item__des-title--strong') EDIFICE 渋谷店　中山 祐太郎
+                      | さんがあなたの投稿にアイテムを提案しました。
+                  span(class='item__des-time text-right') 2018年 2月 16日　16:40
+    +import-script()

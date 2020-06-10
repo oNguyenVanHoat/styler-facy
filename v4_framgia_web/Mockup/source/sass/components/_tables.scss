@@ -1,0 +1,84 @@
+//
+// Components :: Tables
+// --------------------------------------------------
+
+.table-size-chart {
+  margin-bottom: 0;
+  border: 1px solid $table-border;
+
+  > thead {
+    > tr {
+      > th {
+        padding: 25px;
+        border: 1px solid $table-border;
+        border-bottom: 1px solid $table-border;
+        border-bottom-width: 1px;
+        background: $brown;
+        color: $black-lighter;
+        text-align: center;
+        font-size: $font-size-medium;
+        line-height: 24px;
+        font-weight: $font-weight-light;
+        white-space: nowrap;
+
+        @include respond-to(large-desktop-and-down) {
+          padding: 15px;
+        }
+
+        @include respond-to(desktop-and-down) {
+          padding: 5px;
+        }
+
+        @include respond-to(tablet-and-down) {
+          padding: 10px;
+        }
+
+        @include respond-to(phone-and-down) {
+          padding: 20px;
+          font-size: $font-size-base;
+        }
+
+        @include respond-to(smallphone-and-down) {
+          padding: 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  > tbody {
+    > tr {
+      > td {
+        padding: 25px;
+        border: 1px solid $table-border;
+        color: $black-lighter;
+        text-align: center;
+        font-size: $font-size-medium;
+        line-height: 24px;
+        font-weight: $font-weight-light;
+
+        @include respond-to(large-desktop-and-down) {
+          padding: 15px;
+        }
+
+        @include respond-to(desktop-and-down) {
+          padding: 5px;
+        }
+
+        @include respond-to(tablet-and-down) {
+          padding: 10px;
+        }
+
+        @include respond-to(phone-and-down) {
+          padding: 20px;
+          font-size: $font-size-base;
+        }
+
+        @include respond-to(smallphone-and-down) {
+          padding: 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

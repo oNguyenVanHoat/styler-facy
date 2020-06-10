@@ -1,0 +1,125 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s48_created_from_suggested)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar3_3')
+
+      section.dashboard-content.page-created-from-suggested
+        .inner
+          .row
+            .col-md-5
+              .account-avatar
+                .account-avatar-img
+                  +input-upload-file('upload-file-img', 'upload-img', '', 'file', '', 'multiple')
+                  img(src='images/images-people.png' alt='' class='images-avartar')
+                  i.ic-customize-img.sty-icon-camera-icon
+                  .account-avatar-text
+                    p.account-avatar-text__name 商品画像をアップロード
+                    p.account-avatar-text__size （横幅370px以上、容量5MB以内を推奨）
+                  .account-avatar-bottom
+                    p.account-avatar-bottom__text 最大10枚の写真をアップロードできます
+              .thumbnail
+                .thumbnail-list
+                  .thumbnail-item
+                    img(src='images/thumbnail01.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail02.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail01.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail02.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail01.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail02.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail01.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail02.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    +input-upload-file('upload-file-img', 'upload-img', '', 'file', '', 'multiple')
+                    i.proposal-customize-img.sty-icon-camera-icon
+            .col-md-6.suggested-content
+              form.form-customize
+                .field-wrapper
+                  +input-field('ブランド名', '必須', '', 'MR.OLIVER', '', '', '', '', '0/40')
+                .field-wrapper
+                  +input-field('商品名', '必須', '', 'クラシックランダムテレコヘンリーネック', '', '' , '', '', '0/40')
+                .field-wrapper
+                  .box-label
+                    label(for='') タイプ
+                      span.text 必須
+                  .box-gender
+                    ul.gender
+                      li.gender-item.gender-item--checked
+                        +radio-button-gender('read-only-gender', 'read-only-men', 'メンズ', 'checked')
+                      li.gender-item
+                        +radio-button-gender('read-only-gender', 'read-only-women', 'レディース', '')
+                      li.gender-item
+                        +radio-button-gender('read-only-gender', 'read-only-unisex', 'ユニセックス', '')
+
+                .field-wrapper
+                  +input-field('販売価格', '必須', '', '188000', '', '','','円（税込）','販売価格は、数字のみ入力できます')
+                .field-wrapper
+                  label(for='') カラー
+                    span.text 必須
+                  .box-size
+                    .box-label
+                      i.sty-icon-add-triangle
+                    .box-label
+                      label.ic-size ホワイト
+                      i.icon-close
+                    .box-label
+                      label.ic-size ブラック
+                      i.icon-close
+                    .box-label
+                      label.ic-gray 入力してください
+                .field-wrapper
+                  label(for='') サイズ
+                    span.text 必須
+                  .box-size
+                    .box-label
+                      i.sty-icon-add-triangle
+                    .box-label
+                      label.ic-size FREE SIZE
+                      i.icon-close
+                    .box-label
+                      label.ic-size M
+                      i.icon-close
+                    .box-label
+                      label.ic-gray 入力してください
+                .field-wrapper
+                  +input-field('素材', '必須', '', '綿100％', '', '', '', '' , '0/40')
+                .field-wrapper.field-info
+                  +textarea('商品説明', '必須', 'ハニカムメッシュタイプのサーマルカットソーは、生地も厚過ぎず薄すぎない為、オールシーズ着用可能なユーティリティーウェア。各パーツを3本針またぎ付けで縫い合わせることで凹凸面も少なく肌へのストレスも軽減されている。クルーネックも展開。', '', '', '30/1000')
+                .field-wrapper.field-info
+                  +textarea('おすすめポイント', '必須', '夏でも着れる生地でシンプルながら縫い付けもこだわりがあり着ごごち最高です！', '', '', '30/1000')
+                .field-wrapper
+                  +selectBox('カテゴリー', '', 'Tシャツ・カットソー', '', '', 'Tシャツ・カットソー1', 'Tシャツ・カットソー2')
+
+        .button-suggested.text-center
+          +button('提案実行', 'button')(class='button--primary button--w370')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

@@ -1,0 +1,13 @@
+include ../injected/injected
+
+mixin modal(modalId, modalSize)
+  +injected: block
+  .modal.fade.modal-customize&attributes(attributes)(tabindex='-1', role='dialog' id= modalId)
+    .modal-dialog(role='document' class= modalSize)
+      .modal-content
+        .modal-header
+          +use('modal-header')
+        .modal-body
+          +use('modal-body')
+        .modal-footer
+          +use('modal-footer')

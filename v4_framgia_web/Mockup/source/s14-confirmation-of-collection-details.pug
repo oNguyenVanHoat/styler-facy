@@ -1,0 +1,71 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/media/media
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s14_confirmation_of_collection_details)
+  body.main-page
+    +header-staff()
+
+    .dashboard-container
+      +sidebar('sidebar1_3')
+
+      .dashboard-content.page-confirmation-of-collection-details
+        .picker-banner
+          .picker-banner__content
+            h3.picker-banner__brand NIKE
+            p.picker-banner__use French Trainer 1300FS
+            p.picker-banner__price 22,680
+              small.picker-banner__currency 円
+              span.picker-banner__tax （税込）
+        .picker-step
+          .picker-step__group
+            .picker-step__list
+              .picker-step__line
+              .picker-step__item
+                span.picker-step__button.picker-step__button--first
+                p.picker-step__text 引取先
+              .picker-step__item
+                span.picker-step__button
+                p.picker-step__text 引取日
+              .picker-step__item.picker-step__item--active
+                span.picker-step__button
+                p.picker-step__text 確認
+              .picker-step__item
+                span.picker-step__button.picker-step__button--last
+                p.picker-step__text 完了
+          .select-takeover
+            h2.picker-title 引取内容の確認
+            .confirmation-collection
+              .confirmation-collection__list
+                .confirmation-collection__item
+                  .confirmation-collection__content
+                    h3.confirmation-collection__title 引取日
+                    p.confirmation-collection__address 1日後（3月28日・土）に引取
+                    p.confirmation-collection__transport ヤマト運輸が集荷
+                  .confirmation-collection__button
+                    +button('他の引取日')(class='button--bordered button--primary-md button--bordered-primary' data-toggle='modal' data-target='#modal-request-selection')
+                .confirmation-collection__item
+                  .confirmation-collection__content
+                    h3.confirmation-collection__title 引取先：スタイラー渋谷神南店
+                    p.confirmation-collection__address 〒150-0041　東京都渋谷区神南1-10-6
+                    p.confirmation-collection__phone
+                      span.confirmation-collection__phone-number 090-1234-5678
+                      span.confirmation-collection__phone-space |
+                      span.confirmation-collection__phone-respon 担当：スタイラー太郎
+                  .confirmation-collection__button
+                    +button('他の引取日')(class='button--bordered button--primary-md button--bordered-primary' data-toggle='modal' data-target='#modal-request-selection')
+          .authentication-step
+            +button('引取を確定')(class='button--primary button--w370 button--picker-step')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

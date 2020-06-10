@@ -1,0 +1,42 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.h4_ranking)
+  body.main-page.no-sidebar
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar3_11')
+
+      section.dashboard-content.page-ranking
+        .container
+          ul.tab-nav-bar
+            li.tab-nav-bar__item.active
+              a.tab-nav-bar__link(data-toggle='tab' href='#weekly-ranking') 週間ランキング
+            li.tab-nav-bar__item
+              a.tab-nav-bar__link(data-toggle='tab' href='#monthly-ranking') 月間ランキング
+          .tab-content
+            .tab-pane.fade.in.active(id='weekly-ranking')
+              .row
+                each val in [0, 1, 2, 3, 4, 5]
+                  +productGridRanking()
+              .text-center
+                i.icon-loader
+            .tab-pane.fade(id='monthly-ranking')
+              .row
+                each val in [0, 1, 2]
+                  +productGridRanking()
+              .text-center
+                i.icon-loader
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

@@ -1,0 +1,207 @@
+//
+// Pages :: S3 Inventory Request Not Supported
+// --------------------------------------------------
+
+// "has-chat" class will be used for all pages having chat layout
+.has-chat {
+  .footer {
+    display: none;
+  }
+
+  .dashboard-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px;
+    padding-bottom: 0;
+
+    @include respond-to(tablet-and-down) {
+      height: calc(100vh - 130px);
+      padding-top: 15px;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      height: calc(100vh - 94px);
+      padding: 15px 0 0;
+    }
+  }
+
+  .main-left-sidebar {
+    width: $sidebar-has-scroll-width;
+    min-width: $sidebar-has-scroll-width;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+
+    @include respond-to(desktop-and-down) {
+      height: calc(100vh - 140px);
+    }
+
+    @include respond-to(tablet-and-down) {
+      height: 100vh;
+    }
+  }
+
+  .comment {
+    margin-bottom: 0;
+  }
+
+  .comment-form {
+    width: 100%;
+    min-height: 140px;
+    margin-top: 8px;
+
+    @include respond-to(smallphone-and-down) {
+      min-height: 104px;
+    }
+
+    .comment-content {
+      display: flex;
+
+      &__textbox {
+        flex: 1;
+        min-height: 48px;
+        max-height: 176px;
+        padding: 7px 24px;
+        overflow-y: auto;
+        word-break: break-all;
+        color: $black-lighter;
+        background-color: $white-darker;
+        border: 1px solid $white-darker;
+        border-radius: $border-radius-mini;
+        font-size: $font-size-medium;
+        line-height: 32px;
+        font-weight: $font-weight-light;
+        outline: none;
+        transition: background-color .3s;
+
+        @include respond-to(smallphone-and-down) {
+          max-height: 48px;
+          padding-left: 8px;
+          padding-right: 16px;
+          font-size: $font-size-base;
+          line-height: 20px;
+        }
+
+        &:focus {
+          background-color: $white;
+          border: 1px solid $white-darker;
+        }
+
+        &.is-customized {
+          min-height: 32px;
+          max-height: 130px;
+          padding: 2px 10px;
+          font-size: $font-size-base;
+          line-height: 24px;
+
+          @include respond-to(smallphone-and-down) {
+            max-height: 64px;
+          }
+        }
+      }
+
+      &__btn {
+        position: relative;
+        width: 120px;
+        margin-left: 20px;
+
+        @include respond-to(smallphone-and-down) {
+          width: 80px;
+          margin-left: 10px;
+        }
+
+        &.is-customized {
+          width: 60px;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .comment-view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .chat-content {
+      flex: 1;
+      height: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.modal-request-header {
+  .modal-body,
+  .modal-footer {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    @include respond-to(smallphone-and-down) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .modal-body {
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 0;
+
+    .notification {
+      font-size: $font-size-medium;
+      color: $blue-darker;
+      font-weight: $font-weight-general;
+      position: relative;
+      border: 3px solid $blue-darker;
+      padding-left: 65px;
+      padding-right: 65px;
+      height: 40px;
+      line-height: 35px;
+      display: inline-block;
+      margin-bottom: 15px;
+
+      @include respond-to(smallphone-and-down) {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: $font-size-base;
+      }
+
+      &--down {
+        position: absolute;
+        margin-top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 15px;
+        width: 17px;
+        overflow: hidden;
+
+        &__icon {
+          width: 13px;
+          height: 21px;
+          margin: -13px 0 0 3px;
+          transform: rotate(45deg);
+          box-shadow: inset 0 0 0 3px $blue-darker;
+          background: $white;
+          position: relative;
+        }
+      }
+    }
+
+    .sub-text {
+      font-size: $font-size-medium;
+      line-height: 32px;
+      color: $black-lighter;
+      font-weight: $font-weight-bold;
+
+      @include respond-to(smallphone-and-down) {
+        font-size: $font-size-base;
+      }
+    }
+  }
+}

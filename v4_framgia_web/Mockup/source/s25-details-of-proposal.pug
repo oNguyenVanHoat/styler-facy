@@ -1,0 +1,215 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s25_details_of_proposal)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar3_11')
+
+      section.dashboard-content.page-proposal
+        .product.product-general
+          .row
+            .col-md-6
+              .product-general__image.m-grid-overflow
+                .slider.slider-detail.js-slider-detail
+                  .slider-detail-item
+                    img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                    h3.count 1/10
+                  .slider-detail-item
+                    img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                    h3.count 2/10
+                  .slider-detail-item
+                    img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                    h3.count 3/10
+                  .slider-detail-item
+                    img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                    h3.count 4/10
+                  .slider-detail-item
+                    img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                    h3.count 5/10
+                  .slider-detail-item
+                    img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                    h3.count 6/10
+                  .slider-detail-item
+                    img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                    h3.count 7/10
+                  .slider-detail-item
+                    img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                    h3.count 8/10
+                  .slider-detail-item
+                    img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                    h3.count 9/10
+                  .slider-detail-item
+                    img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                    h3.count 10/10
+                .slider.slider-nav.slider-navigation.js-slider-navigation
+                  .slider-navigation__item
+                    img(src='images/thumbnail01.png' alt='' class='slider-navigation__item--image')
+                  .slider-navigation__item
+                    img(src='images/thumbnail02.png' alt='' class='slider-navigation__item--image')
+                  .slider-navigation__item
+                    img(src='images/thumbnail01.png' alt='' class='slider-navigation__item--image')
+                  .slider-navigation__item
+                    img(src='images/thumbnail02.png' alt='' class='slider-navigation__item--image')
+                  .slider-navigation__item
+                    img(src='images/thumbnail01.png' alt='' class='slider-navigation__item--image')
+                  .slider-navigation__item
+                    img(src='images/thumbnail02.png' alt='' class='slider-navigation__item--image')
+                  .slider-navigation__item
+                    img(src='images/thumbnail01.png' alt='' class='slider-navigation__item--image')
+                  .slider-navigation__item
+                    img(src='images/thumbnail02.png' alt='' class='slider-navigation__item--image')
+                  .slider-navigation__item
+                    img(src='images/thumbnail01.png' alt='' class='slider-navigation__item--image')
+                  .slider-navigation__item
+                    img(src='images/thumbnail02.png' alt='' class='slider-navigation__item--image')
+            .col-md-6
+              .product-general__info
+                hgroup.product-general__info--title
+                  h3.main-title.text-center.text-uppercase Sasquatchfabrix
+                  h6.subtitle.text-uppercase 90S tenc denim shorts
+                p.product-general__info--price 25,920円(税込)
+                p.product-general__info--views 32人が閲覧中
+                .product-general__info--favorites
+                  each val, index in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                    .user-liked(class='user-liked__' + index)
+                      if (index === 10)
+                        img(src='images/img-more.svg' alt='' class='user-liked__more')
+                      else if (index === 11)
+                        h3.user-liked__total 15
+                          |
+                          small.user-liked__total--small いいね！
+                      else
+                        img(src='images/comment-user-avatar.png' alt='' class='user-liked__avatar')
+                  .user-interact.text-center
+                    a(href='#' class='user-interact__link js-favorite-product-general')
+                      i.user-interact__ic--save
+                      span.user-interact__txt--save いいね
+                .product-general__info--gender
+                  span.label-primary.label-primary--sm.label-primary--gentleman メンズ
+                  span.label-primary.label-primary--sm.label-primary--lady レディーズ
+                .product-general__info--intro
+                  p.text-inner 全品送料無料
+                .product-general__info--hr
+                .product-general__info--common.product-general__info--colors
+                  p.title カラーバリエーション　(3)
+                  ul.list-inline
+                    li.list-inline-item ブラック/ホワイト
+                    li.list-inline-item レッド/ブラック
+                    li.list-inline-item ホワイト/ブラック
+                .product-general__info--common.product-general__info--sizes
+                  p.title サイズ展開　(5)
+                  +labelProductSize('xs')
+                  +labelProductSize('s')
+                  +labelProductSize('m')
+                  +labelProductSize('l')
+                  +labelProductSize('xl')
+                .product-general__info--common.product-general__info--materials
+                  p.title 素材
+                  p.short-description.text-justify アッパー:天然皮革・合成繊維、ミッドソール:合成樹脂、アウトソール：合成底
+
+        .product.product-details
+          .product-details__content
+            .product-details__descriptions
+              .product-details__descriptions__content.text-justify
+                p
+                  |
+                  strong アイテム説明
+                p こんにちは！
+                p ニューヨーク、ソーホー地区初のメンズカジュアルブランドのO.N.S原宿店の西村です。鮮やかなカラーが特徴のインディゴのデニムシャツをご提案いたします。
+                p
+                  |
+                  strong 【アイテム詳細】
+                p インディゴ染のホリゾンタルカラーシャツ。無骨なイメージのデニムシャツですが、こちらのデニムシャツはコットンレーヨンの生地を使用することで、柔らかい生地感で着心地がとても良いです。
+                p また独特の光沢感がありドレスの要素も兼ね備えいますので、タイドアップにも使えるアイテムです。インディゴ染のアイテムなので経年変化が楽しめますし、オリジナルのメタルボタンも職人が1点1点手で染めているので、こちらも経年変化を楽しめ男心をくすぐる1着に仕上がっています。
+                p 電話:03-5468-2250
+                p 住所:〒150-0001 東京都渋谷区神宮前6-7-8 O.N.S
+                a(href='http://www.onsclothing.jp' target='_blank') http://www.onsclothing.jp
+            .product-details__strengths
+              h4.product-details__strengths--title おすすめポイント
+              .product-details__strengths--content
+                .strengths-message
+                  i.ic-triangle-shape
+                  p O.N.S 別注の限定モデルです。黒メッシュに黒レザーを合わせ、トレンドのスポーツミックスにも従来のスポーティなモデルより取り入れやすくて、おすすめです！
+                .strengths-related.text-center
+                  img(src='images/img-product-present.png' alt='' class='strengths-related__avatar')
+                  p.strengths-related__saler 西村剛
+                  p.strengths-related__shop O.N.S原宿
+                  +button-link('フォローする')(class='strengths-related__button button--bordered button--w250')
+            .vertical-axis
+        .product.product-address
+          h4.product-address__title 取り扱い店舗
+          .product-address__info
+            a(href='#' class='product-address__link')
+              img(src='images/img-shop-logo.png' alt='' class='product-address__img')
+            .product-address__text
+              hgroup
+                h4
+                  a(href='#' class='product-address__name') O.N.S原宿店
+                h6.product-address__location 東京都渋谷区神宮前6-14-13
+              .product-address__gender
+                span.label-primary.label-primary--sm.label-primary--gentleman メンズ
+                span.label-primary.label-primary--sm.label-primary--lady レディーズ
+              .product-address__working
+                p.text-inner
+                  |
+                  span 営業時間
+                  | 火、水、木、金、土　11:00〜20:00
+                p.text-inner
+                  |
+                  span 定休日
+                  | 月
+            .product-address__achievements
+              .product-address__statistics
+                hgroup.group-statistics.text-center
+                  h2 411
+                  h4.text-capitalize items
+                hgroup.group-statistics.text-center
+                  h2 6
+                  h4.text-capitalize events
+                hgroup.group-statistics.text-center
+                  h2 1
+                  h4.text-capitalize staffs
+              .product-address__button
+                +button-link('取引リストを開く')(class='button--cancel')
+          .product-address__map
+            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.9699519399805!2d108.2108634154625!3d16.067048988882274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142184a858c4081%3A0x13f7683344a7535d!2zMjU1IEjDuW5nIFbGsMahbmcsIMSQw6AgTuG6tW5nLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1498204807493' frameborder='0' style='border:0' allowfullscreen)
+
+        .product-related
+          h3.product-related__title 提案アイテム (3)
+          .product-related__list
+            .row
+              each val in [1, 2, 3]
+                +productGrid(true)
+              .col-lg-3.col-md-4.col-sm-6
+                figure.product-presents
+                  a(href='#' class='product-presents__link')
+                    img.product-presents__img(src='images/img-product-present.png' alt='')
+                  figcaption.product-presents__captions
+                    .user-related
+                      a(href='#' class='link-related')
+                        img(src='images/comment-admin-avatar.png' alt='' class='avatar-related')
+                      p.username-related Kawashima
+                    hgroup.group-title
+                      h4.title Monster Men
+                      h4.subtitle ファティーグ スカート
+                    .product-presents__captions--detail
+                      p.price-info 17,064円(税込)
+                      .user-favorite.text-center
+                        a(href='#' class='user-favorite__link js-favorite-product-related')
+                          i.sty-icon-favorite.disable
+                          span.text いいね
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

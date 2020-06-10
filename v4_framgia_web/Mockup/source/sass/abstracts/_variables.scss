@@ -1,0 +1,211 @@
+//
+// Abstracts :: Variables
+// --------------------------------------------------
+
+/// Paths
+/// -------------------------------------------------
+$path-image: '../images/';
+$path-font: '../fonts/';
+
+
+/// Colors
+/// -------------------------------------------------
+
+/// Base
+$white: #fff;
+$black: #000;
+$black-lighter: #1a1a1c;
+$gray: #4d4d4d;
+$blue: #1abbff;
+$blue-darker: #27beff;
+$brown: #d8d8d8;
+$white-darker: #e3e3e3;
+$gray-lighter: #9b9b9b;
+$gray-darker: #959595;
+$gray-light: #888;
+$red: #ef4c67;
+$silver: #c2c2c2;
+$mine-shaft: #333;
+$gray-silver: #939393;
+$green: #b8e986;
+$blue-lighter: #ebf2fb;
+$gray-foreign: #838383;
+$blue-foreign: #62d0ff;
+$tundora-approx: #4c4c4c;
+$gainsboro: #dcdcdc;
+$gray-gains: #eee;
+$dove-gray: #686868;
+$shark: #19191a;
+$boulder: #7d7d7d;
+$red-foreign: #f75667;
+$gray-dim: #929292;
+$red-foreign-darker: #f0405a;
+$gray-bunker: #2c3135;
+$black-charcoal: #4a4a4a;
+$white-foreign: #ddd;
+$dark-pink: #e34a6f;
+$white-smoke: #eee;
+$dusty-gray: #979797;
+$nero-grey: #282828;
+$dark-gray: #ababab;
+$dim-gray: #666;
+$concrete: #f3f3f3;
+$silver-color: #bbb;
+$alto: #dadada;
+$pig-pink: #fbd1d8;
+$charcoal: #4b4b4b;
+$eclipse: #3a3a3a;
+
+$color-01: #e8e8e8;
+$color-02: #5b5b5b;
+$color-03: #969696;
+$color-04: #d5d5d5;
+$color-05: #f1f1f1;
+
+/// Pages :: Top Page
+$border-top-page: #dfdfdf;
+
+/// Brands
+$brand-primary: #0b1a33;
+$brand-success: #aaa;
+$brand-info: #4095c3;
+$brand-danger: #f26d7d;
+$brand-warning: #f0ad4e;
+
+/// Links
+$link-color: $brand-info;
+
+/// Text
+$text-color-dark: $black;
+$text-color-gray: $gray;
+
+/// Media
+$media-heading-color: $black-lighter;
+$media-content-color: $media-heading-color;
+$media-footer-color: $silver;
+
+/// Typography
+/// -------------------------------------------------
+$font-family-primary: 'Hiragino Sans', 'Noto Sans Japanese', 'Yu Gothic', 'Meiryo', 'Hiragino Kaku Gothic Pro', '游ゴシック', 'メイリオ', 'MS ゴシック', 'sans-serif';
+$font-family-extra: 'Roboto', sans-serif;
+$font-family-icon: 'styler-font-icons';
+$font-family-ultrathin: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-general: 500;
+$font-weight-bold: 600;
+$font-weight-extra-bold: 900;
+
+$font-size-small: 12px;
+$font-size-mini: 13px;
+$font-size-base: 14px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
+$font-size-average: 20px;
+$font-size-extra: 22px;
+$font-size-extra-large: 24px;
+$font-size-larger: 36px;
+
+
+/// Transitions
+/// -------------------------------------------------
+$timing-function-ease-out-cubic: cubic-bezier(.215, .610, .355, 1);
+
+
+/// Borders
+/// -------------------------------------------------
+$border-radius-large: 10px;
+$border-radius-base: 8px;
+$border-radius-small: 3px;
+$border-radius-mini: 2px;
+$border-color-primary: #e5e5e5;
+$border-color-secondary: #ebebeb;
+$border-table-weight: $silver;
+$radio-border-color: $silver;
+
+
+/// Gutter
+/// -------------------------------------------------
+$gutter-small: 5px;
+$gutter-medium: 10px;
+$gutter: 15px;
+$gutter-large: 20px;
+$gutter-extra-large: 25px;
+$gutter-huge: 30px;
+$gutter-extra-huge: 40px;
+
+
+/// Global
+/// -------------------------------------------------
+$body-background-color: #f8f8f8;
+$background-result: #f5f5f5;
+
+
+/// Components :: Header
+/// -------------------------------------------------
+$header-height: 60px;
+$header-height-sp: 55px;
+$header-box-shadow: rgba(0, 0, 0, .08);
+$header-box-shadow-profile: rgba(0, 0, 0, .05);
+
+
+/// Components :: Footer
+/// -------------------------------------------------
+$footer-height: 421px;
+$footer-dashboard-border-color: $gray-lighter;
+$footer-dashboard-text-color: #234370;
+
+
+/// Components :: Buttons
+/// -------------------------------------------------
+$button-green-color: $brand-success;
+$button-blue-color: $brand-info;
+$button-primary-bg: $blue-darker;
+$button-bordered-text-color: $silver;
+$button-cancel-bg: $black-lighter;
+$button-primary-hover-bg: $blue-foreign;
+$button-cancel-hover-bg: $gray-foreign;
+
+
+/// Layout :: Sidebar
+/// -------------------------------------------------
+$sidebar-menu-text: $white;
+$sidebar-menu-bg-pressed: $brand-info;
+$sidebar-menu-text-pressed: #f2ffff;
+$sidebar-menu-active-color-from: $brand-success;
+$sidebar-menu-active-color-to: $brand-info;
+$sidebar-menu-active-color-shadow: #2fdcea;
+$sidebar-menu-icon: #6691c0;
+$sidebar-menu-icon-pressed: $sidebar-menu-text-pressed;
+$sidebar-footer-color: #234370;
+$sidebar-width: 220px;
+$sidebar-has-scroll-width: 237px;
+$side-bar-left-width: 24px;
+
+
+
+/// Components :: Tables
+/// -------------------------------------------------
+$table-thead-bg: #cee8f6;
+$table-tbody-bg: #f5f5f5;
+$table-bg-hover-td: #edfbf5;
+$table-border: $silver;
+$table-respond-border: #bdbdbd;
+$table-respond-thead-color: #0069b7;
+$table-respond-thead-bg: #f0f2f5;
+$table-row-error: #fde7e8;
+$table-highlight-tr: $table-bg-hover-td;
+
+
+/// Components :: Pagination
+/// -------------------------------------------------
+$pagination-text-normal: $gray;
+$pagination-border: $gray-lighter;
+
+
+/// Components :: Modal
+/// -------------------------------------------------
+$modal-text-gray: $gray;
+$modal-text-main: $brand-primary;
+$modal-area-content-bg: $body-background-color;
+$modal-area-content-border: $gray-lighter;

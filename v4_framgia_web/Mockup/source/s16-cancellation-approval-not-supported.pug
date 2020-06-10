@@ -1,0 +1,26 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/media/media
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s16_cancellation_approval_not_supported)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container
+      +sidebar('sidebar1_4')
+      section.dashboard-content.page-cancellation-approval-not-supported
+        each val in [1, 2, 3, 4, 5, 6, 7, 8]
+          .message
+            +media('Tsubasa Koseki', '注文番号：{0000001}-{shop.id}-{user.id}-{MM}', 'の商品ですがキャンセル申請がありました。')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

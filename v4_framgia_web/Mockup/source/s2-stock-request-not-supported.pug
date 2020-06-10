@@ -1,0 +1,27 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/media/media
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s2_stock_request_not_supported)
+  body.main-page
+    +header-customer()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar1_2')
+
+      section.dashboard-content.page-stock-request-not-supported
+        each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+          .message
+            +media('高橋祐太郎', '上記内容で商品の在庫がございました', '')
+
+    +footer()
+
+    +snackbarCustomer()
+
+    +import-script()

@@ -1,0 +1,23 @@
+//
+// Components :: Scrollbar
+// --------------------------------------------------
+
+.nano {
+  > .nano-content {
+    padding: 10px 15px;
+  }
+
+  > .nano-pane {
+    width: 4px;
+    top: 7px;
+    right: 7px;
+    bottom: 7px;
+    background: transparent;
+
+    > .nano-slider {
+      width: 100%;
+      background: rgba($black, .4);
+      border-radius: $border-radius-mini;
+    }
+  }
+}

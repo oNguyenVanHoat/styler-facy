@@ -1,0 +1,57 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s18_cancellation_approval)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar1_1')
+
+      section.dashboard-content
+        form.form-customize
+          .transmission-completed
+            h3.transmission-completed__title キャンセルを承認しますか？
+            p.transmission-completed__text 承認した場合商品がキャンセルされます。非承認を押すと運営側で確認いたします。</br>48時間以内にボタンを押してください。
+            .transmission-completed__button
+              +button('承認')(class='button--primary button--w170 button-confirm-cancellation' data-toggle='modal' data-target='#modal-confirm-cancellation')
+              +button('非承認')(class='button--primary button--primary-danger button--w170 js-button-show-cancellation-reasons')
+          .transmission-completed.transmission-completed-invisible
+            .transmission-completed__textarea
+              +textarea-no-label('非承認の理由等を入力してください', '0/200')
+            .transmission-completed__button
+              +button('キャンセル')(class='button--cancel button--w170 js-button-undo-cancellation')
+              +button('送信')(class='button--primary button--w170' data-toggle='modal' data-target='#modal-cancellation-successful')
+
+    +footer()
+
+    +snackbarStaff()
+
+    //- Modal Confirm Cancellation
+    +modal('modal-confirm-cancellation', 'modal-sm')(class='modal-confirm-cancellation modal-vertical-middle')
+      +inject('modal-header')
+      +inject('modal-body')
+        .text-center
+          p.subtitle キャンセルが承認されました
+      +inject('modal-footer')
+        .text-center
+          +button('OK', '')(class='button--primary button--w160')
+
+    //- Modal Cancellation Successful
+    +modal('modal-cancellation-successful', 'modal-sm')(class='modal-cancellation-successful modal-vertical-middle')
+      +inject('modal-header')
+      +inject('modal-body')
+        .text-center
+          p.subtitle 送信が完了しました
+      +inject('modal-footer')
+        .text-center
+          +button('OK', '')(class='button--primary button--w160')
+
+    +import-script()

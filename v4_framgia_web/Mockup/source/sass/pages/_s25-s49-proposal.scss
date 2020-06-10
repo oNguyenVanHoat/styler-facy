@@ -1,0 +1,754 @@
+//
+// Pages :: S25 & S49 Proposal
+// --------------------------------------------------
+
+.page-proposal {
+  overflow: hidden;
+
+  .product {
+    margin-bottom: 32px;
+    padding: 32px;
+    background: $white;
+    border-radius: $border-radius-mini;
+    box-shadow: 0 1px 10px rgba($black, .05);
+
+    @include respond-to(desktop-and-down) {
+      margin-bottom: 24px;
+      padding: 24px;
+    }
+
+    @include respond-to(phone-and-down) {
+      margin-bottom: 16px;
+      padding: 16px;
+    }
+  }
+
+  .product-general {
+    &__image {
+      &--present {
+        width: 100%;
+        height: auto;
+        max-height: 915px;
+        object-fit: cover;
+
+        @include respond-to(large-desktop-and-down) {
+          max-height: 585px;
+        }
+
+        @include respond-to(tablet-and-down) {
+          max-height: 1100px;
+        }
+
+        @include respond-to(phone-and-down) {
+          max-height: 708px;
+        }
+
+        @include respond-to(smallphone-and-down) {
+          max-height: 490px;
+        }
+      }
+    }
+
+    &__info {
+      &--title {
+        margin-bottom: 16px;
+
+        @include respond-to(desktop-and-down) {
+          margin-top: 16px;
+        }
+
+        .main-title {
+          margin-bottom: 10px;
+          color: $black-lighter;
+          font-family: $font-family-extra;
+          font-weight: $font-weight-general;
+        }
+
+        .subtitle {
+          font-size: $font-size-mini;
+          color: $black-lighter;
+          font-family: $font-family-extra;
+          font-weight: $font-weight-light;
+        }
+      }
+
+      &--advice {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+      }
+
+      &--price {
+        margin-bottom: 16px;
+        color: $black-lighter;
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+      }
+
+      &--views {
+        margin-bottom: 23px;
+        color: $gray-lighter;
+        font-size: 14px;
+        font-weight: $font-weight-light;
+      }
+
+      &--favorites {
+        position: relative;
+        margin-bottom: 30px;
+        height: 55px;
+
+        @include respond-to(phone-and-down) {
+          height: 35px;
+          margin-bottom: 15px;
+        }
+
+        @include respond-to(smallphone-and-down) {
+          height: 65px;
+        }
+
+        .user-liked {
+          position: absolute;
+          top: 0;
+
+          &__1 {
+            left: 0;
+          }
+
+          &__2 {
+            left: 30px;
+            z-index: 1;
+
+            @include respond-to(desktop-and-down) {
+              left: 15px;
+            }
+          }
+
+          &__3 {
+            left: 60px;
+            z-index: 2;
+
+            @include respond-to(desktop-and-down) {
+              left: 30px;
+            }
+          }
+
+          &__4 {
+            left: 90px;
+            z-index: 3;
+
+            @include respond-to(desktop-and-down) {
+              left: 45px;
+            }
+          }
+
+          &__5 {
+            left: 120px;
+            z-index: 4;
+
+            @include respond-to(desktop-and-down) {
+              left: 60px;
+            }
+          }
+
+          &__6 {
+            left: 150px;
+            z-index: 5;
+
+            @include respond-to(desktop-and-down) {
+              left: 75px;
+            }
+          }
+
+          &__7 {
+            left: 180px;
+            z-index: 6;
+
+            @include respond-to(desktop-and-down) {
+              left: 90px;
+            }
+          }
+
+          &__8 {
+            left: 210px;
+            z-index: 7;
+
+            @include respond-to(desktop-and-down) {
+              left: 105px;
+            }
+          }
+
+          &__9 {
+            left: 240px;
+            z-index: 8;
+
+            @include respond-to(desktop-and-down) {
+              left: 120px;
+            }
+          }
+
+          &__10 {
+            left: 270px;
+            z-index: 9;
+
+            @include respond-to(desktop-and-down) {
+              left: 135px;
+              width: 34px;
+              height: 34px;
+            }
+          }
+
+          &__11 {
+            left: 340px;
+            z-index: 10;
+
+            @include respond-to(desktop-and-down) {
+              left: 175px;
+            }
+
+            @include respond-to(smallphone-and-down) {
+              top: 35px;
+              left: 0;
+            }
+          }
+
+          &__more {
+            width: 48px;
+            height: 48px;
+
+            @include respond-to(desktop-and-down) {
+              width: 32px;
+              height: 32px;
+            }
+          }
+
+          &__avatar {
+            width: 48px;
+            height: 48px;
+            border: 4px solid $white;
+            border-radius: 50%;
+
+            @include respond-to(desktop-and-down) {
+              width: 32px;
+              height: 32px;
+              border: 2px solid $white;
+            }
+          }
+
+          &__total {
+            padding-top: 10px;
+            color: $gray;
+            font-weight: $font-weight-general;
+
+            @include respond-to(desktop-and-down) {
+              padding-top: 8px;
+              font-size: $font-size-large;
+            }
+
+            &--small {
+              color: $gray;
+            }
+          }
+        }
+
+        .user-interact {
+          position: absolute;
+          z-index: 1;
+          top: 8px;
+          right: 0;
+
+          @include respond-to(desktop-and-down) {
+            top: 0;
+          }
+
+          &__link {
+            display: inline-block;
+          }
+
+          &__ic {
+            &--save {
+              display: inline-block;
+              width: 26px;
+              height: 24px;
+              background: url($path-image + 'ic-save.svg') no-repeat center;
+              background-size: cover;
+            }
+
+            &--saved {
+              background: url($path-image + 'ic-saved.svg') no-repeat center;
+            }
+          }
+
+          &__txt {
+            &--save {
+              display: block;
+              margin-top: 5px;
+              font-size: $font-size-small;
+              color: $gray-lighter;
+
+              @include respond-to(phone-and-down) {
+                margin-top: 0;
+              }
+            }
+
+            &--saved {
+              color: $red-foreign;
+            }
+          }
+        }
+      }
+
+      &--gender {
+        margin-bottom: 12px;
+        margin-left: -4px;
+        font-size: 0;
+
+        span {
+          margin: 5px 4px;
+        }
+      }
+
+      &--intro {
+        margin-bottom: 56px;
+
+        @include respond-to(desktop-and-down) {
+          margin-bottom: 32px;
+        }
+
+        .text-inner {
+          color: $red-foreign;
+          font-size: $font-size-base;
+          font-weight: $font-weight-bold;
+        }
+      }
+
+      &--hr {
+        height: 1px;
+        margin-bottom: 32px;
+        background: $brown;
+      }
+
+      &--common {
+        margin-bottom: 32px;
+        color: $black-lighter;
+        font-size: $font-size-base;
+
+        .title {
+          margin-bottom: 10px;
+          font-weight: $font-weight-bold;
+        }
+      }
+
+      &--colors {
+        .list-inline {
+          margin-left: -10px;
+        }
+
+        .list-inline-item {
+          padding-left: 10px;
+          padding-right: 10px;
+          font-weight: $font-weight-light;
+
+          @include respond-to(phone-and-down) {
+            line-height: 24px;
+          }
+        }
+      }
+
+      &--sizes {
+        .label-size {
+          margin-top: 5px;
+          margin-right: 8px;
+        }
+      }
+
+      &--materials {
+        margin-bottom: 0;
+
+        .short-description {
+          font-weight: $font-weight-light;
+
+          @include respond-to(desktop-and-down) {
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .product-details {
+    &__content {
+      position: relative;
+      display: flex;
+
+      @include respond-to(smallphone-and-down) {
+        flex-direction: column;
+      }
+
+      .vertical-axis {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        background: $brown;
+
+        @include respond-to(phone-and-down) {
+          display: none;
+        }
+      }
+    }
+
+    &__descriptions {
+      flex: 1;
+      padding-right: 30px;
+
+      @include respond-to(smallphone-and-down) {
+        order: 2;
+        padding-right: 0;
+      }
+
+      &__content {
+        p {
+          margin-bottom: 10px;
+          color: $black-lighter;
+          font-size: $font-size-base;
+          font-weight: $font-weight-light;
+          line-height: 24px;
+        }
+      }
+    }
+
+    &__strengths {
+      flex: 1;
+      padding-left: 30px;
+
+      @include respond-to(smallphone-and-down) {
+        order: 1;
+        margin-bottom: 16px;
+        padding-left: 0;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $brown;
+      }
+
+      &--title {
+        margin-bottom: 24px;
+        color: $black-lighter;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-bold;
+      }
+
+      .strengths-message {
+        position: relative;
+        padding: 16px 24px;
+        color: $black-lighter;
+        background: $background-result;
+        border-radius: 6px;
+        font-size: $font-size-base;
+        font-weight: $font-weight-light;
+        line-height: 24px;
+      }
+
+      .ic-triangle-shape {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        bottom: -32px;
+        width: 28px;
+        height: 32px;
+        margin-left: -14px;
+        display: inline-block;
+        border-top: 16px solid $background-result;
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+      }
+
+      .strengths-related {
+        margin-top: 32px;
+
+        &__avatar {
+          display: inline-block;
+          width: 80px;
+          height: 80px;
+          margin-bottom: 24px;
+          border-radius: 50%;
+        }
+
+        &__saler {
+          margin-bottom: 10px;
+          color: $black-lighter;
+          font-size: $font-size-medium;
+          font-weight: $font-weight-general;
+        }
+
+        &__shop {
+          margin-bottom: 16px;
+          color: $gray-lighter;
+          font-size: $font-size-base;
+          font-weight: $font-weight-light;
+        }
+
+        &__button {
+          line-height: 24px;
+        }
+      }
+
+      .button {
+        @include respond-to(smallphone-and-down) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .product-address {
+    margin-bottom: 20px;
+
+    &__title {
+      margin-bottom: 30px;
+      color: $black-lighter;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-bold;
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 32px;
+
+      @include respond-to(desktop-and-down) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__link {
+      order: 1;
+      display: inline-block;
+    }
+
+    &__img {
+      width: 180px;
+      height: 180px;
+      border: 1px solid $border-color-secondary;
+      border-radius: $border-radius-base;
+
+      @include respond-to(tablet-and-down) {
+        width: 130px;
+        height: 130px;
+      }
+
+      @include respond-to(smallphone-and-down) {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &__text {
+      order: 2;
+      flex: 1;
+      padding-left: 32px;
+
+      @include respond-to(desktop-and-down) {
+        padding-left: 16px;
+      }
+
+      @include respond-to(desktop-and-down) {
+        order: 3;
+        padding: 30px 0 0;
+      }
+
+      @include respond-to(smallphone-and-down) {
+        padding-top: 16px;
+      }
+
+      h4 {
+        margin-bottom: 16px;
+        font-size: $font-size-average;
+        font-weight: $font-weight-bold;
+      }
+
+      a {
+        color: $black-lighter;
+      }
+    }
+
+    &__location {
+      margin-bottom: 16px;
+      color: $gray-lighter;
+      font-size: $font-size-base;
+      font-weight: $font-weight-light;
+    }
+
+    &__gender {
+      margin-left: -4px;
+      font-size: 0;
+
+      span {
+        margin: 5px 4px;
+      }
+    }
+
+    &__working {
+      margin-top: 24px;
+
+      @include respond-to(desktop-and-down) {
+        margin-top: 16px;
+      }
+
+      p {
+        color: $black-lighter;
+        font-size: $font-size-base;
+        font-weight: $font-weight-light;
+
+        &:first-child {
+          margin-bottom: 10px;
+        }
+      }
+
+      span {
+        display: inline-block;
+        width: 75px;
+        font-weight: $font-weight-bold;
+
+        @include respond-to(smallphone-and-down) {
+          display: block;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &__achievements {
+      order: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 370px;
+
+      @include respond-to(desktop-and-down) {
+        order: 2;
+        width: calc(100% - 180px);
+        padding-left: 30px;
+      }
+
+      @include respond-to(tablet-and-down) {
+        width: calc(100% - 130px);
+      }
+
+      @include respond-to(smallphone-and-down) {
+        width: calc(100% - 100px);
+        padding-left: 12px;
+      }
+
+      h2 {
+        color: $black-lighter;
+        font-size: $font-size-larger;
+        font-family: $font-family-extra;
+        font-weight: $font-weight-bold;
+        line-height: 42px;
+        letter-spacing: 1px;
+
+        @include respond-to(smallphone-and-down) {
+          font-size: $font-size-extra-large;
+          line-height: inherit;
+        }
+      }
+
+      h4 {
+        color: $gray-silver;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-light;
+
+        @include respond-to(smallphone-and-down) {
+          font-size: $font-size-small;
+        }
+      }
+    }
+
+    &__statistics {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin-bottom: 24px;
+
+      @include respond-to(desktop-and-down) {
+        margin-bottom: 16px;
+      }
+
+      @include respond-to(smallphone-and-down) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &__button {
+      width: 100%;
+
+      a {
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+        line-height: 24px;
+      }
+    }
+
+    &__map {
+      height: 400px;
+
+      @include respond-to(phone-and-down) {
+        height: 300px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .product-related {
+    &__title {
+      margin-bottom: 28px;
+      color: $black-lighter;
+
+      @include respond-to(tablet-and-down) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &__group-button {
+      font-size: 0;
+
+      .button {
+        margin: 5px 15px;
+
+        @include respond-to(phone-and-down) {
+          width: 170px;
+          margin-left: 8px;
+          margin-right: 8px;
+        }
+
+        @include respond-to(smallphone-and-down) {
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .disable {
+      color: $silver;
+      font-size: $font-size-extra-large;
+      cursor: none;
+    }
+  }
+
+  .slider-navigation {
+    &__item {
+      height: 97px;
+
+      @include respond-to(large-desktop-and-down) {
+        height: 74px;
+      }
+    }
+  }
+}

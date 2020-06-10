@@ -1,0 +1,101 @@
+//
+// Pages :: S32 Account Registration Completed
+// --------------------------------------------------
+
+.page-account-registration-completed {
+  .account-registration {
+    &__text-inner {
+      text-align: center;
+      line-height: 32px;
+      font-size: $font-size-medium;
+      color: $black-lighter;
+      padding-top: 30px;
+      padding-bottom: 10px;
+
+      @include respond-to(tablet-and-down) {
+        padding-top: 10px;
+      }
+    }
+
+    &__box-text {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 12px;
+
+      @include respond-to(phone-and-down) {
+        margin-top: 10px;
+      }
+
+      @include respond-to(phone-and-down) {
+        padding-bottom: 10px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__text-descripton {
+      line-height: 32px;
+      font-size: $font-size-medium;
+      color: $black-lighter;
+    }
+  }
+
+
+  .box-item-block {
+    @include respond-to(tablet-and-down) {
+      padding: 0 15px;
+    }
+
+    &.account-registration {
+      margin-bottom: 32px;
+      padding-top: 40px;
+
+      @include respond-to(phone-and-down) {
+        padding-top: 20px;
+        margin-bottom: 12px;
+      }
+    }
+
+
+    &.registration-completed {
+      padding-bottom: 38px;
+
+      @include respond-to(phone-and-down) {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .group-button {
+    margin-top: 56px;
+
+    @include respond-to(phone-and-down) {
+      margin-top: 20px;
+    }
+
+    .button-account-completed {
+      @include respond-to(phone-and-down) {
+        margin-bottom: 15px;
+        width: 370px;
+      }
+
+      @include respond-to(smallphone-and-down) {
+        margin: 0 0 15px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.picker-step {
+  &__itemShop {
+    z-index: 99;
+    width: 35%;
+    text-align: center;
+  }
+
+  .box-item-block {
+    box-shadow: none;
+    padding: 40px 0;
+  }
+}
+

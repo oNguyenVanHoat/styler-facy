@@ -1,0 +1,369 @@
+//
+// Pages :: S42 Event Details
+// --------------------------------------------------
+
+.event-details {
+  &__info {
+    margin-bottom: 32px;
+    background: $white;
+    border-radius: $border-radius-mini;
+    box-shadow: 0 1px 10px rgba($black, .05);
+
+    @include respond-to(tablet-and-down) {
+      margin-bottom: 24px;
+    }
+
+    @include respond-to(phone-and-down) {
+      margin-bottom: 16px;
+    }
+
+    &--top {
+      padding: 32px;
+
+      @include respond-to(tablet-and-down) {
+        padding: 24px;
+      }
+
+      @include respond-to(phone-and-down) {
+        padding: 16px;
+      }
+    }
+
+    &--bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 32px;
+      border-top: 1px solid $white-darker;
+
+      @include respond-to(tablet-and-down) {
+        padding: 16px 24px;
+      }
+
+      @include respond-to(phone-and-down) {
+        padding: 8px 16px;
+      }
+    }
+  }
+
+  &__general {
+    padding: 32px;
+
+    @include respond-to(tablet-and-down) {
+      padding: 24px;
+    }
+
+    @include respond-to(phone-and-down) {
+      padding: 16px;
+    }
+
+    &--img {
+      @include respond-to(tablet-and-down) {
+        margin-bottom: 16px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: $border-radius-mini;
+      }
+    }
+
+    &--intro {
+      .heading {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $white-darker;
+
+        &__title {
+          color: $black-lighter;
+          font-weight: $font-weight-bold;
+          line-height: 32px;
+          max-width: 85%;
+
+          @include respond-to(tablet-and-down) {
+            max-width: 80%;
+          }
+
+          @include respond-to(smallphone-and-down) {
+            max-width: 100%;
+            margin-bottom: 15px;
+          }
+        }
+
+        &__curiousation {
+          color: $shark;
+
+          &--title {
+            font-size: $font-size-larger;
+            font-family: $font-family-extra;
+            font-weight: $font-weight-bold;
+          }
+
+          &--subtitle {
+            font-size: $font-size-mini;
+            font-weight: $font-weight-light;
+          }
+        }
+      }
+
+      .subheading {
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid $white-darker;
+
+        &__main {
+          margin-bottom: 22px;
+          font-size: 0;
+
+          &--ic {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 16px;
+            color: $black-lighter;
+            font-size: $font-size-average;
+            vertical-align: middle;
+          }
+
+          &--txt {
+            display: inline-block;
+            vertical-align: middle;
+            color: $black-lighter;
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+          }
+        }
+
+        &__extra {
+          font-size: $font-size-medium;
+          color: $black-lighter;
+          font-weight: $font-weight-light;
+        }
+      }
+
+      .description {
+        margin-bottom: 32px;
+
+        &__title {
+          margin-bottom: 20px;
+          color: $black-lighter;
+          font-size: $font-size-medium;
+          font-weight: $font-weight-bold;
+        }
+
+        &__content {
+          color: $black-lighter;
+          font-weight: $font-weight-light;
+          line-height: 24px;
+
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .notices {
+        &__content {
+          color: $black-lighter;
+
+          &:last-child {
+            margin-top: 20px;
+
+            @include respond-to(phone-and-down) {
+              line-height: 24px;
+            }
+          }
+
+          &--link {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: $blue-darker;
+            font-weight: $font-weight-light;
+          }
+        }
+      }
+    }
+  }
+
+  &__address {
+    &--group-title {
+      margin-bottom: 32px;
+    }
+
+    &--title {
+      margin-bottom: 24px;
+      color: $black-lighter;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-bold;
+    }
+
+    &--subtitle {
+      color: $black-lighter;
+      font-weight: $font-weight-light;
+
+      @include respond-to(smallphone-and-down) {
+        line-height: 24px;
+      }
+    }
+
+    &--map {
+      height: 400px;
+
+      @include respond-to(phone-and-down) {
+        height: 300px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &--link-txt {
+      color: $gray-lighter;
+      font-weight: $font-weight-bold;
+    }
+
+    &--link-ic {
+      color: $brown;
+      font-size: $font-size-average;
+    }
+  }
+
+  &__location {
+    &--title {
+      margin-bottom: 32px;
+      color: $black-lighter;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-bold;
+    }
+
+    &--content {
+      @include respond-to(phone-and-down) {
+        text-align: center;
+      }
+    }
+
+    &--logo-link {
+      display: inline-block;
+    }
+
+    &--logo-img {
+      width: 170px;
+      height: 170px;
+      border-radius: $border-radius-base;
+      border: 1px solid $border-color-secondary;
+    }
+
+    .media-left {
+      padding-right: 32px;
+
+      @include respond-to(phone-and-down) {
+        display: inherit;
+        padding-right: 0;
+      }
+    }
+
+    .media-heading {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: $font-size-extra-large;
+
+      @include respond-to(phone-and-down) {
+        justify-content: center;
+        margin-top: 16px;
+      }
+    }
+
+    .media-subheading {
+      margin-bottom: 12px;
+      color: $gray-lighter;
+      font-weight: $font-weight-light;
+
+      @include respond-to(smallphone-and-down) {
+        line-height: 24px;
+      }
+    }
+
+    .media-description {
+      margin-bottom: 12px;
+      color: $black-lighter;
+      font-weight: $font-weight-light;
+      line-height: 24px;
+    }
+
+    .media-conclusion {
+      color: $gray-lighter;
+      font-weight: $font-weight-light;
+    }
+
+    &--text-info {
+      font-weight: $font-weight-bold;
+
+      .location-title-info {
+        margin-bottom: 16px;
+        color: $gray-lighter;
+      }
+
+      .phone-number {
+        color: $black-lighter;
+        font-size: $font-size-medium;
+      }
+    }
+
+    &--link-ic {
+      display: inline-block;
+      padding-top: 25px;
+      color: $brown;
+      font-size: $font-size-average;
+    }
+  }
+
+  &__participants {
+    &--title {
+      margin-bottom: 32px;
+      color: $black-lighter;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-bold;
+    }
+
+    &--link-txt {
+      color: $gray-lighter;
+      font-weight: $font-weight-bold;
+    }
+
+    &--link-ic {
+      .text {
+        display: inline-block;
+        vertical-align: middle;
+        width: 48px;
+        height: 32px;
+        padding: 8px 0;
+        color: $white;
+        font-size: $font-size-medium;
+        background: $red-foreign-darker;
+        border-radius: 28px;
+      }
+
+      .ic-view-participants {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        color: $brown;
+        font-size: $font-size-average;
+      }
+    }
+  }
+
+  &__btn {
+    .button {
+      @include respond-to(smallphone-and-down) {
+        width: 100%;
+      }
+    }
+  }
+}

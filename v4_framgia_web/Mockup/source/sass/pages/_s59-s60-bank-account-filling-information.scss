@@ -1,0 +1,32 @@
+.bank-account {
+  &__button--change {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    @include respond-to('tablet-and-down') {
+      position: static;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      margin-left: calc(50% - 50px);
+    }
+  }
+
+  .form-customize {
+    .field-wrap {
+      margin-bottom: 32px;
+    }
+
+    .title-field {
+      margin-bottom: 24px;
+    }
+
+    .btn-wrap {
+      margin-top: 14px;
+    }
+
+    .no-notice {
+      margin-bottom: 55px;
+    }
+  }
+}

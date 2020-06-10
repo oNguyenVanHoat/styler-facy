@@ -1,0 +1,75 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s23_delivery_transaction_details)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar2_3')
+      section.dashboard-content.page-delivery-transaction-details
+        .inner-content.content-info
+          .row
+              .col-md-4.transaction-img
+                .box-images
+                  img(src='images/item-product_01.png' alt='')
+              .col-md-6.box-content-transaction
+                .box-top
+                  h3.title NIKE
+                  .roshe-run ROSHE RUN
+                  .logo-company
+                    .box-images-company
+                      img(src='images/logo-shop.png' alt='logo-shop')
+                    .text ONS
+                .box-inner
+                  .shop-order
+                    p.shop-store-number 注文番号：
+                      span {00000001}-{shop.id}-{user.id}-{MM}
+                  .title 注文状況
+                  .box-button
+                    span.label-message-state 配送準備中
+                .box-inner.box-list
+                  .title お問い合わせ伝票番号
+                  p.box-list__phone 0123-4567-8901
+                  p.box-list__name ヤマト運輪
+                    span.box-list__name--text (配送について)
+                .box-inner.box-list
+                  .title お届け先
+                    span.box-list__suggest 自宅
+                  p.box-list__phone スタイラー太郎
+                  p.box-list__phone 090-1234-5678
+                .box-inner.box-list
+                  .title 発送元
+                    span.box-list__suggest スタイラー渋谷神南店
+                  p.box-list__phone 〒150-0041 東京都渋谷区神南1-10-6
+                  p.box-list__phone 090-1234-5678
+                  .shipping-title
+                    span.shipping-name 担当
+                    span.shipping-text スタイラー太郎
+                .box-bottom
+                  .box-payment-details
+                    .box-title お支払い明細
+                    .box-payment
+                      span.name.name-first お品代
+                      span.price 21,600円
+                    .box-payment
+                      span.name.name-first 送料
+                      span.price 0円
+                    .box-payment
+                      span.name 合計
+                      span.price 21,600円(税込)
+
+                  .btn-button
+                    +button('メッセージ画面へ', 'button')(class='button--primary btn-message-screen')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

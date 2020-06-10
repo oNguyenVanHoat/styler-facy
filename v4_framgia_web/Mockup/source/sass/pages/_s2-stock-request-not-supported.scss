@@ -1,0 +1,23 @@
+//
+// Pages :: S2 Stock Request Not Supported
+// --------------------------------------------------
+
+.message {
+  width: 100%;
+  padding: 32px;
+  background: $white;
+  border-radius: $border-radius-mini;
+  box-shadow: 0 1px 10px rgba($black, .05);
+
+  @include respond-to(smallphone-and-down) {
+    padding: 16px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+
+    @include respond-to(smallphone-and-down) {
+      margin-bottom: 16px;
+    }
+  }
+}

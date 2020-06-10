@@ -1,0 +1,88 @@
+//
+// Pages :: S14 Confirmation of collection details
+// --------------------------------------------------
+
+.confirmation-collection {
+  margin: 25px 0 60px;
+  background: $white;
+  box-shadow: 0 1px 10px rgba($black, .05);
+  border-radius: $border-radius-mini;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $white-darker;
+    align-items: center;
+    padding: 30px 40px;
+
+    @include respond-to(smallphone-and-down) {
+      padding: 20px 15px;
+      display: block;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__button {
+    @include respond-to(smallphone-and-down) {
+      margin-top: 15px;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-average;
+    line-height: 30px;
+    font-weight: $font-weight-light;
+    color: $black-lighter;
+  }
+
+  &__address {
+    font-size: $font-size-base;
+    line-height: 48px;
+    font-weight: $font-weight-light;
+    color: $black-lighter;
+
+    @include respond-to(smallphone-and-down) {
+      line-height: 30px;
+    }
+  }
+
+  &__transport {
+    font-size: $font-size-small;
+    font-weight: $font-weight-light;
+    color: $gray-light;
+  }
+
+  &__phone {
+    font-size: $font-size-base;
+    font-weight: $font-weight-light;
+    color: $black-lighter;
+    display: flex;
+  }
+
+  &__phone-number {
+    @include respond-to(smallphone-and-down) {
+      min-width: 100px;
+      line-height: 20px;
+    }
+  }
+
+  &__phone-respon {
+    @include respond-to(smallphone-and-down) {
+      min-width: 120px;
+      line-height: 20px;
+    }
+  }
+
+  &__phone-space {
+    padding: 0 25px;
+    color: $gray-light;
+
+    @include respond-to(smallphone-and-down) {
+      padding: 0 10px;
+      line-height: 20px;
+    }
+  }
+}

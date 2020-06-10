@@ -1,0 +1,112 @@
+//
+// Pages :: S37 Post Details
+// --------------------------------------------------
+
+.page-post-details {
+  .post-banner {
+    background: $white;
+    border-radius: $border-radius-mini;
+    box-shadow: 0 1px 10px rgba($black, .05);
+
+    &__content {
+      padding-left: 32px;
+      padding-right: 32px;
+
+      @include respond-to(tablet-and-down) {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+
+    &__middle {
+      border-top: 1px solid $brown;
+      border-bottom: 1px solid $brown;
+    }
+
+    &__top {
+      padding-top: 24px;
+      padding-bottom: 24px;
+
+      @include respond-to(tablet-and-down) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+
+      &--title {
+        color: $black-lighter;
+        font-weight: $font-weight-light;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      @include respond-to(tablet-and-down) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+
+      @include respond-to(tablet-and-down) {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .inner-icon,
+      .inner-text {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .inner-text {
+        font-size: $font-size-medium;
+        font-weight: $font-weight-bold;
+      }
+
+      &--link {
+        display: inline-block;
+      }
+
+      &--left {
+        .inner-icon {
+          color: $black-lighter;
+          font-size: $font-size-average;
+        }
+
+        .inner-text {
+          margin-left: 4px;
+          color: $black-lighter;
+        }
+      }
+
+      &--right {
+        .inner-icon {
+          color: $brown;
+          font-size: $font-size-extra-large;
+        }
+
+        .inner-text {
+          height: 32px;
+          margin-right: 4px;
+          padding: 8px 12px;
+          color: $white;
+          background: $red-foreign-darker;
+          border-radius: 28px;
+        }
+      }
+    }
+  }
+
+  .section-title {
+    margin: 40px 0 24px;
+    color: $black-lighter;
+
+    @include respond-to(phone-and-down) {
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+  }
+}

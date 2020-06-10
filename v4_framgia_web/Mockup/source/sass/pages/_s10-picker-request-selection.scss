@@ -1,0 +1,192 @@
+//
+// Pages :: S10 Picker Request Selection
+// --------------------------------------------------
+
+.picker-banner {
+  height: 310px;
+  position: relative;
+  border-radius: $border-radius-mini;
+  background-size: cover;
+
+  &:before {
+    background-color: rgba($black, .5);
+    position: absolute;
+    width: 100%;
+    height: 310px;
+    content: '';
+  }
+
+  &__img {
+    width: 100%;
+    height: 310px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &__content {
+    position: absolute;
+    left: 45px;
+    bottom: 35px;
+    color: $white;
+  }
+
+  &__brand {
+    font-size: $font-size-average;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: $font-weight-light;
+  }
+
+  &__use {
+    font-size: $font-size-base;
+    font-weight: $font-weight-light;
+    line-height: 21px;
+    padding: 12px 0;
+  }
+
+  &__price {
+    font-size: 42px;
+    line-height: 42px;
+    font-weight: $font-weight-light;
+  }
+
+  &__currency {
+    font-size: $font-size-average;
+  }
+
+  &__tax {
+    font-size: 13px;
+    position: relative;
+    right: 0;
+    bottom: 5px;
+  }
+}
+
+.select-takeover {
+  padding-top: 40px;
+
+  &__item {
+    padding: 25px 35px;
+    margin: 30px 0;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 10px rgba($black, .05);
+    display: flex;
+    align-items: center;
+    background: $white;
+    position: relative;
+
+    @include respond-to(smallphone-and-down) {
+      padding: 5px 10px;
+    }
+  }
+
+  &__select {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+
+    .with-gap {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+
+  &-selected {
+    border: 1px solid $blue-darker;
+  }
+
+  &__button {
+    position: relative;
+    z-index: 99;
+    margin-left: 10px;
+
+    @include respond-to(smallphone-and-down) {
+      display: flex;
+      margin-left: 0;
+    }
+
+    .button {
+      display: block;
+      margin: 12px 0;
+
+      @include respond-to(smallphone-and-down) {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 36px;
+    color: $blue-darker;
+    min-width: 70px;
+    opacity: 0;
+
+    @include respond-to(smallphone-and-down) {
+      min-width: 40px;
+    }
+  }
+
+  &__icon-active {
+    opacity: 1;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+    @include respond-to(smallphone-and-down) {
+      display: block;
+    }
+  }
+
+  &__shop-name {
+    color: $black-lighter;
+    font-size: $font-size-average;
+    line-height: 30px;
+  }
+
+  &__shop-branch {
+    color: $gray-light;
+    font-size: $font-size-small;
+    line-height: 18px;
+    padding-bottom: 18px;
+  }
+
+  &__shop-address,
+  &__shop-phone {
+    color: $black-lighter;
+    font-size: $font-size-base;
+    line-height: 30px;
+  }
+}
+
+.add-takeover {
+  padding: 25px 0;
+  margin: 30px 0 55px;
+  box-shadow: 0 1px 10px rgba($black, .05);
+  text-align: center;
+  color: $silver;
+  background: $white;
+  display: block;
+  width: 100%;
+  border: 0;
+
+  &__icon {
+    font-size: 58px;
+  }
+
+  &__text {
+    padding-top: 20px;
+    font-weight: $font-weight-light;
+  }
+}
+
+.authentication-step {
+  text-align: center;
+}
+

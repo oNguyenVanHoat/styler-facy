@@ -1,0 +1,104 @@
+//
+// Components :: UI Elements
+// --------------------------------------------------
+
+.user-chat-record,
+.admin-chat-record {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &--invisible {
+    display: none;
+
+    &.admin-chat-record--visible,
+    &.user-chat-record--visible {
+      display: flex;
+    }
+  }
+
+  &__profile {
+    position: relative;
+
+    &--link {
+      display: inline-block;
+    }
+
+    &--avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+
+      @include respond-to(phone-and-down) {
+        width: 46px;
+        height: 46px;
+      }
+
+      @include respond-to(smallphone-and-down) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__time {
+    color: $silver;
+    font-size: $font-size-mini;
+    font-weight: $font-weight-light;
+
+    @include respond-to(smallphone-and-down) {
+      font-size: 11px;
+    }
+  }
+}
+
+
+.user-chat-record {
+  &__profile {
+    left: -72px;
+
+    @include respond-to(tablet-and-down) {
+      left: -60px;
+    }
+
+    @include respond-to(phone-and-down) {
+      left: 0;
+    }
+
+    &--text {
+      color: $black-lighter;
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      padding-left: 20px;
+
+      @include respond-to(large-desktop-and-down) {
+        padding-left: 10px;
+      }
+
+      @include respond-to(smallphone-and-down) {
+        font-size: $font-size-small;
+      }
+    }
+  }
+}
+
+.admin-chat-record {
+  &__profile {
+    right: -72px;
+
+    @include respond-to(tablet-and-down) {
+      right: -60px;
+    }
+
+    @include respond-to(phone-and-down) {
+      right: 0;
+    }
+  }
+}
+
+.picker-title {
+  color: $black-lighter;
+  font-size: $font-size-extra-large;
+  line-height: 36px;
+}

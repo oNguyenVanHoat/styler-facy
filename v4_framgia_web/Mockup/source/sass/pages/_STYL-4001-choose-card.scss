@@ -1,0 +1,40 @@
+//
+// Pages :: STYL-4001 Choose Card
+// --------------------------------------------------
+
+.modal-choose-card {
+  .modal-body {
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+
+  $table-modal: '.table-bordered > tbody > tr > td';
+
+  #{$table-modal} {
+    border-color: $charcoal;
+    text-align: center;
+
+    &:first-child {
+      background: $eclipse;
+      color: $white;
+      width: 128px;
+    }
+  }
+
+  .select-close {
+    display: block;
+    padding-top: 25px;
+    color: $red;
+
+    @include respond-to(smallphone-and-down) {
+      padding-bottom: 10px;
+      padding-top: 0;
+    }
+  }
+}
+
+.modal-delete-info {
+  .modal-header {
+    padding: 0;
+  }
+}

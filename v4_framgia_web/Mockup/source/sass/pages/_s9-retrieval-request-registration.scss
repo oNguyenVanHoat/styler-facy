@@ -1,0 +1,42 @@
+//
+// Pages :: S9 Retrieval Request Registration
+// --------------------------------------------------
+
+.page-retrieval-request-registration {
+  .inner {
+    padding: 40px 0;
+    background: $white;
+    box-shadow: 0 1px 10px rgba($black, .05);
+
+    @include respond-to(desktop-and-down) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include respond-to(phone-and-down) {
+      padding: 20px 15px;
+    }
+  }
+
+  .field-wrapper {
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .hr {
+    height: 1px;
+    margin: 50px 0 24px;
+    background: $white-darker;
+  }
+
+  .field-half-width {
+    width: 50%;
+
+    @include respond-to(phone-and-down) {
+      width: 100%;
+    }
+  }
+}

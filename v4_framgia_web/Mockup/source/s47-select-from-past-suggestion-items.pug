@@ -1,0 +1,31 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s47_select_from_past_suggestion_items)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar3_11')
+
+      section.dashboard-content.page-select-suggestion-items
+        .select-suggestion
+          .select-suggestion__btn.text-center
+            +button('新規提案作成')(class='button--primary button--w370')
+          .row
+            each val in [0, 1, 2, 3, 4, 5, 6, 7, 8 ,9, 10, 11]
+              +productGrid()
+          .text-center
+            i.icon-loader
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

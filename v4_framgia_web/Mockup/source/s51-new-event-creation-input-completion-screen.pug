@@ -1,0 +1,67 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s51_new_event_creation_input_completion_screen)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar4_1')
+
+      section.dashboard-content.page-new-event-creation
+        form.form-customize
+          .inner.add-new-event
+            .row
+              .col-md-5.col-sm-5
+                .account-avatar
+                  .account-avatar-img
+                    img.img-responsive(src='images/event-new.png' alt='')
+                    i.ic-customize-img.sty-icon-camera-icon
+                    .account-avatar-text
+                      p.account-avatar-text__name イベント画像をアップロード
+                      p.account-avatar-text__size （容量5MB以内を推奨）
+                    .box-warning-error
+                      span.error-message イベント名に誤りがあります。
+              .col-md-6.col-sm-6
+                .field-wrapper
+                  +input-field('イベント名', '必須', '', 'OMNIGOD 横浜 POPUP SHOP オープン', '', '')
+                  .box-warning
+                    span.warning 12/40
+                  .box-warning-error
+                    span.error-message イベント名に誤りがあります。
+                .field-wrapper.field-datetime
+                  +input-field('開始日', '必須', 'datetime-start', '2017/06/22', '', '')
+                  i.ic-customize-time.item-header__no-color.sty-icon-event
+                  .box-warning-error
+                    span.error-message イベント名に誤りがあります。
+                .field-wrapper.field-datetime
+                  +input-field('終了日', '', 'datetime-end', '2017/06/22', '', '')
+                  i.ic-customize-time.item-header__no-color.sty-icon-event
+                  span.warning 終了日の設定は任意です
+                .field-wrapper
+                  +input-field('開催場所', '必須', '', '渋谷区代官山11-1代官山ハイツ1F', '', '')
+                  .box-warning
+                    span.warning 12/40
+                  .box-warning-error
+                    span.error-message イベント名に誤りがあります。
+                .field-wrapper.field-info
+                  +textarea('イベントの内容', '必須', 'ライフスタイルを表現するモノとして向き合う" 【TOKYO DAIKANYAMA】 渋谷区代官山11-1代官山ハイツ1F 営業時間　12:00 -20:00 【OSAKA KITAHORIE】 大阪市西区北堀江1-13-9 宮脇ビル1F 営業時間　12:00 -20:00 http://www.omnigod.jp/about/index.html', '')
+                  .box-warning-error
+                    span.error-message イベント名に誤りがあります。
+                  .box-warning
+                    span.warning 600/1000
+
+          .group-button.text-center
+            +button('提案実行', 'submit')(class='button--primary button--w370')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

@@ -1,0 +1,57 @@
+//
+// Components :: Bootraps Tags Input
+// --------------------------------------------------
+
+.bootstrap-tagsinput {
+  background-color: $white;
+  border: 1px solid $white;
+  box-shadow: none;
+  padding: 0;
+
+  .label-info {
+    background-color: $white;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid $silver;
+    font-size: $font-size-base;
+    font-weight: $font-weight-light;
+    color: $silver;
+    display: inline-block;
+    padding: 0 10px;
+    position: relative;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border-radius: $border-radius-mini;
+  }
+
+  .tag [data-role="remove"] {
+    &:after {
+      content: '';
+      position: absolute;
+      padding: 0 2px;
+      background: url('#{$path-image}delete-icon.svg') no-repeat center;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      top: -10px;
+    }
+  }
+
+  input {
+    border: 1px solid $silver;
+    height: 32px;
+    line-height: 32px;
+    width: 160px;
+    border-radius: $border-radius-mini;
+    color: $silver;
+
+    &:focus {
+      border: 1px solid $silver;
+    }
+
+    &::placeholder {
+      color: $silver;
+    }
+  }
+}

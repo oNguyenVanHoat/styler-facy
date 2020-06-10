@@ -1,0 +1,55 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s61_modal_gallery)
+  body.main-page.has-chat.modal-gallery-custom
+    +header-guest()
+    main.dashboard-container(role='main')
+      +sidebar('sidebar1_1')
+      section.dashboard-content.page-inventory-request-not-support
+        .comment.comment-view
+          +chatHeading()
+          .nano.chat-content
+            .nano-content
+              +userChatMessage()
+              +userChatMessageTextOnly()
+              +adminChatMessageTextOnly()
+              +adminChatMessage('has-no-bg-color')
+              +adminChatMessage('has-bg-color')
+        .comment.comment-form
+          +chatFormHasTriggerModal()
+
+    +footer()
+    +snackbarGuest()
+
+    +modal('modal-request-suggest', 'modal-md')(class='modal-request-suggest modal-vertical-middle')
+      +inject('modal-header')
+        .modal-suggest
+          i(class='sty-icon-delete icon-close-modal' data-dismiss='modal')
+      +inject('modal-body')
+      +inject('modal-footer')
+        .text-center
+          +button('新規作成')(class='btn button--primary button--w160')
+          +button('履歴選択', '')(class='button--cancel button--w160' data-toggle='modal' data-target='#modal-suggest-shop' data-dismiss='modal')
+
+    +modal('modal-suggest-shop', 'modal-lg')(class='modal-suggest-shop')
+      +inject('modal-header')
+        .modal-suggest
+          h4.modal-suggest-title カテゴリー別提案
+          i(class='sty-icon-delete icon-close-modal' data-dismiss='modal')
+      +inject('modal-body')
+        .row.category-list
+          .nano
+            .nano-content
+              each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+                .col-md-3.col-sm-3.category-item
+                  a(href='#' class='category-link') ジャケット・アウター
+      +inject('modal-footer')
+    +import-script()

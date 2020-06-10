@@ -1,0 +1,62 @@
+//
+// Pages :: S58 Shop Account Registration Finish
+// --------------------------------------------------
+
+.registration-intro {
+  .picker-step {
+    &__item {
+      width: 35%;
+    }
+  }
+}
+
+.registration-finish {
+  &__title {
+    font-size: $font-size-extra-large;
+    color: $black-lighter;
+    margin-bottom: 25px;
+    text-align: center;
+
+    @include respond-to(phone-and-down) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__content {
+    padding: 35px;
+    text-align: center;
+
+    @include respond-to(phone-and-down) {
+      padding: 15px;
+    }
+  }
+
+  &__confirm {
+    margin-bottom: 25px;
+
+    @include respond-to(phone-and-down) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    line-height: 24px;
+    font-size: $font-size-base;
+    color: $black-lighter;
+  }
+
+  &__button {
+    text-align: center;
+    margin-top: 40px;
+
+    @include respond-to(phone-and-down) {
+      margin-top: 30px;
+    }
+
+    .button {
+      @include respond-to(smallphone-and-down) {
+        width: 100%;
+      }
+    }
+  }
+}

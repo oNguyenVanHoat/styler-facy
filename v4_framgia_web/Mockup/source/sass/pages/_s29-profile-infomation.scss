@@ -1,0 +1,354 @@
+//
+// Pages :: S29 Profile Infomation
+// --------------------------------------------------
+
+.page-profile-infomation {
+  .title-profile-infomation {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: $font-size-extra-large;
+
+    @include respond-to(phone-and-down) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+
+  .inner-content-title {
+    text-align: center;
+    font-size: $font-size-extra-large;
+    font-weight: $font-weight-bold;
+    padding-bottom: 45px;
+
+    @include respond-to(phone-and-down) {
+      padding-bottom: 20px;
+    }
+  }
+
+  .box-content-profile-information {
+    .btn-update-profile {
+      margin-left: 30px;
+    }
+  }
+
+  .box-images {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+
+    @include respond-to(tablet-and-down) {
+      justify-content: flex-start;
+      margin-bottom: 15px;
+    }
+
+    @include respond-to(phone-and-down) {
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .box-description {
+      text-align: center;
+    }
+
+    .box-text-images {
+      padding-top: 15px;
+    }
+
+    .text-second {
+      padding-top: 7px;
+      color: $gray-silver;
+    }
+  }
+
+  .box-images-content {
+    position: relative;
+
+    .images {
+      width: 170px;
+      height: 170px;
+      background: $gray-gains;
+    }
+
+    .icon-uploads {
+      position: absolute;
+      top: 70px;
+      left: 60px;
+      background: url('#{$path-image}cameraicon.png') no-repeat center;
+      width: 46px;
+      height: 38px;
+    }
+  }
+
+  .field-wrapper {
+    .rank {
+      text-align: right;
+      color: $silver;
+      padding-top: 8px;
+    }
+  }
+
+  .text {
+    line-height: 12px;
+
+    @include respond-to(smallphone-and-down) {
+      line-height: 20px;
+    }
+  }
+
+  .field-info {
+    .form-control {
+      height: 105px;
+
+      @include respond-to(phone-and-down) {
+        height: 60px;
+      }
+    }
+  }
+
+  .box-input-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+
+    .form-control {
+      &:focus {
+        border-bottom: 1px solid $silver;
+      }
+    }
+
+    .box-input {
+      display: flex;
+      align-items: center;
+    }
+
+    .text-input-time {
+      width: 50px;
+      padding: 20px 0 0 10px;
+      color: $dove-gray;
+    }
+  }
+
+  .inner-content {
+    background: $white;
+    border-radius: $border-radius-mini;
+    box-shadow: 0 1px 10px rgba($black, .05);
+
+    @include respond-to(phone-and-down) {
+      padding: 0 15px;
+    }
+
+    .inner-content-custom {
+      margin: 0 auto;
+    }
+
+    &.introduction {
+      margin-bottom: 48px;
+      padding: 48px;
+    }
+
+    &.account-info {
+      margin-bottom: 32px;
+      padding-top: 56px;
+      padding-bottom: 56px;
+
+      @include respond-to(tablet-and-down) {
+        padding: 15px;
+      }
+
+      @include respond-to(phone-and-down) {
+        margin-bottom: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+
+    &.service-terms {
+      padding: 32px 32px 56px;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 24px;
+    color: $black-lighter;
+    font-weight: $font-weight-light;
+  }
+
+  .checkbox-wrapper {
+    display: flex;
+    margin-top: 6px;
+    flex-wrap: wrap;
+    width: 575px;
+
+    @include respond-to(phone-and-down) {
+      width: 100%;
+    }
+
+
+    label {
+      margin-bottom: 0;
+      font-weight: $font-weight-light;
+    }
+
+    .checkbox-custom {
+      margin-right: 28px;
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-top: 10px;
+        margin-right: 0;
+
+        @include respond-to(phone-and-down) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .introduction {
+    .title {
+      margin-bottom: 22px;
+      color: $black-lighter;
+      font-weight: $font-weight-bold;
+    }
+
+    .short-description {
+      margin-bottom: 40px;
+      color: $black-lighter;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-light;
+      line-height: 32px;
+    }
+  }
+
+  .account-info {
+    .field-wrapper {
+      margin-bottom: 50px;
+
+      @include respond-to(phone-and-down) {
+        margin-bottom: 20px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .filed-wrapper-custom {
+      margin-bottom: 35px;
+    }
+  }
+
+  .group-button {
+    @include respond-to(phone-and-down) {
+      margin-top: 20px;
+    }
+
+    .button {
+      margin: 0;
+
+      @include respond-to(smallphone-and-down) {
+        width: 100%;
+      }
+    }
+  }
+
+  .button-custom {
+    @include respond-to('desktop-and-up') {
+      text-align: left;
+      padding-left: 98px;
+    }
+  }
+
+  .box-button-profile-information {
+    .button-profile-infomation {
+      margin-top: 56px;
+    }
+  }
+}
+
+.styler-table {
+  width: 100%;
+
+  > tbody {
+    > tr {
+      > th {
+        text-align: center;
+        color: $gray-lighter;
+        font-weight: $font-weight-light;
+        padding: 10px 8px;
+
+        @include respond-to('phone-and-down') {
+          display: none;
+        }
+
+        &:nth-child(1) {
+          width: 50px;
+        }
+
+        &:nth-child(3) {
+          width: 50px;
+        }
+      }
+
+      > td {
+        padding: 5px 0;
+
+        @include respond-to('phone-and-down') {
+          display: block;
+        }
+
+        &:nth-child(3) {
+          text-align: center;
+        }
+
+        &:first-child {
+          padding-top: 15px;
+        }
+
+        &:before {
+          content: attr(data-th)' ';
+          font-weight: $font-weight-light;
+          width: 90px;
+          padding: 7px 0;
+          display: inline-block;
+
+          @include respond-to('phone-and-up') {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .box-input-inner {
+    position: relative;
+
+    @include respond-to('phone-and-down') {
+      display: inline-block;
+    }
+  }
+
+  .sty-icon-access-time {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+  }
+
+  .checkbox-custom {
+    text-align: center;
+
+    @include respond-to('phone-and-down') {
+      display: inline-block;
+    }
+  }
+
+  .space {
+    @include respond-to('phone-and-down') {
+      display: none;
+    }
+  }
+}
+
+

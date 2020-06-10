@@ -1,0 +1,177 @@
+//
+// Components :: Datetimepicker
+// --------------------------------------------------
+.field-datetime {
+  width: 50%;
+  position: relative;
+
+  @include respond-to(phone-and-down) {
+    width: 100%;
+  }
+
+  .form-control {
+    position: relative;
+    z-index: 6;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .picker-switch {
+    font-family: $font-family-extra;
+    color: $gray-bunker;
+    font-size: $font-size-medium;
+    text-transform: capitalize;
+    font-weight: $font-weight-general;
+  }
+
+  .dow {
+    font-family: $font-family-extra;
+    color: $gray-lighter;
+    font-size: $font-size-base;
+    text-transform: uppercase;
+    font-weight: $font-weight-general;
+  }
+
+  .bootstrap-datetimepicker-widget {
+    border-color: $white-darker;
+    border-radius: $border-radius-small + 1;
+    min-width: 445px;
+    padding: 15px;
+    box-shadow: 0 1px 13px 0 rgba($black, .05);
+
+    @include respond-to(phone-and-down) {
+      min-width: 360px;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      min-width: inherit;
+      width: 100%;
+      padding: 0;
+    }
+
+    .day {
+      font-family: $font-family-extra;
+      font-size: $font-size-mini;
+      padding: 2px;
+      border-radius: $border-radius-mini;
+    }
+
+    .today {
+      &:before {
+        display: none;
+      }
+    }
+
+    .active {
+      background: $blue;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .old {
+      background: $body-background-color;
+    }
+
+    .next,
+    .prev,
+    .picker-switch {
+      &:hover {
+        background: $blue;
+        border-radius: $border-radius-mini;
+      }
+    }
+  }
+
+  .top {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .bottom {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .ic-customize-time {
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+
+    @include respond-to(phone-and-down) {
+      right: 20px;
+    }
+  }
+
+  &:hover {
+    .ic-customize-time {
+      color: $blue;
+    }
+  }
+}
+
+.glyphicon-chevron-left {
+  transform: rotate(-180deg);
+  float: left;
+
+  &:before {
+    content: '\e911';
+    font-family: $font-family-icon;
+    color: $gray-lighter;
+  }
+}
+
+.glyphicon-chevron-right {
+  float: right;
+
+  &:before {
+    content: '\e911';
+    font-family: $font-family-icon;
+    color: $gray-lighter;
+  }
+}
+
+.time-picker {
+  .bootstrap-datetimepicker-widget {
+    td {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+
+      &:first-child {
+        padding: 0;
+      }
+    }
+
+    span {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      font-weight: normal;
+      font-size: $font-size-base;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+
+    .btn {
+      color: $gray-lighter;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    .btn-primary {
+      background: transparent;
+      border-color: transparent;
+      color: $blue;
+    }
+  }
+}

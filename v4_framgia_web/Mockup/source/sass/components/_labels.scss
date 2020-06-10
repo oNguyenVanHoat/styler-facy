@@ -1,0 +1,129 @@
+//
+// Components :: Labels
+// --------------------------------------------------
+
+// Label Primary
+.label-primary {
+  display: inline-block;
+  background: $white;
+  font-size: $font-size-base;
+  font-weight: $font-weight-light;
+  border-radius: $border-radius-mini;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &--md {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  &--lg {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  &--shop {
+    height: 30px;
+    line-height: 30px;
+
+    @include respond-to(smallphone-and-down) {
+      height: 22px;
+      line-height: 22px;
+      font-size: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  .not-macos & {
+    &--md {
+      line-height: 26px;
+    }
+
+    &--shop {
+      line-height: 26px;
+
+      @include respond-to(smallphone-and-down) {
+        line-height: 20px;
+      }
+    }
+  }
+
+  &--sm {
+    height: 24px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  &--gray {
+    color: $silver;
+    border: 1px solid $silver;
+  }
+
+  &--gentleman {
+    color: $blue-darker;
+    border: 1px solid $blue-darker;
+  }
+
+  &--lady {
+    color: $red-foreign;
+    border: 1px solid $red-foreign;
+  }
+
+  &--tshirt {
+    color: $silver;
+    border: 1px solid $silver;
+  }
+
+  &--bordered {
+    color: $black-lighter;
+    border: 1px solid $black-lighter;
+  }
+
+  &--solid {
+    border: 1px solid $button-primary-bg;
+    background: $button-primary-bg;
+    color: $white;
+  }
+}
+
+/// Label Message State
+.label-message-state {
+  background: $red;
+  padding: 0 $gutter;
+  border-radius: 100px;
+  color: $white;
+  font-weight: $font-weight-bold;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+
+  .not-macos & {
+    line-height: 28px;
+  }
+}
+
+// Label Sizes (Products)
+.label-size {
+  display: inline-block;
+  height: 24px;
+  padding: 4px 20px;
+  background: $white;
+  color: $black-lighter;
+  border: 1px solid $black-lighter;
+  border-radius: $border-radius-mini;
+}
+
+// Label manages message of customer
+.label-manage-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 24px;
+  color: $white;
+  background: $blue;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  border-radius: 100px;
+}

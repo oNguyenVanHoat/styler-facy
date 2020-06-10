@@ -1,0 +1,437 @@
+//
+// Pages :: STYL-4001 Select Address User
+// --------------------------------------------------
+.page-select-address {
+  margin-bottom: 105px;
+  padding: 0;
+}
+
+.snackbar-address {
+
+  &__button {
+    padding-left: 0;
+    margin-left: -65px;
+
+     @include respond-to(phone-and-down) {
+        margin-left: 0;
+        text-align: center;
+      }
+
+    .text {
+      font-weight: $font-weight-light;
+      font-size: $font-size-medium;
+      letter-spacing: .6px;
+    }
+  }
+}
+
+.address {
+  background: $white;
+  padding-top: 60px;
+  padding-right: 95px;
+  padding-bottom: 50px;
+  padding-left: 45px;
+
+  @include respond-to(phone-and-down) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+   @include respond-to(smallphone-and-down) {
+    padding-top: 40px;
+  }
+
+  &-title {
+    font-weight: $font-weight-general;
+    color: $nero-grey;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .picker-step {
+    &__group {
+      box-shadow: none;
+    }
+  }
+
+  $selector: '.picker-step';
+
+  #{$selector} {
+
+    &__line {
+      width: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__item--active {
+      #{$selector} {
+        &__text {
+          color: $dim-gray;
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+  }
+
+  $select-item: '.table-product tr';
+
+  #{$select-item} {
+    > th {
+      border: 0;
+    }
+
+    > th:first-child {
+      text-align: center;
+    }
+
+    > th:last-child {
+      @include respond-to(phone-and-down) {
+        min-width: 70px;
+      }
+    }
+  }
+
+  .table-product {
+    border-bottom: 1px solid $white-foreign;
+  }
+
+  .product-img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 30%;
+    position: relative;
+
+    &--item {
+      max-width: 220px;
+
+      @include respond-to(smallphone-and-down) {
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .product-des {
+    width: 50%;
+    color: $black-lighter;
+    padding-left: 60px;
+    line-height: 30px;
+    padding-top: 35px;
+
+    @include respond-to(phone-and-down) {
+      padding-left: 10px;
+    }
+
+    &--title {
+      font-size: $font-size-average;
+      font-weight: $font-weight-general;
+    }
+
+    &--sub {
+      font-size: $font-size-mini;
+    }
+
+    &--price {
+      font-size: $font-size-mini;
+      margin-bottom: 15px;
+    }
+
+    &_size {
+      &--name {
+        color: $dark-gray;
+      }
+    }
+  }
+
+  .product-number {
+    position: relative;
+
+    &--text {
+      position: absolute;
+      top: 50%;
+    }
+  }
+
+  .table-transport {
+    text-align: center;
+
+    > tbody > tr > td {
+      border-top: 0;
+    }
+
+    .gender {
+      height: auto;
+      margin-top: 10px;
+      border: 0;
+      line-height: 45px;
+
+      @include respond-to(phone-and-down) {
+        margin-top: 0;
+      }
+
+      &-item {
+        display: block;
+        width: auto;
+        border: 0;
+        padding-left: 2px;
+      }
+    }
+
+    .gender-radio {
+      + label {
+        text-align: left;
+
+        span {
+          padding-left: 35px;
+
+          &:before {
+            margin-left: 0;
+            font-size: $font-size-medium - 1;
+            left: 2px;
+            color: $white;
+          }
+
+          &:after {
+            content: '';
+            width: 22px;
+            height: 22px;
+            border: 2px solid $dusty-gray;
+            border-radius: $border-radius-mini;
+            position: absolute;
+            z-index: 8;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+
+      &:checked {
+        + label {
+          span {
+            &:after {
+              border-color: $black;
+              background: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .transport {
+    display: block;
+    width: 500px;
+    min-height: 175px;
+    padding: 10px 30px;
+    background: $concrete;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: left;
+
+    @include respond-to(phone-and-down) {
+      width: 480px;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      width: 290px;
+      padding: 0;
+    }
+
+    .radio-wrapper {
+      padding-top: 55px;
+    }
+
+    &-title {
+      margin-top: 48px;
+      border-bottom: 2px solid $white-darker;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    &-des {
+      color: $dim-gray;
+      min-width: 220px;
+
+      @include respond-to(smallphone-and-down) {
+        min-width: 200px;
+      }
+
+      &--office {
+        font-size: $font-size-small - 3;
+      }
+
+      &--taro {
+        font-size: $font-size-small - 3;
+        margin-bottom: 20px;
+      }
+
+      &--name {
+        font-size: $font-size-average + 1;
+      }
+
+      &--content {
+        font-size: $font-size-medium;
+        letter-spacing: .7px;
+        font-weight: $font-weight-normal;
+        line-height: 22px;
+      }
+    }
+
+    .button {
+      padding-left: 150px;
+      padding-top: 40px;
+
+      @include respond-to(phone-and-down) {
+        padding-left: 120px;
+      }
+
+      @include respond-to(smallphone-and-down) {
+        padding-left: 0;
+      }
+
+      &-change {
+        display: block;
+        color: $blue-darker;
+        margin-bottom: 30px;
+      }
+
+      &-delete {
+        display: block;
+        color: $red;
+      }
+    }
+  }
+}
+
+.button-address {
+  .button {
+    &--cancel {
+      font-weight: $font-weight-light;
+      font-size: $font-size-medium;
+      letter-spacing: .6px;
+    }
+  }
+}
+
+.modal-address {
+  label {
+    color: $silver-color;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+
+    .text {
+      color: $red;
+      font-size: $font-size-large;
+    }
+  }
+
+  .form-control {
+    border: 1px solid $alto;
+    border-radius: 0;
+  }
+
+  .modal-footer {
+    padding-bottom: 30px;
+
+    @include respond-to(smallphone-and-down) {
+      padding-bottom: 0;
+    }
+
+    .button {
+      font-weight: $font-weight-normal;
+    }
+  }
+}
+
+.card-support {
+  &--img {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.modal-choose-card {
+  label {
+    margin-bottom: 10px;
+  }
+
+  .select-box-style {
+    .form-control {
+      width: 80px;
+      height: 33px;
+      float: left;
+    }
+  }
+
+  .select-date {
+    &__item {
+      display: inline-block;
+      margin-right: 20px;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 1px;
+        height: 15px;
+        transform: rotate(15deg);
+        background: $silver-color;
+        position: absolute;
+        z-index: 2;
+        right: -12px;
+        top: 15px;
+      }
+
+      .form-group {
+        overflow: hidden;
+        margin-top: -10px;
+      }
+
+      &:last-child {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .box-warning-error {
+    .warning {
+      text-align: left;
+      font-size: $font-size-small - 3;
+    }
+  }
+
+  .modal-footer {
+    .warning {
+      display: block;
+      margin-top: 20px;
+      padding-right: 35px;
+
+      @include respond-to(smallphone-and-down) {
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+    }
+
+    .text {
+      color: $red;
+      font-size: $font-size-large;
+    }
+  }
+
+  .error {
+    padding-bottom: 20px;
+    color: $red;
+  }
+
+  .validate {
+    .form-control {
+      background: $pig-pink;
+    }
+  }
+}

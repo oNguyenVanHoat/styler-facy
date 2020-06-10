@@ -1,0 +1,169 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.STYL_4001_choose_card)
+  body.main-page.no-sidebar.no-footer
+    +header-customer()
+    main.dashboard-container(role='main')
+      section.dashboard-content.page-proposal.page-select-address
+        .container
+          .address
+            h2.address-title.text-center アイテムの購入
+            table.table.table-product
+              thead
+                tr
+                  th アイテム
+                  th
+                  th 個数
+              tbody
+                tr
+                  td.product-img
+                    img(src='images/product_01.png' alt='' class='product-img--item')
+                  td.product-des
+                    h4.product-des--title NEEDLES
+                    p.product-des--sub KNIT BOMBER CAP
+                    p.product-des--price ¥14,040（税込）
+                    p.product-des_size 
+                      span.product-des_size--name サイズ：
+                      span.product-des_size--text L
+                    p.product-des_size 
+                      span.product-des_size--name カラー：
+                      span.product-des_size--text ゼファ・レッド
+                  td.product-number
+                    p.product-number--text １個
+            .picker-step__group
+              .picker-step__list
+                .picker-step__line
+                .picker-step__item
+                  span.picker-step__button.picker-step__button--first
+                  p.picker-step__text お届け先
+                .picker-step__item.picker-step__item--active
+                  span.picker-step__button
+                  p.picker-step__text 決済方法
+                .picker-step__item
+                  span.picker-step__button
+                  p.picker-step__text 確認
+                .picker-step__item
+                  span.picker-step__button.picker-step__button--last
+                  p.picker-step__text 完了
+
+              h3.transport-title.text-center お届け先を選択
+              table.table.table-transport
+                tbody
+                  tr.transport
+                    td.radio-wrapper
+                      ul.gender
+                        li.gender-item
+                          +radio-button-gender('radio-select', 'card-one', '', 'checked')
+                    td.transport-des
+                      p.transport-des--office オフィス
+                      p.transport-des--name **** **** *333
+                      p.transport-des--taro
+                      p.transport-des--content STYLER TARO
+                      p.transport-des--content 04/2020
+                    td.button
+                      a(href='#' class='button-change') 変更
+                      a(href='#' class='button-delete' data-toggle='modal' data-target='#modal-delete-info') 削除
+                  tr.transport
+                    td.radio-wrapper
+                      ul.gender
+                        li.gender-item
+                          +radio-button-gender('radio-select', 'card-three', '', '')
+                    td.transport-des
+                      p.transport-des--office オフィス
+                      p.transport-des--name **** **** *333
+                      p.transport-des--taro
+                      p.transport-des--content STYLER TARO
+                      p.transport-des--content 04/2020
+                    td.button
+                      a(href='#' class='button-change') 変更
+                      a(href='#' class='button-delete' data-toggle='modal' data-target='#modal-delete-info') 削除
+              .button-address.text-center
+                +button-link('お届け先を追加する')(data-toggle='modal' data-target='#modal-choose-card' class='button--primary button--cancel button--w305')
+    section.snackbar-booking.snackbar-address
+      .snackbar-booking__button.snackbar-address__button
+        +button-link('支払い方法へ進む')(class='button--primary button--primary-danger button--w305')
+
+    //- Modal choose card
+    +modal('modal-choose-card', 'modal-sm')(class='modal-choose-card modal-address modal-color-size modal-vertical-middle')
+      +inject('modal-header')
+        .modal-suggest
+          h4.modal-title カード情報
+      +inject('modal-body')
+        p.card-support
+         label 対応カード
+         img(src='images/card.png' alt='' class='card-support--img')
+        .field-wrapper
+          +input-field('カード名義', '*', '', 'STYLER TAROU', '', '')
+        .field-wrapper
+          +input-field('カード番号', '*', '', '0000000000', '', '')
+        .field-wrapper
+          p.card-date
+            label 有効期限
+              span.text *
+          .select-date
+            .select-date__item
+              +selectBox('', '', '01', '', '', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12')
+            .select-date__item
+              +selectBox('', '', '2018', '', '', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', '2035', '2036', '2037', '2038')
+        .field-wrapper
+          +input-field('セキュリティコード', '', '', '000', '', '', '', '', '※カードの裏面もしくは表にある４桁の数字')
+      +inject('modal-footer')
+        .text-center
+          +button('OK')(data-toggle='modal' data-target='#modal-confirm-card' data-dismiss="modal" class='button--primary button--w305')
+          p.warning
+            span.text *
+            span は必須
+
+    //- Modal confirm card
+    +modal('modal-confirm-card', 'modal-sm')(class='modal-choose-card modal-address modal-color-size modal-vertical-middle')
+      +inject('modal-header')
+        .modal-suggest
+          h4.modal-title 確認
+      +inject('modal-body')
+        table.table.table-bordered.table-purchase-detail
+          tbody
+            tr
+              td カード名義
+              td Sutyler Tarou
+            tr
+              td カード番号
+              td 0000-0000-0000
+            tr
+              td 使用期限
+              td 00/00
+            tr
+              td 
+                | セキュリティ
+                br
+                | コード
+              td 000
+      +inject('modal-footer')
+        .text-center
+          +button('OK')(class='button--primary button--w305')
+          p
+            a.select-close(href='#' data-dismiss='modal') キャンセル
+
+    //- Modal delete info
+    +modal('modal-delete-info', 'modal-sm')(class='modal-delete-info modal-choose-card modal-address modal-color-size modal-vertical-middle')
+      +inject('modal-header')
+
+      +inject('modal-body')
+        h4.modal-title 登録情報を削除しますか？
+      +inject('modal-footer')
+        .text-center
+          +button('OK')(class='button--primary button--primary-danger button--w305')
+          p
+            a.select-close(href='#' data-dismiss='modal') キャンセル
+
+
+    +footer()
+
+    +import-script()

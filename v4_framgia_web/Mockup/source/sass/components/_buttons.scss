@@ -1,0 +1,301 @@
+//
+// Components :: Buttons
+// --------------------------------------------------
+
+.button {
+  @extend %truncate;
+  height: 48px;
+  border: 0;
+  border-radius: $border-radius-mini;
+  transition: background-color .3s ease;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  &--primary {
+    padding-left: 45px;
+    padding-right: 45px;
+    background: $button-primary-bg;
+    color: $white;
+    font-weight: $font-weight-bold;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $button-primary-hover-bg;
+      box-shadow: 0 0 4px rgba($black, .24);
+    }
+  }
+
+  &--primary-danger {
+    background: $red;
+    color: $white;
+    transition: all 300ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      background: $red;
+      opacity: .8;
+      color: $white;
+    }
+  }
+
+  &--primary-disabled {
+    background: $brown;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background: $brown;
+      color: $white;
+    }
+  }
+
+  &--bordered {
+    background: transparent;
+    border: 1px solid $brown;
+    color: $button-bordered-text-color;
+    font-weight: $font-weight-bold;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      border: 1px solid $brown;
+      color: $button-bordered-text-color;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &--bordered-dark {
+    background: $white;
+    color: $black-lighter;
+    border: 1px solid $black-lighter;
+    font-weight: $font-weight-bold;
+
+    &:hover,
+    &:focus {
+      color: $black-lighter;
+      border: 1px solid $black-lighter;
+    }
+  }
+
+  &--primary-md {
+    height: 32px;
+    width: 100px;
+    font-size: $font-size-base;
+    font-weight: $font-weight-light;
+    padding: 6px 10px;
+    border-radius: $border-radius-small;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &--bordered-primary {
+    border: 1px solid $blue-darker;
+    color: $blue-darker;
+
+    &:hover {
+      background: $blue-darker;
+    }
+  }
+
+  &--bordered-danger {
+    border: 1px solid $red;
+    color: $red;
+
+    &:hover {
+      background: $red;
+    }
+  }
+
+  &--picker-step {
+    font-size: $font-size-medium;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &--cancel {
+    padding-left: 45px;
+    padding-right: 45px;
+    color: $white;
+    background: $button-cancel-bg;
+    font-weight: $font-weight-bold;
+    box-shadow: 0 0 4px rgba($black, .24);
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $button-cancel-hover-bg;
+    }
+  }
+
+  &--bubble {
+    background: $blue-lighter;
+    color: $black-lighter;
+    border-radius: 100px;
+  }
+
+  &--white {
+    background-color: $white;
+    color: $blue;
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+
+  &--no-background {
+    background-color: transparent;
+    color: $blue;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &--w250 {
+    width: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include respond-to(smallphone-and-down) {
+      width: 100%;
+    }
+  }
+
+  &--w270 {
+    width: 270px;
+
+    @include respond-to(smallphone-and-down) {
+      width: 100%;
+    }
+  }
+
+  &--w305 {
+    width: 305px;
+
+    @include respond-to(smallphone-and-down) {
+      width: 290px;
+    }
+  }
+
+  &--w320 {
+    width: 320px;
+
+    @include respond-to(smallphone-and-down) {
+      width: 100%;
+    }
+  }
+
+  &--w160 {
+    width: 160px;
+  }
+
+  &--w370 {
+    width: 370px;
+
+    @include respond-to(smallphone-and-down) {
+      width: 100%;
+    }
+  }
+
+  &--w170 {
+    width: 170px;
+  }
+
+  &--w380 {
+    width: 380px;
+
+    @include respond-to(smallphone-and-down) {
+      width: 100%;
+    }
+  }
+
+  &--w125 {
+    width: 125px;
+  }
+
+  &--w145 {
+    width: 145px;
+  }
+
+  &--full {
+    font-family: $font-family-extra;
+    width: 100%;
+    text-align: center;
+    color: $white;
+    background-color: $dark-pink;
+    font-weight: $font-weight-general;
+    height: 60px;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $dark-pink;
+      box-shadow: 0 0 4px rgba($black, .24);
+    }
+
+    &.button {
+      &--primary {
+        background: $button-primary-bg;
+        color: $white;
+        font-size: 18px;
+      }
+
+      &--bordered-primary {
+        background: transparent;
+        font-size: 18px;
+        border: 1px solid $blue-darker;
+        color: $blue-darker;
+
+        &:hover {
+          background: $blue-darker;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &--sm {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 12px 0 13px;
+    font-size: 11px;
+  }
+}
+
+.group-button {
+  margin-top: 56px;
+  font-size: 0;
+
+  @include respond-to(phone-and-down) {
+    margin-top: 32px;
+  }
+
+  .button {
+    margin: 0 15px;
+
+    @include respond-to(tablet-and-down) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    @include respond-to(phone-and-down) {
+      width: 170px;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,307 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.h4_item_detail)
+  body.main-page.no-sidebar.no-footer
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar3_11')
+
+      section.dashboard-content.page-proposal.page-item-detail
+        .container
+          hgroup.item-detail__group_title.text-center
+            h3.item-detail__title 提案
+            h5.item-detail__subtitle takumi | 1ヶ月前
+          .product.product-general
+            .row
+              .col-md-6
+                .product-general__image.m-grid-overflow
+                  .slider.slider-detail.js-slider-detail
+                    .slider-detail-item
+                      img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                      h3.count 1/10
+                    .slider-detail-item
+                      img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                      h3.count 2/10
+                    .slider-detail-item
+                      img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                      h3.count 3/10
+                    .slider-detail-item
+                      img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                      h3.count 4/10
+                    .slider-detail-item
+                      img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                      h3.count 5/10
+                    .slider-detail-item
+                      img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                      h3.count 6/10
+                    .slider-detail-item
+                      img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                      h3.count 7/10
+                    .slider-detail-item
+                      img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                      h3.count 8/10
+                    .slider-detail-item
+                      img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                      h3.count 9/10
+                    .slider-detail-item
+                      img(src='images/img-product-present.png' alt='' class='product-general__image--present')
+                      h3.count 10/10
+                  .slider.slider-nav.slider-navigation.js-slider-navigation
+                    .slider-navigation__item
+                      img(src='images/thumbnail01.png' alt='' class='slider-navigation__item--image')
+                    .slider-navigation__item
+                      img(src='images/thumbnail02.png' alt='' class='slider-navigation__item--image')
+                    .slider-navigation__item
+                      img(src='images/thumbnail01.png' alt='' class='slider-navigation__item--image')
+                    .slider-navigation__item
+                      img(src='images/thumbnail02.png' alt='' class='slider-navigation__item--image')
+                    .slider-navigation__item
+                      img(src='images/thumbnail01.png' alt='' class='slider-navigation__item--image')
+                    .slider-navigation__item
+                      img(src='images/thumbnail02.png' alt='' class='slider-navigation__item--image')
+                    .slider-navigation__item
+                      img(src='images/thumbnail01.png' alt='' class='slider-navigation__item--image')
+                    .slider-navigation__item
+                      img(src='images/thumbnail02.png' alt='' class='slider-navigation__item--image')
+                    .slider-navigation__item
+                      img(src='images/thumbnail01.png' alt='' class='slider-navigation__item--image')
+                    .slider-navigation__item
+                      img(src='images/thumbnail02.png' alt='' class='slider-navigation__item--image')
+              .col-md-6
+                .product-general__info
+                  .product-general__top
+                    .product-general__top--left
+                      hgroup.product-general__info--title
+                        h3.main-title.text-uppercase Sasquatchfabrix
+                        h6.subtitle.text-uppercase 90S tenc denim shorts
+                      .product-general__info--gender
+                        span.label-primary.label-primary--sm.label-primary--gentleman メンズ
+                        span.label-primary.label-primary--sm.label-primary--lady レディーズ
+                      .product-general__info--intro
+                        p.text-inner 全品送料無料
+                    .product-general__top--right
+                      h3.product-general__top__view_count 15
+                        |
+                        small.product-general__top__view_count_inner いいね！
+                      .product-general__info--favorites
+                        .user-interact.text-center
+                          a(href='#' class='user-interact__link js-favorite-product-general')
+                            i.user-interact__ic--save
+                            span.user-interact__txt--save いいね
+                      .product-general__sharing
+                        a(href='#' class='product-general__sharing_icon')
+                  .product-general__info--hr
+                  .product-general__info--common.product-general__info--colors
+                    p.title カラーバリエーション　(3)
+                    ul.list-inline
+                      li.list-inline-item ブラック/ホワイト
+                      li.list-inline-item レッド/ブラック
+                      li.list-inline-item ホワイト/ブラック
+                  .product-general__info--common.product-general__info--sizes
+                    p.title サイズ展開　(5)
+                    +labelProductSize('xs')
+                    +labelProductSize('s')
+                    +labelProductSize('m')
+                    +labelProductSize('l')
+                    +labelProductSize('xl')
+                  .product-general__info--common.product-general__info--materials
+                    p.title 素材
+                    p.short-description.text-justify アッパー:天然皮革・合成繊維、ミッドソール:合成樹脂、アウトソール：合成底
+          .product.product-details
+            .product-details__content
+              .product-details__descriptions
+                .product-details__descriptions__content.text-justify
+                  p
+                    |
+                    strong アイテム説明
+                  p こんにちは！
+                  p ニューヨーク、ソーホー地区初のメンズカジュアルブランドのO.N.S原宿店の西村です。鮮やかなカラーが特徴のインディゴのデニムシャツをご提案いたします。
+                  p
+                    |
+                    strong 【アイテム詳細】
+                  p インディゴ染のホリゾンタルカラーシャツ。無骨なイメージのデニムシャツですが、こちらのデニムシャツはコットンレーヨンの生地を使用することで、柔らかい生地感で着心地がとても良いです。
+                  p また独特の光沢感がありドレスの要素も兼ね備えいますので、タイドアップにも使えるアイテムです。インディゴ染のアイテムなので経年変化が楽しめますし、オリジナルのメタルボタンも職人が1点1点手で染めているので、こちらも経年変化を楽しめ男心をくすぐる1着に仕上がっています。
+                  p 電話:03-5468-2250
+                  p 住所:〒150-0001 東京都渋谷区神宮前6-7-8 O.N.S
+                  a(href='http://www.onsclothing.jp' target='_blank') http://www.onsclothing.jp
+              .product-details__strengths
+                h4.product-details__strengths--title おすすめポイント
+                .product-details__strengths--content
+                  .strengths-message
+                    i.ic-triangle-shape
+                    p O.N.S 別注の限定モデルです。黒メッシュに黒レザーを合わせ、トレンドのスポーツミックスにも従来のスポーティなモデルより取り入れやすくて、おすすめです！
+                  .strengths-related.text-center
+                    img(src='images/img-product-present.png' alt='' class='strengths-related__avatar')
+                    p.strengths-related__saler 西村剛
+                    p.strengths-related__shop O.N.S原宿
+                    +button-link('フォローする')(class='strengths-related__button button--bordered button--w250')
+              .vertical-axis
+          .product.product-address
+            h4.product-address__title 取り扱い店舗
+            .product-address__info
+              a(href='#' class='product-address__link')
+                img(src='images/img-shop-logo.png' alt='' class='product-address__img')
+              .product-address__text
+                hgroup
+                  h4
+                    a(href='#' class='product-address__name') O.N.S原宿店
+                  h6.product-address__location 東京都渋谷区神宮前6-14-13
+                .product-address__gender
+                  span.label-primary.label-primary--sm.label-primary--gentleman メンズ
+                  span.label-primary.label-primary--sm.label-primary--lady レディーズ
+              .product-address__achievements
+                .product-address__statistics
+                  hgroup.group-statistics.text-center
+                    h2 411
+                    h4.text-capitalize アイテム
+                  hgroup.group-statistics.text-center
+                    h2 6
+                    h4.text-capitalize イベント
+                  hgroup.group-statistics.text-center
+                    h2 1
+                    h4.text-capitalize スタッフ
+                .product-address__button
+                  +button-link('取引リストを開く')(class='button--bordered')
+            .product-address__map.m-grid-overflow
+              iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.9699519399805!2d108.2108634154625!3d16.067048988882274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142184a858c4081%3A0x13f7683344a7535d!2zMjU1IEjDuW5nIFbGsMahbmcsIMSQw6AgTuG6tW5nLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1498204807493' frameborder='0' style='border:0' allowfullscreen)
+            .product-address__working
+              p.text-inner
+                |
+                span 営業時間
+                | 火、水、木、金、土　11:00〜20:00
+              p.text-inner
+                |
+                span 定休日
+                | 月
+          .product-related
+            h3.product-related__title 提案アイテム (3)
+            .product-related__list
+              .row
+                each val in [1, 2, 3]
+                  +productGridRanking(true)
+
+    section.snackbar-booking
+      hgroup.snackbar-booking__text
+        h3.snackbar-booking__title ¥21,600（税込）
+        h5.snackbar-booking__subtitle 32人が閲覧中
+      .snackbar-booking__button
+        //- +button-link('購入の相談')(data-toggle='modal' data-target='#modal-ask-installing-app' class='button--primary button--primary-danger button--w250')
+        //
+          <a class="btn button button--primary button--primary-danger button--w250" role="button" href="#" data-toggle="modal" data-target="#modal-ask-installing-app">
+            <span class="text">購入の相談</span>
+          </a>
+        +button-link('購入の相談')(data-toggle='modal' data-target='#modal-register' class='button--primary button--primary-danger button--w250')
+
+    +footer()
+
+    +snackbarStaff()
+
+    //- Modal to ask installing app
+    +modal('modal-ask-installing-app', 'modal-sm')(class='modal-ask-installing-app modal-vertical-middle')
+      +inject('modal-header')
+      +inject('modal-body')
+        .text-center
+          p.subtitle このページを”App Store”で開きますか？
+      +inject('modal-footer')
+        .text-center
+          +button('キャンセル')(class='button--cancel button--w160')
+          +button('OK', 'submit')(class='button--primary button--w160' data-dismiss='modal')
+
+    //- Modal register
+    +modal('modal-register', 'modal-sm')(class='modal-register modal-vertical-middle')
+      +inject('modal-header')
+        h4.modal-title 新規登録
+        span.modal-cancel(data-dismiss='modal') キャンセル
+        .show-in-mobile
+          p.desc ソーシャルで登録する。
+          +button('Facebookログイン')(class='button--primary btn-block button-facebook js-button-register-facebook')
+      +inject('modal-body')
+        p.note.show-in-desktop アカウント登録をするとFACY内でお買い物を楽しめます。
+        p.desc.show-in-mobile メールアドレスで登録
+        .form-customize
+          .form-group
+            +input-field-no-label('メールアドレス')
+          .form-group
+            +input-field-no-label('パスワード', 'password')
+            p.note-input.show-in-desktop パスワードは英数字で8時以上入力してください。
+          .form-group.show-in-desktop
+            +input-field-no-label('パスワード', 'password')
+        +button('アカウント新規登録')(class='button--primary btn-block button-register js-button-register')
+        a.show-in-mobile.text-center.u-pt10(href='#' data-dismiss='modal') キャンセル
+        .show-in-desktop
+          .text-center
+            span.seperator または
+          +button('Facebook登録')(class='button--primary btn-block button-facebook js-button-register-facebook')
+          p.privacy
+            | アカウント新規登録した場合は、
+            strong 利用規約とプライバシーポリシー
+            | に同意したものとします。
+      +inject('modal-footer')
+        .text-center
+          p
+            | アカウントをお持ちですか？
+            a.link.js-open-form-login(href='#') ログインする
+
+    //- Modal login
+    +modal('modal-login', 'modal-sm')(class='modal-register modal-vertical-middle')
+      +inject('modal-header')
+        h4.modal-title ログイン
+        span.modal-cancel(data-dismiss='modal') キャンセル
+        .show-in-mobile
+          p.desc ソーシャルでログインする。
+          +button('Facebookログイン')(class='button--primary btn-block button-facebook js-button-login-facebook')
+      +inject('modal-body')
+        p.desc.show-in-mobile メールアドレスでログイン
+        .form-customize
+          .form-group
+            +input-field-no-label('メールアドレス')
+          .form-group
+            +input-field-no-label('パスワード', 'password')
+            p.note-input パスワードを忘れましたか？
+        +button('ログイン')(class='button--primary btn-block button-register js-button-login')
+        a.show-in-mobile.text-center.u-pt10(href='#' data-dismiss='modal') キャンセル
+        .show-in-desktop
+          .text-center
+            span.seperator または
+          +button('Facebookログイン')(class='button--primary btn-block button-facebook js-button-login-facebook')
+      +inject('modal-footer')
+        .text-center
+          p
+            | アカウントがありませんか？
+            a.link.js-open-form-register(href='#') 新規登録する
+          p
+            | ショップは
+            a.link(href='#') こちら
+
+    //- Modal register
+    +modal('modal-success', 'modal-xs')(class='modal-success modal-vertical-middle')
+      +inject('modal-body')
+        h4.main-title ありがとうございます
+        p.sub-title
+          | 登録が完了いたしました。
+          br
+          | FACYでのショッピングをお楽しみください。
+
+    //- Modal facebook
+    +modal('modal-facebook', 'modal-sm')(class='modal-facebook modal-vertical-middle')
+      +inject('modal-body')
+        h4.main-title こんにちは、STYLER 太郎 様。
+        p.sub-title
+          | 以下がご登録のメールアドレスとなり、ショップスタッフからのメッセージやアイテム購入の際のご連絡の宛先として使用されます。
+        p.note ※別のメールアドレスをご希望の場合は、枠内を変更をしてください。
+        .form-customize
+          .form-group
+            +input-field-no-label('info@styler.link')
+        .wrap-button
+          +button('OK')(class='button--primary btn-block button-register')
+
+    +import-script()

@@ -1,0 +1,151 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/media/media
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.STYL_3812_pickup_order)
+  body.main-page
+    +header-customer()
+
+    main.dashboard-container(role='main')
+
+      section.dashboard-content.page-user-order.page-user-order-detail
+        h2.title 購入詳細
+        .order-item
+          .order-wrapper
+            .image-wrapper
+              img(src="https://dummyimage.com/300x300/f0f1f2", alt="")
+            h4.order-title NEEDLES
+            p.order-subtitle KNIT BOMBER CAP
+            .order-branch
+              img(src="https://dummyimage.com/33x33/f0f1f2", alt="")
+              p EDIFICE 渋谷店
+            .order-number
+              span 注文番号：
+              span 0000000-000-0000-00000000
+            .order-meta
+              .order-date
+                span.order-label 注文日：
+                span 2018年 2月 10日
+              .order-total
+                span.order-label 合計：
+                span ¥16,300
+
+        .order-detail
+          .detail-row
+            .row-label 注文状況
+            .row-content
+              p.order-status-label.delivering 配送完了
+          .detail-row
+            .row-label 来店予定日
+            .row-content
+              span.js-display-date 2018年2月18日（月）
+              span.js-display-time 12:00
+              | &nbsp;頃
+              a.link.confirm-shipping-status(href="#" data-toggle='modal' data-target='#modal-pickup-order' data-dismiss='modal') 変更する
+          .detail-row
+            .row-label お届け先：オフィス
+            .row-content
+              span スタイラー　太郎
+              span.styler スタイラー　タロウ
+              p.u-mt10
+                | 〒150-0041
+                br
+                | 東京都渋谷区神南1-10-6
+                br
+                | 090-0000-0000
+          .detail-row
+            .row-label お支払い : credit
+            .row-content
+              p
+                | Visa (下４桁が4242)
+                br
+                | STYLER TARO
+                br
+                | 03/2019
+
+
+        table.table.table-bordered.table-purchase-detail
+          thead
+            tr
+              th(colspan='2')
+                | お買い上げ明細
+                +button('変更する')(class='button--white button--sm button-open-modal' data-toggle='modal' data-target='#modal-color-size' data-dismiss='modal')
+          tbody
+            tr
+              td カラー
+              td グレー
+            tr
+              td サイズ
+              td FREE
+            tr
+              td お品代
+              td ¥12,300
+            tr
+              td 送料
+              td ¥12,300
+            tr
+              td 合計
+              td ¥24,600
+
+        .wrap-button
+          +button('注文をキャンセル')(class='button--bordered-primary button--full' data-toggle='modal' data-target='#modal-cancel-order' data-dismiss='modal')
+          +button('メッセージをみる')(class='button--primary button--full')
+
+    +modal('modal-color-size', 'modal-sm')(class='modal-color-size modal-vertical-middle')
+      +inject('modal-header')
+        .modal-suggest
+          h4.modal-title カラーを選択
+          +button('完了')(class='button--no-background' data-dismiss='modal')
+      +inject('modal-body')
+        form
+          .form-group.form-group-color
+            +radio-button('color', 'color1', 'Red', 'checked')(class='radio-button-rectangle')
+            +radio-button('color', 'color2', 'Black')(class='radio-button-rectangle')
+          .modal-header
+            .modal-suggest
+              h4.modal-title サイズを選択
+          .form-group.form-group-size
+            +radio-button('size', 'size1', 'S', 'checked')(class='radio-button-rectangle')
+            +radio-button('size', 'size2', 'M')(class='radio-button-rectangle')
+            +radio-button('size', 'size3', 'L')(class='radio-button-rectangle')
+
+    +modal('modal-cancel-order', 'modal-sm')(class='modal-cancel-order')
+      +inject('modal-header')
+        .modal-suggest
+          h4.modal-title 確認
+          i(class='sty-icon-delete icon-close-modal' data-dismiss='modal')
+      +inject('modal-body')
+        p
+          | 注文の商品を
+          br
+          | キャンセルしますか？
+      +inject('modal-footer')
+        +button('OK')(class='button--primary-danger btn-block')
+        p.dismiss-cancel(data-dismiss='modal')
+          span キャンセル
+
+    +modal('modal-pickup-order', 'modal-xs')(class='modal-pickup-order')
+      +inject('modal-header')
+        .modal-suggest
+          h4.modal-title 来店日時を選択
+          i(class='sty-icon-delete icon-close-modal' data-dismiss='modal')
+      +inject('modal-body')
+        .show-date-time
+          span.label-primary.label-primary--lg.label-primary--bordered.label-show-date.js-show-date 2018年 2月 18日（月）
+          span.label-primary.label-primary--lg.label-primary--solid.label-show-time.js-show-time 12:00
+        input(class="flatpickr flatpickr-select-date" type="text" placeholder="Select Date.." readonly="readonly")
+        .modal-header
+          .modal-suggest
+            h4.modal-title 来店時間
+        input(class="flatpickr flatpickr-select-time" type="text" placeholder="Select Date.." readonly="readonly")
+      +inject('modal-footer')
+        +button('OK')(class='button--primary btn-block js-close-modal')
+
+    +import-script()

@@ -1,0 +1,291 @@
+//
+// Pages :: S44 Comment details
+// --------------------------------------------------
+
+.page-comment-details {
+  .nano {
+    > .nano-content {
+      padding: 0;
+    }
+  }
+}
+
+.comment-details {
+  &__content {
+    flex: 1;
+  }
+}
+
+.shop-profile {
+  padding: 32px;
+
+  @include respond-to(tablet-and-down) {
+    padding: 24px;
+  }
+
+  @include respond-to(tablet-and-down) {
+    padding: 16px;
+  }
+
+  &__generality {
+    display: flex;
+
+    @include respond-to(smallphone-and-down) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__avatar {
+    padding-right: 50px;
+
+    @include respond-to(tablet-and-down) {
+      padding-right: 0;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+  }
+
+  &__analytic {
+    display: flex;
+    width: 100%;
+
+    @include respond-to(tablet-and-down) {
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  &__analytic-item {
+    padding-right: 100px;
+
+    @include respond-to(tablet-and-down) {
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+
+  &__analytic-number {
+    font-size: $font-size-larger;
+    color: $black-lighter;
+    font-weight: $font-weight-general;
+    line-height: 42px;
+  }
+
+  &__analytic-text {
+    font-size: $font-size-medium;
+    color: $gray-silver;
+    line-height: 24px;
+  }
+
+  &__content {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    @include respond-to(phone-and-down) {
+      margin-top: 24px;
+    }
+
+    span {
+      @include respond-to(tablet-and-down) {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: $font-size-medium;
+    color: $black-lighter;
+    font-weight: $font-weight-bold;
+    padding-bottom: 10px;
+  }
+
+  &__info {
+    font-size: $font-size-small;
+    line-height: 18px;
+    color: $gray-silver;
+    font-weight: $font-weight-light;
+  }
+
+  &__text {
+    font-size: $font-size-base;
+    padding: 25px 0 35px;
+
+    @include respond-to(phone-and-down) {
+      padding-top: 15px;
+      padding-bottom: 25px;
+      line-height: 24px;
+    }
+  }
+
+  &__watched {
+    display: flex;
+    color: $gray-light;
+    font-size: $font-size-base;
+  }
+
+  &__watched-icon {
+    padding-right: 10px;
+  }
+}
+
+.shop-comment {
+  margin-top: 8px;
+  padding: 32px;
+
+  @include respond-to(tablet-and-down) {
+    margin-top: 20px;
+  }
+
+  @include respond-to(phone-and-down) {
+    padding: 24px;
+  }
+
+  @include respond-to(smallphone-and-down) {
+    padding: 16px;
+  }
+
+  .nano-content {
+    padding: 35px 30px;
+
+    @include respond-to(tablet-and-down) {
+      padding: 16px 24px 16px 16px;
+    }
+  }
+
+  &__item-box {
+    margin-left: 68px;
+  }
+
+  &__figure {
+    border: 1px solid $white-darker;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+
+  &__item-figure-custom {
+    margin-top: 15px;
+  }
+
+  &__title {
+    font-size: $font-size-large;
+    color: $black-lighter;
+    margin-bottom: 35px;
+    font-weight: $font-weight-bold;
+
+    @include respond-to(phone-and-down) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item-avatar {
+    position: absolute;
+    top: -20px;
+    left: -65px;
+
+    @include respond-to(phone-and-down) {
+      padding-right: 8px;
+    }
+  }
+
+  &__item-image-avartar {
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+  }
+
+  &__item-image {
+    width: 56px;
+    height: 56px;
+    border-radius: 100px;
+
+    @include respond-to(phone-and-down) {
+      width: 46px;
+      height: 46px;
+    }
+  }
+
+  &__item-content {
+    margin-bottom: 16px;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-light;
+    color: $black-lighter;
+    padding: 7px 100px 7px 24px;
+    border: 1px solid $white-darker;
+    border-radius: 12px;
+    word-break: break-all;
+
+    @include respond-to(phone-and-down) {
+      margin-bottom: 8px;
+      padding: 4px 16px;
+    }
+  }
+
+  &__item-text {
+    line-height: 32px;
+
+    @include respond-to(phone-and-down) {
+      line-height: 24px;
+    }
+  }
+
+  &__item-extra {
+    display: flex;
+    justify-content: space-between;
+    color: $silver;
+    font-size: $font-size-mini;
+    position: relative;
+    padding: 0 10px;
+  }
+
+  &__item-datetime {
+    font-weight: $font-weight-light;
+  }
+
+  &__item-report {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.comment-content {
+  &__button {
+    margin-right: 24px;
+
+    @include respond-to(phone-and-down) {
+      flex-basis: 100%;
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      .button {
+        width: 100%;
+      }
+    }
+  }
+
+  &__button-link {
+    padding: 14px 24px;
+  }
+}

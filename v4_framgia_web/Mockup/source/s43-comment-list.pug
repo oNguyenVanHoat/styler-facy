@@ -1,0 +1,36 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s43_comment_list)
+  body.main-page
+    +header-staff()
+
+    .dashboard-container
+      +sidebar()
+
+      section.dashboard-content.page-comment-list
+        .comment-list
+          each val in [1, 2, 3, 4, 5]
+            ul.message
+              li
+                a(href='#' class='message-link')
+                  .media
+                    .media-left
+                      img(class='media-object' src='./images/media-object.png')
+                    .media-body
+                      h4.media-heading Tsubasa Kosekiがコメントを投稿しました
+                      p.media-content 笑
+                      p.media-content わりと春夏に柄物流行りそうですねー
+                      p.media-content 最近がベーシックからの回帰で
+
+    //- +footer()
+
+    +snackbarStaff()
+
+    +import-script()

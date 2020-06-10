@@ -1,0 +1,55 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.STYL_3827_user_conversation)
+  body(class='main-page has-chat')
+    +header-customer()
+    main(class='dashboard-container user-conversation' role='main')
+      aside(class='main-left-sidebar')
+        h4(class='user-conversation__title text-center') メッセージ一覧
+        .user-conversation__list.nano.chat-content
+          .nano-content
+            each value in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+              a(class='user-conversation__item js-user-conversation__item' href='#')
+                span(class='user-conversation__image-container')
+                  img(class='user-conversation__image' src='images/oval_5.png' alt='')
+                  if value === 1 || value === 2 || value === 3 || value === 4 || value === 5
+                    span(class='user-conversation__image--has-cirlce')
+                span(class='user-conversation__des-container')
+                  span(class='user-conversation__des-title') EDIFICE 渋谷店　中山 祐太郎
+                  span(class='user-conversation__des-subtitle') ご連絡ありがとうございます。こちらの商品ですが ご連絡ありがとうございます。こちらの商品ですが
+                  span(class='user-conversation__time text-right') 2018年 2月 16日　16:40
+      section(class='dashboard-content js-dashboard-content')
+        section(class='comment comment-view')
+          .chat-heading
+            i(class='chat-heading__icon-back sty-icon-arrow-down js-chat-heading__icon')
+            a(class='chat-heading__user-profile--link' href='#')
+              img(class='chat-heading__user-profile--img' src='images/comment-user-avatar.png' alt='')
+              span(class='chat-heading__user-profile--text') 西村剛さん
+                span(class='chat-heading__subtitle') LINKS のショップマネージャー兼プレス
+                span(class='chat-heading__subtitle') の酒井です。 気になる事があればお気軽にお問い合わせ下さい。
+          .nano.chat-content
+            .nano-content
+              +userChatMessage()
+              +userChatMessageTextOnly()
+              +adminChatMessageTextOnly()
+              +adminChatMessage('has-no-bg-color', true, false)
+              +adminChatMessage('has-no-bg-color', false, false, true)
+              +adminChatMessageTextOnly()
+        section(class='comment comment-form')
+          form(action='' role='form')
+            .comment-content
+              .comment-content__btn-secondary
+                +button('購入内容を選ぶ')(class='button--bordered button--primary-md button--bordered-primary')
+              .comment-content__textbox.is-customized(contentEditable='true')
+              .comment-content__btn.is-customized
+                +button('送信', 'submit')(class='button--primary button--primary-md')
+    +footer()
+    +snackbarStaff()
+    +import-script()

@@ -1,0 +1,204 @@
+//
+// Components :: Icons
+// --------------------------------------------------
+
+/// Icon fonts
+@font-face {
+  font-family: 'styler-font-icons';
+  src: url($path-font + 'styler-font-icons.eot?2hjsvr');
+  src: url($path-font + 'styler-font-icons.eot?2hjsvr#iefix') format('embedded-opentype'),
+    url($path-font + 'styler-font-icons.ttf?2hjsvr') format('truetype'),
+    url($path-font + 'styler-font-icons.woff?2hjsvr') format('woff'),
+    url($path-font + 'styler-font-icons.svg?2hjsvr#styler-font-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='sty-icon-'],
+[class*=' sty-icon-'] {
+  font-family: 'styler-font-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sty-icon-bell:before {
+  content: '\e927';
+}
+
+.sty-icon-arrow-right-outline:before {
+  content: '\e926';
+  color: #9b9b9b;
+}
+
+.sty-icon-post-add:before {
+  content: '\e925';
+}
+
+.sty-icon-post-comment:before {
+  content: '\e922';
+}
+
+.sty-icon-post-watch:before {
+  content: '\e923';
+}
+
+.sty-icon-post-more:before {
+  content: '\e924';
+}
+
+.sty-icon-fill:before {
+  content: '\e920';
+}
+
+.sty-icon-delete:before {
+  content: '\e921';
+}
+
+.sty-icon-user-icon:before {
+  content: '\e91e';
+}
+
+.sty-icon-ic-question:before {
+  content: '\e906';
+}
+
+.sty-icon-ic-photo:before {
+  content: '\e907';
+}
+
+.sty-icon-ic-date:before {
+  content: '\e908';
+}
+
+.sty-icon-ic-clothitem:before {
+  content: '\e909';
+}
+
+.sty-icon-ic-favorite:before {
+  content: '\e90a';
+}
+
+.sty-icon-arrow-down:before {
+  content: '\e903';
+}
+
+.sty-icon-category:before {
+  content: '\e900';
+}
+
+.sty-icon-event:before {
+  content: '\e901';
+}
+
+.sty-icon-arrow-up:before {
+  content: '\e902';
+}
+
+.sty-icon-list:before {
+  content: '\e904';
+}
+
+.sty-icon-message:before {
+  content: '\e905';
+}
+
+.sty-icon-check-circle:before {
+  content: '\e90c';
+}
+
+.sty-icon-add-circle-disable:before {
+  content: '\e90b';
+}
+
+.sty-icon-check-success:before {
+  content: '\e90d';
+}
+
+.sty-icon-access-time:before {
+  content: '\e90e';
+}
+
+.sty-icon-camera-icon:before {
+  content: '\e912';
+}
+
+.sty-icon-arrow-right:before {
+  content: '\e911';
+}
+
+.sty-icon-phone:before {
+  content: '\e913';
+}
+
+.sty-icon-favorite:before {
+  content: '\e90f';
+}
+
+.sty-icon-like:before {
+  content: '\e910';
+}
+
+.sty-icon-arrow-left-calendar:before {
+  content: '\e914';
+}
+
+.sty-icon-arrow-right-calendar:before {
+  content: '\e915';
+}
+
+.sty-icon-eye-icon:before {
+  content: '\e916';
+}
+
+.sty-icon-circle-black:before {
+  content: '\e917';
+}
+
+.sty-icon-camera-gray-icon:before {
+  content: '\e918';
+}
+
+.sty-icon-add-triangle:before {
+  content: '\e919';
+}
+
+.sty-icon-location:before {
+  content: '\e91a';
+}
+
+.sty-icon-comment:before {
+  content: '\e91b';
+}
+
+.sty-icon-photo:before {
+  content: '\e91c';
+}
+
+.sty-icon-menu-sidebar:before {
+  content: '\e91d';
+}
+
+.sty-icon-gender-categories-checked:before {
+  content: '\e91f';
+}
+
+/// Icon images
+.icon-common {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+// Icon Loader
+.icon-loader {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url($path-image + 'ic-loader.svg') no-repeat center;
+  background-size: cover;
+}

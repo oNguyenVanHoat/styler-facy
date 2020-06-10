@@ -1,0 +1,95 @@
+//
+// Layout :: Footer
+// --------------------------------------------------
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-small;
+  color: $white;
+  height: $footer-height;
+  font-family: $font-family-primary;
+  background: $black-lighter;
+
+  @include respond-to(phone-and-down) {
+    padding: 0 15px;
+  }
+
+  @include respond-to(smallphone-and-down) {
+    display: block;
+    height: auto;
+  }
+
+  &__title {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-general;
+    line-height: 30px;
+    padding-bottom: 40px;
+
+    @include respond-to(smallphone-and-down) {
+      padding: 10px 0;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-medium;
+    color: $white;
+    font-weight: $font-family-ultrathin;
+    line-height: 30px;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.footer-about {
+  padding-right: 67px;
+
+  @include respond-to(phone-and-down) {
+    padding-right: 30px;
+  }
+
+  @include respond-to(smallphone-and-down) {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-support {
+  padding-left: 67px;
+
+  @include respond-to(phone-and-down) {
+    padding-left: 30px;
+  }
+
+  @include respond-to(smallphone-and-down) {
+    padding-left: 0;
+  }
+}
+
+.main-footer {
+  display: flex;
+
+  @include respond-to(smallphone-and-down) {
+    display: block;
+  }
+}
+
+.backdrop-light {
+  &--invisible {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($black, .15);
+    transition: background-color .25s;
+    display: none;
+  }
+
+  &--visible {
+    display: inherit;
+  }
+}

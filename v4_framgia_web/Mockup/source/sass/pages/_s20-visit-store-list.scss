@@ -1,0 +1,17 @@
+//
+// Pages :: S3 Inventory Request Not Supported
+// --------------------------------------------------
+
+.shop-store-item {
+  &__disable {
+    background: $silver;
+  }
+
+  &__shipping-title {
+    display: flex;
+  }
+
+  &__shipping-name {
+    min-width: 100px;
+  }
+}

@@ -1,0 +1,83 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/media/media
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s53_new_shop_registration)
+  body.main-page
+    +header-logo-only()
+
+    main.dashboard-container(role='main')
+
+      section.dashboard-content.page-new-shop-registration
+        .registration-intro.box-item-block
+          h2.registration-intro__title FACY 新規ショップ登録申請
+          p.registration-intro__text こちらのページでお申し込みいただくと、FACYで商品を販売することができます。
+          p.registration-intro__text ご登録の指定口座へ毎週金曜日（休日の場合は翌週営業日）に販売代金（販売手数料を差し引いた金額）をお振込いたします。
+        .registration-form
+          h2.registration-form__title ショップ基本情報入力
+          form.form-customize.registration-form__infor
+            .box-item-block
+              .registration-form__group
+                .field-wrapper
+                  +input-field('ショップ名', '必須', '', 'スタイラーショップ', '', '','','','0/40')
+                .field-wrapper.field-info
+                  +textarea('ショップ紹介文', '必須', '国内ブランド中心にメンズ・ウィメンズを揃えるセレクトショップ！デイリーに楽しめる上質な大人のカジュアルウェアを提案しています！！', '','13/1000')
+                .field-wrapper.registration-form__not-warning
+                  +input-field('郵便番号', '必須', '', '1234567')
+                .field-wrapper.registration-form__select-box.registration-form__not-warning
+                  +selectBox('都道府県', '必須', '北海道', '', '', 'Option first', 'Option second')
+                .field-wrapper
+                  +input-field('店舗住所  ', '必須', '', '渋谷区神南1-10-6バルビゾン98 401', '', '','','','17/40')
+                .field-wrapper.registration-form__select-box.registration-form__not-warning
+                  +selectBox('取扱商品性別', '必須', 'メンズ', '', '', 'Option first', 'Option second')
+                .field-wrapper
+                  +input-field('Webサイト  ', '', '', 'http://facy.jp/', '', '','','','27/40')
+                .field-wrapper.registration-form__button
+                  label ショップロゴ
+                    span.text 必須
+                  .registration-form__button-image
+                    img(src='images/event-new.png' alt='')
+                  .button-wrapper
+                    +button-icon('画像をアップロードする', 'sty-icon-photo registration-form__button-icon')(class='button--primary button--w250')
+                .field-wrapper
+                  +input-field('担当者氏名', '必須', '', 'スタイラー太郎', '', '','','','17/40')
+                .field-wrapper
+                  +input-field('担当者メールアドレス', '必須', '', 'info@styler.link', '', '','','','17/40')
+                .field-wrapper.registration-form__not-warning
+                  +input-field('担当者パスワード', '必須', '', '1234567')
+                .field-wrapper.registration-form__not-warning
+                  +input-field('担当者パスワード(確認)', '必須')
+                .field-wrapper.registration-form__checkboxes
+                  label 取引種別
+                    span.text 必須
+                  .checkbox-wrapper
+                    +checkbox-custom('read-only-one', 'read-only-one', '法人', true, '法人')
+                    +checkbox-custom('read-only-two', 'read-only-two', '個人', '', '個人')
+            .registration-form__button-group
+              +button('キャンセル')(class='button--cancel button--w270')
+              +button-icon('申請', '')(class='button--primary button--w270' data-toggle='modal' data-target='#modal-new-shop-registration')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +modal('modal-new-shop-registration', 'modal-md')(class='modal-new-shop-registration modal-vertical-middle')
+      +inject('modal-header')
+      +inject('modal-body')
+        .text-center
+          p.subtitle お申込みいただきまして、ありがとうございます。
+          p.subtitle お申込み内容確認後、ご入力いただいたメールアドレスに
+          p.subtitle お手続きのご案内をいたします。
+          p.subtitle しばらくお待ち下さいませ。
+      +inject('modal-footer')
+        .text-center
+          +button('OK', '')(class='button--primary button--w160')
+
+    +import-script()

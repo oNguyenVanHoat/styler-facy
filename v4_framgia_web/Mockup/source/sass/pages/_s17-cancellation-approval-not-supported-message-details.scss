@@ -1,0 +1,37 @@
+//
+// Pages :: S17 Cancellation approval not supported → Message details
+// --------------------------------------------------
+
+.chat-notification-button {
+  text-align: center;
+  margin: 24px 0 32px;
+
+  @include respond-to(desktop-and-large-desktop) {
+    margin-bottom: 24px;
+  }
+
+  @include respond-to(phone-and-down) {
+    margin-bottom: 16px;
+  }
+
+  .button {
+    display: block;
+    margin: 0 auto;
+
+    &:first-child {
+      margin-bottom: 32px;
+
+      @include respond-to(desktop-and-large-desktop) {
+        margin-bottom: 24px;
+      }
+
+      @include respond-to(phone-and-down) {
+        margin-bottom: 16px;
+      }
+
+      @include respond-to(smallphone-and-down) {
+        width: 100%;
+      }
+    }
+  }
+}

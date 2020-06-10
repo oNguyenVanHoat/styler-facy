@@ -1,0 +1,115 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s31_account_registration_application_details_confirmation)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar()
+
+      section.dashboard-content.shop-account-confirmation.page-account-registration-application-details-confirmation
+        .box-item-block.info-facy.info-facy-custom
+          .title FACY 新規ショップ登録申請
+          .text-inner こちらのページでお申し込みいただくと、FACYで商品を販売することができます。<br> ご登録の指定口座へ毎週金曜日（休日の場合は翌週営業日）に販売代金（販売手数料を差し引いた金額）をお振込いたします。
+          .picker-step
+            .picker-step__group.box-item-block
+              .picker-step__list
+                .picker-step__line
+                .picker-step__itemShop
+                  span.picker-step__button
+                  p.picker-step__text 口座登録
+                .picker-step__itemShop.picker-step__item--active
+                  span.picker-step__button
+                  p.picker-step__text 確認
+                .picker-step__itemShop
+                  span.picker-step__button.picker-step__button--last
+                  p.picker-step__text 完了
+
+        .box-infomation
+          .title-facy-infomation 法人口座登録基本情報
+          .box-item-block.info-facy
+            .row
+              .col-md-6.col-md-offset-3
+                p.infomation-people
+                  label.label-name 会社名
+                  span.text-name スタイラー株式会社
+                p.infomation-people
+                  label.label-name 会社名カナ 　
+                  span.text-name スタイラーカブシキガイシャ
+                p.infomation-people
+                  label.label-name 登記番号  　
+                  span.text-name 1234-12-123456
+                p.infomation-people
+                  label.label-name 会社住所  　
+                  span.text-name 〒123-4567 <br> 東京都 渋谷区 神南1丁目10番地6号 バルビゾン98401
+                p.infomation-people
+                  label.label-name 住所カナ  　
+                  span.text-name シブヤク ジンナン イッチョウメジュウバンチロクゴウ <br> バルビゾンキュウジュウハチ　ヨンゼロイチ
+
+        .box-infomation
+          .title-facy-infomation 口座管理基本情報
+          .box-item-block.info-facy
+            .row
+              .col-md-6.col-md-offset-3
+                p.infomation-people
+                  label.label-name 氏名
+                  span.text-name スタイラー太郎
+                p.infomation-people
+                  label.label-name 氏名カナ　
+                  span.text-name スタイラータロウ
+                p.infomation-people
+                  label.label-name 性別　
+                  span.text-name 男
+                p.infomation-people
+                  label.label-name 生年月日　
+                  span.text-name 1978年3月1日
+                p.infomation-people
+                  label.label-name 住所　
+                  span.text-name 〒123-4567 <br> 東京都 渋谷区 神南1丁目10番地6号 バルビゾン98401
+                p.infomation-people
+                  label.label-name 住所カナ 　
+                  span.text-name シブヤク ジンナン イッチョウメジュウバンチロクゴウ <br> バルビゾンキュウジュウハチ　ヨンゼロイチ
+                p.infomation-people
+                  label.label-name メール　
+                  span.text-name info@styler.link
+                p.infomation-people
+                  label.label-name 電話番号
+                  span.text-name 08012345678
+                p.infomation-people-avartar
+                  label.label-name 本人確認
+                  img.shop-account-images(src='images/shop-account.png' alt ='shop-account')
+
+        .box-infomation
+          .title-facy-infomation 口座情報
+          .box-item-block.info-facy
+            .row
+              .col-md-6.col-md-offset-3
+                p.infomation-people
+                  label.label-name 銀行名
+                  span.text-name スタイラー銀行
+                p.infomation-people
+                  label.label-name 支店名　
+                  span.text-name スタイラー支店
+                p.infomation-people
+                  label.label-name 口座番号
+                  span.text-name 1234567
+                p.infomation-people
+                  label.label-name 口座名義カナ
+                  span.text-name カ）スタイラー
+
+        .group-button.text-center
+          +button('キャンセル', 'button')(class='button--cancel button--w270 button-shop-account')
+          +button('登録', 'button')(class='button--primary button--w270 button-shop-account')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

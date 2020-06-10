@@ -1,0 +1,19 @@
+//
+// Pages :: STYL-4001 Page Confirm
+// --------------------------------------------------
+
+.confirm-detail {
+  max-width: 505px;
+  margin: auto;
+
+  .text-des {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    color: $color-04;
+  }
+
+  .credit-link {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}

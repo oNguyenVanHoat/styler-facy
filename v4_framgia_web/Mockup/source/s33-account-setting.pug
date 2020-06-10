@@ -1,0 +1,63 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s33_account_setting)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar()
+
+      section.dashboard-content.page-account-setting
+        form.form-customize
+          .inner
+            h3.account-title.text-center プロフィール情報
+            .row
+              .col-md-4.acount-left
+                .accout-avatar
+                  .accout-avatar-img
+                    i.proposal-customize-img.sty-icon-camera-icon
+                  p.accout-avatar__name プロフィール画像
+                  span.accout-avatar__size (300x300px以上推奨)
+              .col-md-6.acount-right
+                .field-wrapper
+                  +input-field('名前', '必須', '', '名前を入力してください', '', '')
+                  span.warning 0/40
+                .field-wrapper
+                  +selectBox('所在地', '', '選択', '', '', 'Option 1', 'Option 2')
+                .row
+                  .col-md-6.acount-birthday
+                    .field-wrapper.field-birthday
+                      p.field-birthday__title 生年月日
+                      .field-birthday__content
+                        +input-field('', '', '', '1990', '', '')
+                        span.field-birthday__space.field-birthday__space--left /
+                        +input-field('', '', '', '01', '', '')
+                        span.field-birthday__space.field-birthday__space--right /
+                        +input-field('', '', '', '01', '', '')
+                .field-wrapper
+                  p.field-birthday__title 性別
+                  ul.gender
+                    li.gender-item.gender-item--checked
+                      +radio-button-gender('read-only-gender', 'read-only-men', '男性', 'checked')
+                    li.gender-item
+                      +radio-button-gender('read-only-gender', 'read-only-women', '女性', '')
+                .field-wrapper.field-info
+                  +textarea('自己紹介', '必須', '自己紹介を入力してください', '')
+                  span.warning 0/1000
+
+          .group-button.text-center
+            +button('キャンセル')(class='button--cancel button--w270')
+            +button('更新', 'submit')(class='button--primary button--w270')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

@@ -1,0 +1,56 @@
+//
+// Components :: Media
+// --------------------------------------------------
+
+.media {
+  .media-left {
+    padding-right: 16px;
+
+    @include respond-to(smallphone-and-down) {
+      padding-right: 8px;
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  .media-object {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+  }
+
+  .media-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-medium;
+
+    a {
+      color: $media-heading-color;
+    }
+  }
+
+  .media-content {
+    color: $media-content-color;
+    font-weight: $font-weight-light;
+    line-height: 30px;
+
+    @include respond-to(smallphone-and-down) {
+      line-height: 26px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $gutter-medium;
+    }
+  }
+
+  .media-footer {
+    color: $media-footer-color;
+    font-size: $font-size-small + 1px;
+    font-weight: $font-weight-light;
+    line-height: 20px;
+  }
+}

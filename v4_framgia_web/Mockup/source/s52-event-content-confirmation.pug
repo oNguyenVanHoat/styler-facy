@@ -1,0 +1,113 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s52_event_content_confirmation)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar()
+
+      section.dashboard-content.page-event-content-confirmation
+        .event-details
+          .event-details__info.event-details__general
+            .row
+              .col-md-5.col-sm-6
+                .event-details__general--img
+                  img(src='images/combined.png' alt='')
+              .col-md-7.col-sm-6
+                .event-details__general--intro
+                  .heading
+                    h3.heading__title アクセサリーイベント
+                    .share-curiousation
+                      .heading__share.text-center
+                        i.heading__share--ic.sty-icon-fill
+                        span.heading__curiousation--subtitle シェア
+                      .heading__curiousation.text-center
+                        p.heading__curiousation--title 5
+                        span.heading__curiousation--subtitle 興味あり
+                  .subheading
+                    h4.subheading__main
+                      i.subheading__main--ic.sty-icon-event
+                      span.subheading__main--txt 開催期間
+                    p.subheading__extra
+                      time(date-time='2017-05-25') 2017年05月25日
+                      span.subheading__extra--symbol-center 〜
+                      time(date-time='2017-05-26') 2017年05月26日
+                  .description
+                    h4.description__title イベント説明
+                    p.description__content アクセサリーを2,000点集めたイベントです。
+
+          .event-details__info.event-details__address
+            .event-details__info--top
+              hgroup.event-details__address--group-title
+                h4.event-details__address--title 開催場所
+                h5.event-details__address--subtitle 東京都渋谷区神南1-10-6
+              .event-details__address--map
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.9699519399805!2d108.2108634154625!3d16.067048988882274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142184a858c4081%3A0x13f7683344a7535d!2zMjU1IEjDuW5nIFbGsMahbmcsIMSQw6AgTuG6tW5nLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1498204807493' frameborder='0' style='border:0' allowfullscreen)
+            .event-details__info--bottom
+              p.event-details__address--link-txt 大きな地図で見る
+              a(href='#' target='_blank')
+                i.event-details__address--link-ic.sty-icon-arrow-right
+
+          .event-details__info.event-details__location
+            .event-details__info--top
+              h4.event-details__location--title イベント開催店舗
+              .media.event-details__location--content
+                .media-left.col-lg-2.col-md-12.col-sm-12
+                  a(href='#' class='event-details__location--logo-link')
+                    img(src='images/shopavatar.png' alt='' class='event-details__location--logo-img')
+                .media-main.col-lg-6.col-md-12.col-sm-12
+                  h4.media-heading
+                    a(href='#') STYLER公式
+                  p.media-subheading 東京都渋谷神南1-10-6 バルビゾン98 401
+                  .media-description
+                    p.media-description__content STYLERの公式アカウントです。
+                    p.media-description__content 主にSTYLERの使い方などを発信していきます。
+                  p.media-conclusion 最寄駅:
+                .detail-event.col-lg-4.col-md-12.col-sm-12
+                  .details-item
+                    .details-item__text
+                      p.details-item__text-quanlity 28
+                      span.details-item__text-des アイテム
+                    .details-item__text
+                      p.details-item__text-quanlity 12
+                      span.details-item__text-des イベント
+                    .details-item__text
+                      p.details-item__text-quanlity 08
+                      span.details-item__text-des スタッフ
+                    .button-event.text-right
+                      +button-icon('ショップ詳細をみる', '')(class='button--cancel button--w370')
+
+            .event-details__info--bottom
+              .event-details__location--text-info
+                p.location-title-info お問い合わせ
+                p.phone-number 0912 345 6789
+              a(href='#' target='_blank')
+                i.event-details__location--link-ic.sty-icon-phone
+
+          .event-details__info.event-details__participants
+            .event-details__info--top
+              h4.event-details__participants--title イベント参加者
+            .event-details__info--bottom
+              p.event-details__participants--link-txt 参加者の一覧を見る
+              .event-details__participants--link-ic
+                a(href='#' target='_blank')
+                  span.text.text-center ０人
+                  i.ic-view-participants.sty-icon-arrow-right
+
+          .event-details__btn.text-center
+            +button('編集')(class='button--cancel button--w270')
+            +button('完了')(class='button--primary button--w270')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

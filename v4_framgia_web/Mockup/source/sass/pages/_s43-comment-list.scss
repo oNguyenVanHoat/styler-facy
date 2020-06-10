@@ -1,0 +1,23 @@
+//
+// Pages :: S43 Comment list
+// --------------------------------------------------
+
+.comment-list {
+  .media-heading {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include respond-to(smallphone-and-down) {
+      margin-bottom: 5px;
+    }
+  }
+
+  .message-link {
+    color: $black-lighter;
+
+    &:hover,
+    &:focus {
+      color: $black-lighter;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s9_retrieval_request_registration)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar1_3')
+
+      section.dashboard-content.page-retrieval-request-registration
+        form.form-customize
+          .inner
+            .row
+              .col-md-6.col-md-offset-3
+                .field-wrapper
+                  +input-field('店舗名/倉庫名', '必須', '', 'スタイラー', '', '', '名前に誤りがあります。')
+                .field-wrapper
+                  +input-field('氏名', '必須', '', 'スタイラー', '', '')
+                .field-wrapper
+                  +input-field('フリガナ', '必須', '', 'スタイラー', '', '')
+            .hr
+            .row
+              .col-md-6.col-md-offset-3
+                .field-wrapper.field-half-width
+                  +input-field('郵便番号', '必須', '', '1500041', '', '', '名前に誤りがあります。')
+                .field-wrapper.field-half-width
+                  +selectBox('都道府県', '必須', '北海道', '', '都道府県誤りがあります。', 'Option first', 'Option second')
+                .field-wrapper
+                  +input-field('市区町村', '必須', '', '渋谷神南 1-10-6', '', '')
+                .field-wrapper
+                  +input-field('建物名', '', '', 'バルビゾン 98 401', '', '')
+                .field-wrapper.field-half-width
+                  +input-field('電話番号', '必須', '', 'スタイラー', '', '')
+                .field-wrapper.field-half-width
+                  +input-field('引取先名称', '', '', '自宅、会社など', '', '')
+
+          .group-button.text-center
+            +button('引取先登録をキャンセル')(class='button--cancel button--w270')
+            +button('引取先を登録', 'submit')(class='button--primary button--w270')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

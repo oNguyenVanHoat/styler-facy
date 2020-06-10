@@ -1,0 +1,16 @@
+mixin media(mediaTitle, mediaContentFirst, mediaContentSecond)
+  .media
+    .media-left
+      a(href='#')
+        img(class='media-object' src='./images/media-object.png')
+    .media-body
+      h4.media-heading
+        a(href='#')= mediaTitle
+        span.label-message-state 未読
+      if (mediaContentFirst && mediaContentSecond)
+        p.media-content= mediaContentFirst
+        p.media-content= mediaContentSecond
+      else
+        p.media-content= mediaContentFirst
+      p.media-footer
+        time(datetime='2017-02-01 18:54') 2017年2月1日 18:54

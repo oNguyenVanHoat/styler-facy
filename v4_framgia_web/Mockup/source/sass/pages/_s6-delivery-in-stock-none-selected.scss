@@ -1,0 +1,101 @@
+//
+// Pages :: S6 Delivery: In stock none selected
+// --------------------------------------------------
+
+.comment-figures {
+
+  .item-tick {
+    position: relative;
+
+    &:before {
+      content: '';
+      background: url('../images/shape.png');
+      width: 24px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 3px;
+    }
+  }
+}
+
+.comment-upload {
+  overflow: hidden;
+  padding: 24px 32px;
+  border-bottom: 1px solid $white-darker;
+
+  @include respond-to(smallphone-and-down) {
+    padding: 8px 24px;
+  }
+
+  .input-file-trigger {
+    display: block;
+    cursor: pointer;
+
+    &__text {
+      margin-left: 5px;
+
+      @include respond-to(smallphone-and-down) {
+        display: none;
+      }
+    }
+  }
+
+  .upload-file-img {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    max-width: 95px;
+  }
+}
+
+.comment-upload-item {
+  display: inline-block;
+  float: left;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 70px;
+
+    @include respond-to(phone-and-down) {
+      margin-right: 45px;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: $black-charcoal;
+
+    &:hover {
+      color: $blue-foreign;
+    }
+
+    &--text {
+      margin-left: 5px;
+
+      @include respond-to(smallphone-and-down) {
+        display: none;
+      }
+    }
+  }
+
+  &__active {
+    color: $blue-foreign;
+  }
+
+  &--disabled {
+    color: $silver;
+  }
+
+  &:hover {
+    .input-file-trigger {
+      color: $blue-foreign;
+    }
+  }
+}

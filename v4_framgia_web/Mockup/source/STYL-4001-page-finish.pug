@@ -1,0 +1,74 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.STYL_4001_page_finish)
+  body.main-page.no-sidebar.no-footer
+    +header-customer()
+    main.dashboard-container(role='main')
+      section.dashboard-content.page-proposal.page-finish
+        .container
+          .address
+            h2.address-title.text-center アイテムの購入
+            table.table.table-product
+              thead
+                tr
+                  th アイテム
+                  th
+                  th 個数
+              tbody
+                tr
+                  td.product-img
+                    img(src='images/product_01.png' alt='' class='product-img--item')
+                  td.product-des
+                    h4.product-des--title NEEDLES
+                    p.product-des--sub KNIT BOMBER CAP
+                    p.product-des--price ¥14,040（税込）
+                    p.product-des_size 
+                      span.product-des_size--name サイズ：
+                      span.product-des_size--text L
+                    p.product-des_size 
+                      span.product-des_size--name カラー：
+                      span.product-des_size--text ゼファ・レッド
+                  td.product-number
+                    p.product-number--text １個
+            .picker-step__group
+              .picker-step__list
+                .picker-step__line
+                .picker-step__item
+                  span.picker-step__button.picker-step__button--first
+                  p.picker-step__text お届け先
+                .picker-step__item
+                  span.picker-step__button
+                  p.picker-step__text 決済方法
+                .picker-step__item
+                  span.picker-step__button
+                  p.picker-step__text 確認
+                .picker-step__item.picker-step__item--active
+                  span.picker-step__button.picker-step__button--last
+                  p.picker-step__text 完了
+
+              h3.transport-title.text-center ご購入完了
+              .finish-detail
+                h4.order-number 注文番号：0000000-0-0000-00000000
+                p.order-des
+                  | お買い上げいただき、ありがとうございます。
+                  br
+                  br
+                  | お買い上げ明細をご登録のEメールアドレスにお送信しま
+                  br
+                  | した。商品受け取りまで、お手元に保管をお願いいたし
+                  br
+                  | ます。
+
+              .button-address.text-center
+                +button-link('購入メッセージを見る')(class='button--primary button--w305')
+    +footer()
+
+    +import-script()

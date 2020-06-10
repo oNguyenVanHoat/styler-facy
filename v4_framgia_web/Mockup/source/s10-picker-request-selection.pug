@@ -1,0 +1,119 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/media/media
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s10_picker_request_selection)
+  body.main-page
+    +header-staff()
+
+    .dashboard-container
+      +sidebar('sidebar1_3')
+
+      .dashboard-content.page-picker-request-selection
+        .picker-banner
+          .picker-banner__img(style='background-image: url(images/img-banner_01.jpg)')
+          .picker-banner__content
+            h3.picker-banner__brand NIKE
+            p.picker-banner__use French Trainer 1300FS
+            p.picker-banner__price 22,680
+              small.picker-banner__currency 円
+              span.picker-banner__tax （税込）
+        .picker-step
+          .picker-step__group
+            .picker-step__list
+              .picker-step__line
+              .picker-step__item.picker-step__item--active
+                span.picker-step__button.picker-step__button--first
+                p.picker-step__text 引取先
+              .picker-step__item
+                span.picker-step__button
+                p.picker-step__text 引取日
+              .picker-step__item
+                span.picker-step__button
+                p.picker-step__text 確認
+              .picker-step__item
+                span.picker-step__button.picker-step__button--last
+                p.picker-step__text 完了
+          .select-takeover
+            .select-takeover__title.picker-title 引取先を選択
+            .select-takeover__list
+              .select-takeover__item
+                +radio-button('takeover-select', 'takeover-select-1')(class='select-takeover__select')
+                .select-takeover__icon
+                  i.sty-icon-check-circle
+                .select-takeover__content
+                  .select-takeover__desc
+                    h3.select-takeover__shop-name スタイラー渋谷神南店
+                    h4.select-takeover__shop-branch スタイラーシブヤジンナンテン
+                    p.select-takeover__shop-address 〒150-0041東京都渋谷区神南1-10-6
+                    p.select-takeover__shop-phone 090-1234-5678
+                  .select-takeover__button
+                    +button-link('変更')(class='button--bordered button--primary-md button--bordered-primary')
+                    +button-link('削除')(class='button--bordered button--primary-md button--bordered-danger')
+              .select-takeover__item
+                +radio-button('takeover-select', 'takeover-select-2')(class='select-takeover__select')
+                .select-takeover__icon
+                  i.sty-icon-check-circle
+                .select-takeover__content
+                  .select-takeover__desc
+                    h3.select-takeover__shop-name スタイラー渋谷神南店
+                    h4.select-takeover__shop-branch スタイラーシブヤジンナンテン
+                    p.select-takeover__shop-address 〒150-0041東京都渋谷区神南1-10-6
+                    p.select-takeover__shop-phone 090-1234-5678
+                  .select-takeover__button
+                    +button-link('変更')(class='button--bordered button--primary-md button--bordered-primary')
+                    +button-link('削除')(class='button--bordered button--primary-md button--bordered-danger')
+              .select-takeover__item
+                +radio-button('takeover-select', 'takeover-select-3')(class='select-takeover__select')
+                .select-takeover__icon
+                  i.sty-icon-check-circle
+                .select-takeover__content
+                  .select-takeover__desc
+                    h3.select-takeover__shop-name スタイラー渋谷神南店
+                    h4.select-takeover__shop-branch スタイラーシブヤジンナンテン
+                    p.select-takeover__shop-address 〒150-0041東京都渋谷区神南1-10-6
+                    p.select-takeover__shop-phone 090-1234-5678
+                  .select-takeover__button
+                    +button-link('変更')(class='button--bordered button--primary-md button--bordered-primary')
+                    +button-link('削除')(class='button--bordered button--primary-md button--bordered-danger')
+              .select-takeover__item
+                +radio-button('takeover-select', 'takeover-select-4')(class='select-takeover__select')
+                .select-takeover__icon
+                  i.sty-icon-check-circle
+                .select-takeover__content
+                  .select-takeover__desc
+                    h3.select-takeover__shop-name スタイラー渋谷神南店
+                    h4.select-takeover__shop-branch スタイラーシブヤジンナンテン
+                    p.select-takeover__shop-address 〒150-0041東京都渋谷区神南1-10-6
+                    p.select-takeover__shop-phone 090-1234-5678
+                  .select-takeover__button
+                    +button-link('変更')(class='button--bordered button--primary-md button--bordered-primary')
+                    +button-link('削除')(class='button--bordered button--primary-md button--bordered-danger')
+          button.add-takeover(type='button' data-toggle='modal' data-target='#modal-request-selection')
+              i.sty-icon-add-circle-disable.add-takeover__icon
+              p.add-takeover__text 引取先を追加する
+          .authentication-step
+            +button('引取日を選択')(class='button--primary button--picker-step button--w370')
+
+    +footer()
+
+    +snackbarStaff()
+
+    //- Modal Request Selection
+    +modal('modal-request-selection', 'modal-sm')(class='modal-request-selection modal-vertical-middle')
+      +inject('modal-header')
+      +inject('modal-body')
+        .text-center
+          p.subtitle 引取先登録は最大５件です。
+      +inject('modal-footer')
+        .text-center
+          +button('キャンセル', '')(class='button--cancel button--w160')
+
+    +import-script()

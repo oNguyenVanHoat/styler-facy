@@ -1,0 +1,45 @@
+//
+// Pages :: STYL-4001 Page Finish
+// --------------------------------------------------
+
+.page-finish {
+  margin: 0;
+  padding: 0;
+
+  .picker-step {
+    &__group {
+      text-align: center;
+    }
+  }
+
+  .finish-detail {
+    display: inline-block;
+    margin: auto;
+    text-align: left;
+  }
+
+  .order {
+    &-number {
+      font-weight: $font-weight-bold;
+      letter-spacing: .6px;
+      color: $black;
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+
+    &-des {
+      font-size: $font-size-large;
+      line-height: 22px;
+      color: $black;
+      letter-spacing: .6px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .button {
+    &--primary {
+      font-weight: $font-weight-light;
+      font-size: $font-size-medium;
+    }
+  }
+}

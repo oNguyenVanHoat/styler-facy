@@ -1,0 +1,98 @@
+//
+// Pages :: S41 Event list
+// --------------------------------------------------
+
+.event-item {
+  margin-bottom: 30px;
+  background: $white;
+  border-radius: $border-radius-mini;
+  box-shadow: 0 1px 10px rgba($black, .05);
+
+  @include respond-to(phone-and-down) {
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__image {
+    max-width: 100%;
+
+    @include respond-to(tablet-and-down) {
+      height: auto;
+    }
+  }
+
+  &__info {
+    padding: 35px;
+
+    @include respond-to(phone-and-down) {
+      padding: 15px 10px;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 60px;
+
+    @include respond-to(phone-and-down) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    color: $shark;
+    font-size: $font-size-large;
+    font-weight: $font-weight-general;
+    padding-bottom: 16px;
+    word-wrap: break-word;
+    height: 45px;
+    overflow: hidden;
+    line-height: 25px;
+    margin-bottom: 15px;
+  }
+
+  &__date {
+    font-size: $font-size-mini;
+    color: $boulder;
+  }
+
+  &__other {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__style {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-shop {
+    margin-right: 16px;
+    width: 32px;
+    height: 32px;
+  }
+
+  &__version {
+    font-size: $font-size-mini;
+    color: $shark;
+  }
+
+  &__review {
+    text-align: center;
+  }
+
+  &__number {
+    font-size: $font-size-larger;
+    font-weight: $font-weight-bold;
+    line-height: 42px;
+    font-family: $font-family-extra;
+  }
+
+  &__interested {
+    font-size: $font-size-mini;
+    color: $shark;
+    font-weight: $font-weight-light;
+  }
+}

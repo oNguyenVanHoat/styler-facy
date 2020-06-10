@@ -1,0 +1,33 @@
+//
+// Pages :: S15 Take Over Content Transmission Completed
+// --------------------------------------------------
+
+.page-take-over-content {
+  .title {
+    margin: 50px 0 24px;
+    color: $black-lighter;
+  }
+
+  .cancellation-info {
+    padding: 24px 32px 38px;
+    background: $white;
+    border-radius: $border-radius-mini;
+    box-shadow: 0 1px 10px rgba($black, .05);
+
+    .text-inline {
+      color: $black-lighter;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    span {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .button {
+    margin-top: 56px;
+  }
+}

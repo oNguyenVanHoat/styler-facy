@@ -1,0 +1,191 @@
+//
+// Pages :: S3 Inventory Request Not Supported
+// --------------------------------------------------
+
+.page-delivery-transaction-details {
+
+  @include respond-to(smallphone-and-down) {
+    padding: 10px;
+  }
+
+  .content-info {
+    margin-bottom: 32px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .inner-content {
+    background: $white;
+    border-radius: 2px;
+    box-shadow: 0 1px 10px rgba($black, .05);
+
+    @include respond-to(tablet-and-down) {
+      padding: 20px 10px;
+    }
+  }
+
+  .box-images {
+    display: flex;
+    justify-content: flex-end;
+
+    @include respond-to(phone-and-down) {
+      margin-bottom: 20px;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      display: block;
+      border-bottom: 1px solid $white-darker;
+      padding-bottom: 20px;
+    }
+
+    img {
+      width: 170px;
+      height: 170px;
+
+      @include respond-to(tablet-and-down) {
+        width: 130px;
+        height: 130px;
+      }
+
+      @include respond-to(phone-and-down) {
+        width: 110px;
+        height: 110px;
+      }
+    }
+  }
+
+  .transaction-img {
+    @include respond-to(tablet-and-down) {
+      display: inline-block;
+      float: left;
+      width: 35%;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      width: 100%;
+    }
+  }
+
+  .box-content-transaction {
+    @include respond-to(tablet-and-down) {
+      display: inline-block;
+      float: left;
+      width: 65%;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      width: 100%;
+    }
+
+    .box-top,
+    .box-inner {
+      border-bottom: 1px solid $white-darker;
+      padding-bottom: 35px;
+
+      @include respond-to(smallphone-and-down) {
+        padding-bottom: 20px;
+      }
+    }
+
+    .title {
+      font-size: $font-size-large;
+      color: $black-lighter;
+      font-weight: $font-weight-bold;
+
+      @include respond-to(smallphone-and-down) {
+        line-height: 25px;
+      }
+    }
+
+    .roshe-run {
+      padding: 20px 0;
+      font-size: $font-size-medium;
+    }
+
+    .shop-order {
+      padding-top: 35px;
+      padding-bottom: 45px;
+
+      @include respond-to(smallphone-and-down) {
+        line-height: 22px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+
+    .box-button {
+      margin-top: 20px;
+    }
+
+    .shipping-title {
+      padding-top: 25px;
+      font-size: $font-size-medium;
+    }
+
+    .shipping-name {
+      color: $gray-light;
+      padding-right: 20px;
+    }
+
+    .btn-button {
+      margin-top: 45px;
+      width: 100%;
+    }
+
+    .btn-message-screen {
+      width: 100%;
+    }
+
+    .box-list {
+      padding-top: 35px;
+
+      @include respond-to(smallphone-and-down) {
+        padding-top: 20px;
+      }
+
+      &__phone {
+        font-size: $font-size-medium;
+        color: $black-lighter;
+        margin-top: 25px;
+
+        @include respond-to(smallphone-and-down) {
+          line-height: 25px;
+        }
+      }
+
+      &__name {
+        font-size: $font-size-base;
+        color: $gray-dim;
+        margin-top: 20px;
+
+        &--text {
+          color: $blue-darker;
+        }
+      }
+
+      &__suggest {
+        font-size: $font-size-large;
+        color: $black-lighter;
+        font-weight: $font-weight-light;
+        padding-left: 30px;
+      }
+    }
+  }
+
+  .logo-company {
+    display: flex;
+    flex-wrap: wrap;
+
+    .text {
+      padding-top: 8px;
+      padding-left: 10px;
+    }
+  }
+}
+
+.box-payment-details {
+  .box-title {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+}

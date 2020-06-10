@@ -1,0 +1,50 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/media/media
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s58_shop_account_registration_finish)
+  body.main-page
+    +header-logo-only()
+
+    main.dashboard-container(role='main')
+
+      section.dashboard-content.page-shop-account-registration-finish
+        .registration-intro.box-item-block
+          h2.registration-intro__title FACY 新規ショップ登録申請
+          .registration-intro__step
+            .picker-step__list
+              .picker-step__line
+              .picker-step__item
+                span.picker-step__button.picker-step__button--first
+                p.picker-step__text 口座登録
+              .picker-step__item
+                span.picker-step__button
+                p.picker-step__text 確認
+              .picker-step__item.picker-step__item--active
+                span.picker-step__button
+                p.picker-step__text 完了
+        .registration-finish
+          h2.registration-finish__title 登録完了
+          .registration-finish__content.box-item-block
+            .registration-finish__confirm
+              p.registration-finish__text お申込みいただきまして、ありがとうございます。
+              p.registration-finish__text これより、サービスの利用が可能となります。
+              p.registration-finish__text FACYをご愛顧いただきますようお願い申し上げます。
+            .registration-finish__contact
+              p.registration-finish__text ご質問等ございましたら、お気軽に下記アドレスまでお問い合わせください。
+              p.registration-finish__text cs@styler.link
+          .registration-finish__button
+            +button-icon('サービスイン', '')(class='button--primary button--w270')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

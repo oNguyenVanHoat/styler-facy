@@ -1,0 +1,60 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s17_cancellation_approval_not_supported_message_detail)
+  body.main-page.has-chat
+    +header-staff()
+    main.dashboard-container
+      +sidebar('sidebar1_1')
+      .dashboard-content.page-cancellation-approval-not-supported-message-detail
+        .comment.comment-view
+          +chatHeading()
+          .nano.chat-content
+            .nano-content
+              +userChatMessage()
+              +userChatMessageTextOnly()
+              +adminChatMessageTextOnly()
+              +adminChatMessage('has-no-bg-color', true, false)
+              +adminChatMessage('has-no-bg-color', false, false, true)
+              .chat-notification-button
+                +button('購入手続きが完了しています。')(class='button button--bubble button--w320 procedure-is-complete-button')
+                +button('引取先を選択')(class='button button--primary button--w370 transaction-list-button')
+              +adminChatMessageTextOnly()
+              .chat-message-content.js-chat-message-content
+                .row
+                  .col-md-6.col-sm-6
+                    .user-chat-message.has-no-bg-color
+                      ul.list
+                        li.list-item
+                          .media.chat-media
+                            .media-left.media-middle
+                              a(href='#')
+                                img(src='./images/comment-feature-img.png' alt='' class='media-object')
+                            .media-body
+                              h4.media-heading.text-uppercase
+                                a(href='#') Nike
+                              p.media-content.text-uppercase French Trainer 1300FS
+                              .media-footer.chat-media-footer
+                                p.pricing ￥21,600（税込）
+                                p.favorites
+                                  i.ic-favorite.sty-icon-ic-favorite
+                                  span.text 29
+                        li.list-item
+                          .confirm-message-text
+                            p この商品のキャンセルをお願いいたします。
+                            p
+                              |
+                              span.confirm-message-text--highlight キャンセルページへ
+                              | 移動する
+                    +userChatInfo()
+        .comment.comment-form
+          +chatForm()
+    +footer()
+    +snackbarStaff()
+    +import-script()

@@ -1,0 +1,104 @@
+//
+// Pages :: STYL-3812 Pickup Order
+// --------------------------------------------------
+.flatpickr-select-date {
+  display: none;
+}
+
+.flatpickr-select-time {
+  display: none;
+}
+
+.flatpickr-calendar {
+  // scss-lint:disable SelectorFormat
+  &.inline {
+    border-radius: 0;
+    box-shadow: none;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+    border-top: 1px solid $gray-darker;
+
+    &.noCalendar {
+      margin-top: -2px;
+      border: 0;
+    }
+  }
+
+  &.showTimeInput.hasTime .flatpickr-time {
+    border-top: 0;
+  }
+
+  .flatpickr-month {
+    padding: 0 15px;
+  }
+
+  .flatpickr-innerContainer {
+    padding: 0 10px;
+  }
+
+  .flatpickr-rContainer,
+  .flatpickr-days,
+  .dayContainer {
+    width: 100%;
+  }
+
+  .dayContainer {
+    min-width: 0;
+    max-width: none;
+  }
+
+  .flatpickr-day {
+    max-width: none;
+  }
+
+  .flatpickr-current-month {
+    padding-top: 2px;
+  }
+}
+
+.show-date-time {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px 20px;
+
+  .label-show-date {
+    width: 180px;
+    white-space: nowrap;
+  }
+}
+
+.modal-pickup-order {
+  .modal-dialog {
+    margin-top: 100px;
+  }
+
+  .modal-content {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 7px 0 rgba(182, 182, 182, .5);
+  }
+
+  .modal-header {
+    background-color: $brown;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  .modal-title {
+    font-size: 14px;
+    color: #828284;
+    text-align: center;
+  }
+
+  .modal-body {
+    .modal-header {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  .modal-footer {
+    padding: 10px 46px 26px;
+  }
+}

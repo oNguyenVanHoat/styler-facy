@@ -1,0 +1,21 @@
+//
+// Pages :: S47 Select From Past Suggestion Items
+// --------------------------------------------------
+
+.page-select-suggestion-items {
+  .select-suggestion {
+    &__btn {
+      margin-bottom: 40px;
+
+      @include respond-to(phone-and-down) {
+        margin-bottom: 20px;
+      }
+
+      .button {
+        @include respond-to(smallphone-and-down) {
+          width: 270px;
+        }
+      }
+    }
+  }
+}

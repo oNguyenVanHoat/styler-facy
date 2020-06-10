@@ -1,0 +1,126 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s46_create_new_proposal)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar3_3')
+
+      section.dashboard-content.page-created-new-proposal
+        .inner
+          .header
+            .box-header
+              .proposal-profile
+                .box-avartar
+                  img.box-avartar-img(src='images/oval_5.png' alt ='')
+                .box-content
+                  h3.title 佐藤琢美
+                  .proposal-breadcrum 31歳　/　男性
+              .box-button
+                +button('過去の提案アイテムから選択', 'button')(class='button--primary button--w270')
+            .text 一枚だけで存在感のあるTシャツを探しています教えてください。
+          .row
+            .col-md-5
+              .proposal-avatar
+                .proposal-avatar-img
+                  +input-upload-file('upload-file-img', 'upload-img', '', 'file', '', 'multiple')
+                  img(src='images/images-people.png' alt='' class='images-avartar')
+                  i.proposal-customize-img.sty-icon-camera-icon
+                  .proposal-avatar-text
+                    p.proposal-avatar-text__name 商品画像をアップロード
+                    p.proposal-avatar-text__size （横幅370px以上、容量5MB以内を推奨）
+                  .proposal-avatar-bottom
+                    p.proposal-avatar-bottom__text 最大10枚の写真をアップロードできます
+              .thumbnail
+                .thumbnail-list
+                  .thumbnail-item
+                    img(src='images/thumbnail01.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail02.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail01.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail02.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail01.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail02.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail01.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    img(src='images/thumbnail02.png' alt='' class='thumbnail-item__img')
+                    i.icon-close
+                  .thumbnail-item
+                    +input-upload-file('upload-file-img', 'upload-img', '', 'file', '', 'multiple')
+                    i.proposal-customize-img.sty-icon-camera-icon
+            .col-md-6
+              form.form-customize.form-customize-proposal
+                .field-wrapper
+                  +input-field('ブランド名', '必須', '', 'ブランド名を入力してください', '', '','ブランド名に誤りがあります。','','0/40')
+                .field-wrapper
+                  +input-field('商品名', '必須', '', '商品名を入力してください', '', '','商品名に誤りがあります。','','0/40')
+                .field-wrapper
+                  .box-label
+                    label(for='') タイプ
+                      span.text 必須
+                  .box-gender-proposal
+                    ul.gender
+                      li.gender-item.gender-item--checked
+                        +radio-button-gender('read-only-gender', 'read-only-men', 'メンズ', 'checked')
+                      li.gender-item
+                        +radio-button-gender('read-only-gender', 'read-only-women', 'レディース', '')
+                      li.gender-item
+                        +radio-button-gender('read-only-gender', 'read-only-unisex', 'ユニセックス', '')
+
+                .field-wrapper
+                  +input-field('販売価格', '必須', '', '販売価格を入力してください', '', '','販売価格に誤りがあります。','円（税込）','販売価格は、数字のみ入力できます')
+                .field-wrapper
+                  label(for='') カラー
+                    span.text 必須
+                  .box-size
+                    .box-label
+                      input(type='text' class='ic-gray' value='入力してください, 入力してください' data-role='tagsinput' placeholder='入力してください')
+                  .box-warning-error
+                    span.error-message カラーに誤りがあります。
+                .field-wrapper
+                  label(for='') サイズ
+                    span.text 必須
+                  .box-size
+                    .box-label
+                      input(type='text' class='ic-gray' value='入力してください, 入力してください' data-role='tagsinput' placeholder='入力してください')
+                  .box-warning-error
+                    span.error-message カラーに誤りがあります。
+
+                .field-wrapper
+                  +input-field('素材', '必須', '', '素材を入力してください　', '', '','素材に誤りがあります。','','0/40')
+
+                .field-wrapper.field-info
+                  +textarea('商品説明', '必須', '商品説明を入力してください', '','素材に誤りがあります。','0/1000')
+                .field-wrapper.field-info
+                  +textarea('おすすめポイント', '必須', 'おすすめポイントを入力してください', '','素材に誤りがあります。','0/1000')
+                .field-wrapper
+                  +selectBox('カテゴリー', '', 'Tシャツ・カットソー', '', '', 'Tシャツ・カットソー1', 'Tシャツ・カットソー2')
+
+        .group-button.text-center
+          +button('提案実行', 'submit')(class='button--primary button--w370')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

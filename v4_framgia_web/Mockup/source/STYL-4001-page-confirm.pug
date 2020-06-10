@@ -1,0 +1,122 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.STYL_4001_page_confirm)
+  body.main-page.no-sidebar.no-footer
+    +header-customer()
+    main.dashboard-container(role='main')
+      section.dashboard-content.page-proposal.page-select-address.page-user-order-detail
+        .container
+          .address
+            h2.address-title.text-center アイテムの購入
+            table.table.table-product
+              thead
+                tr
+                  th アイテム
+                  th
+                  th 個数
+              tbody
+                tr
+                  td.product-img
+                    img(src='images/product_01.png' alt='' class='product-img--item')
+                  td.product-des
+                    h4.product-des--title NEEDLES
+                    p.product-des--sub KNIT BOMBER CAP
+                    p.product-des--price ¥14,040（税込）
+                    p.product-des_size 
+                      span.product-des_size--name サイズ：
+                      span.product-des_size--text L
+                    p.product-des_size 
+                      span.product-des_size--name カラー：
+                      span.product-des_size--text ゼファ・レッド
+                  td.product-number
+                    p.product-number--text １個
+            .picker-step__group
+              .picker-step__list
+                .picker-step__line
+                .picker-step__item
+                  span.picker-step__button.picker-step__button--first
+                  p.picker-step__text お届け先
+                .picker-step__item
+                  span.picker-step__button
+                  p.picker-step__text 決済方法
+                .picker-step__item.picker-step__item--active
+                  span.picker-step__button
+                  p.picker-step__text 確認
+                .picker-step__item
+                  span.picker-step__button.picker-step__button--last
+                  p.picker-step__text 完了
+
+              h3.transport-title.text-center お届け先を選択
+              .confirm-detail
+                .order-detail               
+                  .detail-row
+                    .row-label 商品到着予定
+                    .row-content
+                      span 3日〜5日後にお届け
+                      p.text-des
+                        | ご注文から商品お届けまで最速で対応いたします。
+                        br
+                        | 取り扱いショップからの発送
+                        a.link.confirm-shipping-status(href="#") (発送について)
+
+                table.table.table-bordered.table-purchase-detail
+                  thead
+                    tr
+                      th(colspan='2')
+                        | お買い上げ明細
+                  tbody
+                    tr
+                      td カラー
+                      td グレー
+                    tr
+                      td サイズ
+                      td FREE
+                    tr
+                      td お品代
+                      td ¥12,300
+                    tr
+                      td 送料
+                      td ¥12,300
+                    tr
+                      td 合計
+                      td ¥24,600
+
+                .order-detail
+                  .detail-row
+                    .row-label お届け先：オフィス
+                    .row-content
+                      span スタイラー　太郎
+                      span スタイラー　タロウ
+                      a.link.confirm-shipping-status(href="#") 他のお届け先
+                      p.u-mt10
+                        | 〒150-0041
+                        br
+                        | 東京都渋谷区神南1-10-6
+                        br
+                        | 090-0000-0000
+                  .detail-row
+                    .row-label お支払い : credit
+                    .row-content
+                      a.link.confirm-shipping-status.credit-link(href="#") 他のお支払い方法  
+                      p
+                        | Visa (下４桁が4242)
+                        br
+                        | STYLER TARO
+                        br
+                        | 03/2019
+              
+    section.snackbar-booking.snackbar-address
+      .snackbar-booking__button.snackbar-address__button
+        +button-link('注文を確定する')(class='button--primary button--primary-danger button--w305')
+
+    +footer()
+
+    +import-script()

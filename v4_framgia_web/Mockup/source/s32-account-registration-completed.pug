@@ -1,0 +1,49 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s32_account_registration_completed)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar()
+      section.dashboard-content.page-account-registration-completed
+        .box-item-block.account-registration
+          h2.main-title.text-center FACY 新規ショップ登録申請
+          p.account-registration__text-inner こちらのページでお申し込みいただくと、FACYで商品を販売することができます。<br> ご登録の指定口座へ毎週金曜日（休日の場合は翌週営業日）に販売代金（販売手数料を差し引いた金額）をお振込いたします。
+          .picker-step
+            .picker-step__group.box-item-block
+              .picker-step__list
+                .picker-step__line
+                .picker-step__itemShop
+                  span.picker-step__button
+                  p.picker-step__text 申込
+                .picker-step__itemShop
+                  span.picker-step__button
+                  p.picker-step__text 確認
+                .picker-step__itemShop.picker-step__item--active
+                  span.picker-step__button
+                  p.picker-step__text 完了
+
+        .box-item-block.account-registration.registration-completed
+          h2.main-title.text-center お申込み内容を受け付けました
+          .account-registration__box-text
+            p.account-registration__text-descripton お申込みいただきまして、ありがとうございます。
+            p.account-registration__text-descripton 引き続きFACYをご愛顧ください。
+            p.account-registration__text-descripton ご質問等ございましたらお気軽に下記アドレスまでお問い合わせください。
+            p.account-registration__text-descripton cs@styler.link
+
+        .group-button.text-center
+          +button('ホームへ戻る', 'button')(class='button--cancel button--w370 button-account-completed')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

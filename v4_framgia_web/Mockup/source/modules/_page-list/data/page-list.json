@@ -1,0 +1,247 @@
+{
+  "pageList": {
+    "data": [
+      {
+        "title": "UI Elements",
+        "url": "elements"
+      }, {
+        "title": "H4 Ranking",
+        "url": "h4-ranking"
+      }, {
+        "title": "H4 Item Detail",
+        "url": "h4-item-detail"
+      }, {
+        "title": "Size Chart",
+        "url": "s69-size-chart"
+      }, {
+        "title": "S1 Default (Message List)",
+        "url": "s1-default-message-list"
+      }, {
+        "title": "S2 Stock Request Not Supported",
+        "url": "s2-stock-request-not-supported"
+      }, {
+        "title": "S3 Inventory Request Not Supported (Message Details)",
+        "url": "s3-inventory-request-not-supported"
+      }, {
+        "title": "S4 In Stock Availability Confirmation Modal",
+        "url": "s4-in-stock-availability-confirmation-modal"
+      }, {
+        "title": "S5 Delivery In Stock Selection",
+        "url": "s5-delivery-in-stock-selection"
+      }, {
+        "title": "S16 Cancellation Approval Not Supported",
+        "url": "s16-cancellation-approval-not-supported"
+      }, {
+        "title": "S7 Withdrawal Request Not Supported",
+        "url": "s7-withdrawal-request-not-supported"
+      }, {
+        "title": "S10 Picker Request Selection",
+        "url": "s10-picker-request-selection"
+      }, {
+        "title": "S28 Staff List",
+        "url": "s28-staff-list"
+      }, {
+        "title": "S9 Retrieval Request Registration",
+        "url": "s9-retrieval-request-registration"
+      }, {
+        "title": "S6 Delivery: In Stock None Selected",
+        "url": "s6-delivery-in-stock-none-selected"
+      }, {
+        "title": "S8 Withdrawal Request Not Supported → Message Details",
+        "url": "s8-withdrawal-request-not-supported-message-details"
+      }, {
+        "title": "S17 Cancellation Approval Not Supported → Message Details",
+        "url": "s17-cancellation-approval-not-supported-message-details"
+      }, {
+        "title": "S13 Pick-Up Date Selection",
+        "url": "s13-pick-up-date-selection"
+      }, {
+        "title": "S11 Pick Order Request Selection: Remove Modal",
+        "url": "s11-pick-order-request-selection-remove-modal"
+      }, {
+        "title": "S30 Account Registration Application",
+        "url": "s30-account-registration-application"
+      }, {
+        "title": "S14 Confirmation Of Collection Details",
+        "url": "s14-confirmation-of-collection-details"
+      }, {
+        "title": "S33 Account Setting",
+        "url": "s33-account-setting"
+      }, {
+        "title": "S24 Past Suggestion List",
+        "url": "s24-past-suggestion-list"
+      }, {
+        "title": "S18 Cancellation Approval",
+        "url": "s18-cancellation-approval"
+      }, {
+        "title": "S19 List Of Expected Shopping Days",
+        "url": "s19-list-of-expected-shopping-days"
+      }, {
+        "title": "S34 Login Information",
+        "url": "s34-login-information"
+      }, {
+        "title": "S15 Take Over Content Transmission Completed",
+        "url": "s15-take-over-content-transmission-completed"
+      }, {
+        "title": "S29 Profile Information",
+        "url": "s29-profile-infomation"
+      }, {
+        "title": "S22 Delivery Transaction List",
+        "url": "s22-delivery-transaction-list"
+      }, {
+        "title": "S41 Event list",
+        "url": "s41-event-list"
+      }, {
+        "title": "S20 Visit Store List",
+        "url": "s20-visit-store-list"
+      }, {
+        "title": "S21 Transaction Details",
+        "url": "s21-transaction-details"
+      }, {
+        "title": "S25 Details Of Proposal",
+        "url": "s25-details-of-proposal"
+      }, {
+        "title": "S23 Delivery Transaction Details",
+        "url": "s23-delivery-transaction-details"
+      }, {
+        "title": "S43 Comment List",
+        "url": "s43-comment-list"
+      }, {
+        "title": "S42 Event Details",
+        "url": "s42-event-details"
+      }, {
+        "title": "S47 Select From Past Suggestion Items",
+        "url": "s47-select-from-past-suggestion-items"
+      }, {
+        "title": "S39 Shop List",
+        "url": "s39-shop-list"
+      }, {
+        "title": "S45 T-shirt Cut and Sewn",
+        "url": "s45-t-shirt-cut-and-sewn"
+      }, {
+        "title": "S50 Create New Event",
+        "url": "s50-create-new-event"
+      }, {
+        "title": "S51 New Event Creation (Input Completion Screen)",
+        "url": "s51-new-event-creation-input-completion-screen"
+      }, {
+        "title": "S44 Comment Details",
+        "url": "s44-comment-details"
+      }, {
+        "title": "S49 Proposal Content Confirmation",
+        "url": "s49-proposal-content-confirmation"
+      }, {
+        "title": "S48 Created From Suggested",
+        "url": "s48-created-from-suggested"
+      }, {
+        "title": "S40 Shop Details",
+        "url": "s40-shop-details"
+      }, {
+        "title": "S35 Followers",
+        "url": "s35-followers"
+      }, {
+        "title": "S36 New Arrival Post",
+        "url": "s36-new-arrival-post"
+      }, {
+        "title": "S37 Post Details",
+        "url": "s37-post-details"
+      }, {
+        "title": "S46 Create A New Proposal",
+        "url": "s46-create-new-proposal"
+      }, {
+        "title": "S57 Shop Accounts Information Confirmation (Personal)",
+        "url": "s57-shop-accounts-information-confirmation"
+      }, {
+        "title": "S55 Shop Accounts Information Confirmation (Company)",
+        "url": "s55-shop-accounts-information-confirmation"
+      }, {
+        "title": "S53 New Shop Registration",
+        "url": "s53-new-shop-registration"
+      }, {
+        "title": "S54 Shop Account Information",
+        "url": "s54-shop-account-info"
+      }, {
+        "title": "S56 Shop Account's Information (Personal)",
+        "url": "s56-shop-accounts-information-personal"
+      }, {
+        "title": "S58 Shop Account Registration Finish",
+        "url": "s58-shop-account-registration-finish"
+      }, {
+        "title": "S31 Account Registration Application Details Confirmation",
+        "url": "s31-account-registration-application-details-confirmation"
+      }, {
+        "title": "S32 Account Registration Completed",
+        "url": "s32-account-registration-completed"
+      }, {
+        "title": "S59 Bank Account Filling Comfirmation",
+        "url": "s59-bank-account-filling-confirmation"
+      }, {
+        "title": "S60 Bank Account Filling Edit Account Info",
+        "url": "s60-bank-account-filling-edit-acc-info"
+      }, {
+        "title": "S60 Bank Account Filling Edit Profile",
+        "url": "s60-bank-account-filling-edit-profile"
+      }, {
+        "title": "S60 Bank Account Filling Edit Bank",
+        "url": "s60-bank-account-filling-edit-bank"
+      }, {
+        "title": "S52 Event Content Confirmation",
+        "url": "s52-event-content-confirmation"
+      }, {
+        "title": "S61 Modal Gallery",
+        "url": "s61-modal-gallery"
+      }, {
+        "title": "S63 Modal Create Products Related",
+        "url": "s63-modal-create-products-related"
+      }, {
+        "title": "S62 Modal Select Products",
+        "url": "s62-modal-select-products"
+      }, {
+        "title": "Top Page",
+        "url": "top-page"
+      }, {
+        "title": "Top Shop Page",
+        "url": "top-shop-page"
+      }, {
+        "title": "H4 Item Detail Sidebar",
+        "url": "h4-item-detail-sidebar"
+      }, {
+        "title": "STYL-3716 User Orders",
+        "url": "STYL-3716-user-orders"
+      }, {
+        "title": "STYL-3717 User Order Detail",
+        "url": "STYL-3717-user-order-detail"
+      }, {
+        "title": "STYL-3718 User Order Shipping",
+        "url": "STYL-3718-user-order-shipping"
+      }, {
+        "title": "STYL-3812 Pickup Order",
+        "url": "STYL-3812-pickup-order"
+      }, {
+        "title": "STYL-3676 User Notification",
+        "url": "STYL-3676-user-notification"
+      }, {
+        "title": "STYL-3827 User Conversation",
+        "url": "STYL-3827-user-conversation"
+      }, {
+        "title": "STYL-3980 Pop-up Select",
+        "url": "STYL-3980-pop-up-select"
+      }, {
+        "title": "STYL-4001 Select Address User",
+        "url": "STYL-4001-select-address-user"
+      }, {
+        "title": "STYL-4001 Choose Card",
+        "url": "STYL-4001-choose-card"
+      }, {
+        "title": "STYL-4001 Choose Card Error",
+        "url": "STYL-4001-choose-card-error"
+      }, {
+        "title": "STYL-4001 Page Confirm",
+        "url": "STYL-4001-page-confirm"
+      }, {
+        "title": "STYL-4001 Page Finish",
+        "url": "STYL-4001-page-finish"
+      }
+    ]
+  }
+}

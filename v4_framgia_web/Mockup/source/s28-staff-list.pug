@@ -1,0 +1,45 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s28_staff_list)
+  body
+    +header-staff()
+
+    main.dashboard-container
+      +sidebar()
+      .dashboard-content.page-staff-list
+        .two-column-list.staff-list
+          .row
+            each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+              .col-lg-6.col-md-6.col-sm-6
+                .two-column-list__item
+                  .list-item
+                    .list-item__img
+                      a(href='#')
+                          img.list-item__image(src='images/oval_icon.png')
+                    .list-item__content
+                      h3.list-item__name
+                        a.list-item__name-text(href='#') 西村剛
+                      p.list-item__link
+                        a.list-item__link-text(href='#') LINKS LINKS
+                      .list-item__number
+                        .list-item__text
+                          p.list-item__text-quanlity 28
+                          span.list-item__text-des 販売
+                        .list-item__text
+                          p.list-item__text-quanlity 12
+                          span.list-item__text-des 提案
+                        .list-item__text
+                          p.list-item__text-quanlity 08
+                          span.list-item__text-des フォロワー
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

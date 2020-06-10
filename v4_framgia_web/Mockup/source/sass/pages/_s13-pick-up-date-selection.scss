@@ -1,0 +1,67 @@
+//
+// Pages :: S13 pick-up date selection
+// --------------------------------------------------
+
+.selection-date {
+  margin: 25px 0 60px;
+  background: $white;
+  box-shadow: 0 1px 10px rgba($black, .05);
+  border-radius: $border-radius-mini;
+
+  &__item {
+    display: flex;
+    border-bottom: 1px solid $white-darker;
+    height: 80px;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+    cursor: pointer;
+
+    @include respond-to(smallphone-and-down) {
+      padding: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__select {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+
+    .with-gap {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__icon {
+    color: $green;
+    font-size: $font-size-extra;
+    opacity: 0;
+  }
+
+  &__icon-active {
+    opacity: 1;
+  }
+
+  &__text {
+    padding-left: 35px;
+    color: $blue-darker;
+    font-size: $font-size-medium;
+  }
+
+  &--checked {
+    .selection-date {
+      &__text {
+        padding-left: 35px;
+      }
+    }
+  }
+}

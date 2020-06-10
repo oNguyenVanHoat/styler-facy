@@ -1,0 +1,58 @@
+//
+// Pages :: S51 New event creation (input completion screen)
+// --------------------------------------------------
+
+.page-new-event-creation {
+  .account-avatar-img {
+    &:before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      background: rgba($black, .5);
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  .ic-customize-img {
+    color: $white;
+  }
+
+  .add-new-event {
+    .account-avatar-text {
+      &__name,
+      &__size {
+        color: $white;
+      }
+    }
+  }
+
+  .group-button {
+    margin-top: 40px;
+  }
+
+  .box-warning-error {
+    position: absolute;
+  }
+}
+
+.add-new-event {
+  .field-info {
+    .form-control {
+      height: 85px;
+      padding-bottom: 25px;
+      line-height: 24px;
+    }
+  }
+
+  .box-warning {
+    float: right;
+  }
+}
+
+.field-datetime {
+  .warning {
+    float: right;
+    padding-top: 8px;
+  }
+}

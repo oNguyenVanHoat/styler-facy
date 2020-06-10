@@ -1,0 +1,142 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/media/media
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s44_comment_details)
+  body.main-page.has-chat
+    +header-staff()
+    main.dashboard-container(role='main')
+      +sidebar()
+      section.dashboard-content.page-comment-details
+        .comment-details__content.nano.chat-content
+          .nano-content
+            .shop-profile.box-item-block
+              .shop-profile__generality
+                .shop-profile__avatar
+                  img.shop-profile__image(src='images/oval_5.png' alt='')
+                .shop-profile__analytic
+                  .shop-profile__analytic-item
+                    h3.shop-profile__analytic-number 28
+                    p.shop-profile__analytic-text 投稿
+                  .shop-profile__analytic-item
+                    h3.shop-profile__analytic-number 12
+                    p.shop-profile__analytic-text ウォッチ
+                  .shop-profile__analytic-item
+                    h3.shop-profile__analytic-number 08
+                    p.shop-profile__analytic-text いいね！
+              .shop-profile__content
+                .shop-profile__desc
+                  h3.shop-profile__title ぞみ
+                  p.shop-profile__info 34歳　/　男性　/　東京
+                  .shop-profile__text 柄物のトップスで今いけてるやつはありますか？よろしくお願いします。
+                  .shop-profile__watched
+                    i.shop-profile__watched-icon.sty-icon-eye-icon
+                    p.shop-profile__watched-number 169
+                .shop-profile__label
+                  span.label-primary.label-primary--md.label-primary--gray ニット・スウェット
+            .shop-comment.box-item-block
+              h3.shop-comment__title コメント (8)
+              .shop-comment__list
+                .shop-comment__item
+                  .shop-comment__item-box
+                    .shop-comment__item-content
+                      p.shop-comment__item-text 赤がきになるなー。似合わないけど。
+                    .shop-comment__item-extra
+                      mixin avartarDetails()
+                        .shop-comment__item-avatar
+                          img.shop-comment__item-image(src='images/comment-user-avatar.png' alt='')
+                      +avartarDetails()
+                      p.shop-comment__item-datetime
+                        span.shop-comment__item-date 2017年2月1日
+                        span.shop-comment__item-time 18:54
+                      p.shop-comment__item-report Report
+                .shop-comment__item
+                  .shop-comment__item-box
+                    .shop-comment__item-content
+                      p.shop-comment__item-text 柄物を入れて、ちょっとチンピラっぽい感じにするのが楽しい笑
+                    .shop-comment__item-extra
+                      +avartarDetails()
+                      p.shop-comment__item-datetime
+                        span.shop-comment__item-date 2017年2月1日
+                        span.shop-comment__item-time 18:54
+                      p.shop-comment__item-report Report
+                .shop-comment__item
+                  .shop-comment__item-box
+                    .shop-comment__item-content
+                      p.shop-comment__item-text カラーレンズのサングラスつければ完成ですね（笑）
+                    .shop-comment__item-extra
+                      +avartarDetails()
+                      p.shop-comment__item-datetime
+                        span.shop-comment__item-date 2017年2月1日
+                        span.shop-comment__item-time 18:54
+                      p.shop-comment__item-report Report
+                .shop-comment__item
+                  .shop-comment__item-box
+                    .shop-comment__item-content
+                      p.shop-comment__item-text ミラーレスレンズで是非　笑
+                    .shop-comment__item-extra
+                      +avartarDetails()
+                      p.shop-comment__item-datetime
+                        span.shop-comment__item-date 2017年2月1日
+                        span.shop-comment__item-time 18:54
+                      p.shop-comment__item-report Report
+                .shop-comment__item
+                  .shop-comment__item-box
+                    .shop-comment__item-content
+                      p.shop-comment__item-text 去年はアロハシャツを買ったなー。今年は開襟シャツがはやるみたい。あれ、去年もだったような。
+                    .shop-comment__item-extra
+                      +avartarDetails()
+                      p.shop-comment__item-datetime
+                        span.shop-comment__item-date 2017年2月1日
+                        span.shop-comment__item-time 18:54
+                      p.shop-comment__item-report Report
+                .shop-comment__item
+                  .shop-comment__item-box
+                    .shop-comment__item-content
+                      p.shop-comment__item-text ミラーですか・・・！！（笑）あれ昆虫に見えてダメなんですよね（笑）
+                    .shop-comment__item-extra
+                      +avartarDetails()
+                      p.shop-comment__item-datetime
+                        span.shop-comment__item-date 2017年2月1日
+                        span.shop-comment__item-time 18:54
+                      p.shop-comment__item-report Report
+                .shop-comment__item
+                  .shop-comment__item-box
+                    .user-chat-message
+                      a.user-chat-message__link(href='#')
+                        img.user-chat-message__img(src='./images/comment-feature-img.png' alt='')
+                      .user-chat-message__caption
+                        h4.user-chat-message__title.text-uppercase
+                          a.user-chat-message__title_link(href='#') Nike
+                        p.user-chat-message__short_description.text-uppercase French Trainer 1300FS
+                        .user-chat-message__favorite_price
+                          p.user-chat-message__pricing ￥21,600（税込）
+                          p.user-chat-message__favorites
+                            i.user-chat-message__favorites_ic.sty-icon-ic-favorite
+                            span.text 29
+                    .shop-comment__item-extra.shop-comment__item-figure-custom
+                        +avartarDetails()
+                        p.shop-comment__item-datetime
+                          span.shop-comment__item-date 2017年2月1日
+                          span.shop-comment__item-time 18:54
+                        p.shop-comment__item-report Report
+        .comment.comment-form
+          form(action='' role='form')
+            .comment-upload
+              .comment-upload-item
+                a.comment-upload-item__link(href='#')
+                  i.sty-icon-ic-clothitem
+                  span.comment-upload-item__link--text 他のアイテムを提案する
+            .comment-content
+              .comment-content__textbox(contentEditable='true')
+              .comment-content__btn
+                +button('送信', 'submit')(class='button--primary')
+    +footer()
+    +snackbarStaff()
+    +import-script()

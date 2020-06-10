@@ -1,0 +1,79 @@
+{
+  "extends": "eslint:recommended",                // http://eslint.org/docs/user-guide/configuring#using-eslintrecommended
+  "env": {
+    "browser": true,                              // http://eslint.org/docs/user-guide/configuring#specifying-environments
+    "jquery": true                                // http://eslint.org/docs/user-guide/configuring#specifying-environments
+  },
+  "rules": {
+    /**
+     * Strict mode
+     */
+    "strict": [2,  "safe"],                       // http://eslint.org/docs/rules/strict
+
+    /**
+     * Possible errors
+     */
+    "no-alert": 1,                                // http://eslint.org/docs/rules/no-alert
+    "comma-dangle": [2, "never"],                 // http://eslint.org/docs/rules/comma-dangle
+    "no-console": [1, {
+      "allow": ["log"]
+    }],
+
+    /**
+     * Best practices
+     */
+    "eqeqeq": 2,                                  // http://eslint.org/docs/rules/eqeqeq
+    "curly": 2,                                   // http://eslint.org/docs/rules/curly
+    "guard-for-in": 2,                            // http://eslint.org/docs/rules/guard-for-in
+    "default-case": 2,                            // http://eslint.org/docs/rules/default-case
+    "no-magic-numbers": [2, {                     // http://eslint.org/docs/rules/no-magic-numbers
+      "ignore": [1, 0]
+    }],
+    "no-multi-spaces": 2,                         // http://eslint.org/docs/rules/no-multi-spaces
+    "no-eq-null": 2,                              // http://eslint.org/docs/rules/no-eq-null
+    "no-self-compare": 2,                         // http://eslint.org/docs/rules/no-self-compare
+    "block-scoped-var": 2,                        // http://eslint.org/docs/rules/block-scoped-var
+
+    /*
+     * Stylistic Issues
+     */
+    "array-bracket-spacing": [2, "never"],        // http://eslint.org/docs/rules/array-bracket-spacing
+    "brace-style": [2, "1tbs", {                  // http://eslint.org/docs/rules/brace-style
+      "allowSingleLine": true
+    }],
+    "camelcase": 2,                               // http://eslint.org/docs/rules/camelcase
+    "capitalized-comments": [2, "always", {       // http://eslint.org/docs/rules/capitalized-comments
+      "ignoreConsecutiveComments": true
+    }],
+    "indent": [2, 2],                             // http://eslint.org/docs/rules/indent
+    "quotes": [2, "single"],                      // http://eslint.org/docs/rules/quotes
+    "comma-spacing": [2, {                        // http://eslint.org/docs/rules/comma-spacing
+      "before": false,
+      "after": true
+    }],
+    "comma-style": [2, "last"],                   // http://eslint.org/docs/rules/comma-style
+    "key-spacing": [2, {                          // http://eslint.org/docs/rules/key-spacing
+      "beforeColon": false,
+      "afterColon": true
+    }],
+    "new-cap": [2, {                              // http://eslint.org/docs/rules/new-cap
+      "newIsCap": true
+    }],
+    "no-multiple-empty-lines": [2, {              // http://eslint.org/docs/rules/no-multiple-empty-lines
+      "max": 2
+    }],
+    "no-spaced-func": 2,                          // http://eslint.org/docs/rules/no-spaced-func
+    "no-trailing-spaces": 2,                      // http://eslint.org/docs/rules/no-trailing-spaces
+    "one-var": [2, "never"],                      // http://eslint.org/docs/rules/one-var
+    "padded-blocks": [2, "never"],                // http://eslint.org/docs/rules/padded-blocks
+    "semi": [2, "always"],                        // http://eslint.org/docs/rules/semi
+    "semi-spacing": [2, {                         // http://eslint.org/docs/rules/semi-spacing
+      "before": false,
+      "after": true
+    }],
+    "keyword-spacing": 2,                         // http://eslint.org/docs/rules/keyword-spacing
+    "space-before-blocks": 2,                     // http://eslint.org/docs/rules/space-before-blocks
+    "space-before-function-paren": [2, "never"],  // http://eslint.org/docs/rules/space-before-function-paren
+    "space-infix-ops": 2                          // http://eslint.org/docs/rules/space-infix-ops
+  }
+}

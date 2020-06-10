@@ -1,0 +1,62 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s40_shop_details)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar()
+
+      section.dashboard-content.page-shop-details
+        form.form-customize
+          .shop-detais
+            .row
+              .col-md-3.col-md-offset-1.detail-logo
+                .detail-logo-img
+                  img(src='images/euphonica-img.png' alt='')
+              .col-md-6.detail-event
+                .details-item
+                  .details-item__text
+                    p.details-item__text-quanlity 411
+                    span.details-item__text-des アイテム
+                  .details-item__text
+                    p.details-item__text-quanlity 6
+                    span.details-item__text-des イベント
+                  .details-item__text
+                    p.details-item__text-quanlity 1
+                    span.details-item__text-des スタッフ
+                  .group-button.text-left
+                    +button-icon('マップで所在地を見る', 'sty-icon-location')(class='button--cancel button--w380')
+            .row
+              .detais-content.col-md-11.col-md-offset-1
+                h2.detais-content__title Euphonica
+                span.detais-content__add 横浜市都筑区仲町台1-33-19
+                .detais-content-description
+                  p.detais-content-description__text Euphonica（ユーフォニカ）は横浜市営地下鉄の仲町台駅からほど近い場所に位置する、小さな洋品店です。
+                  p.detais-content-description__text ラグジュアリーとは異なる静謐な上質と、数年程度では旧びることのないパーマネント性を提案していきます。
+                  p.detais-content-description__text 衣類はメンズ、レディス両方(+若干の子供服)を、その他ナチュラルに日和らないデザイン雑貨等を扱っています。
+                .detais-content-description
+                  p.detais-content-description__text 横浜市都筑区仲町台1-33-19ピアッツァ仲町台ノバA
+                  p.detais-content-description__text TEL/FAX 045-532-8460
+                  p.detais-content-description__text E-mail euphonica.ykhm@gmail.com
+                  p.detais-content-description__text Official Blog "高慢と偏見" http://euphonica.yokohama/blog
+                  p.detais-content-description__text Official Online Store http://euphonica.yokohama/
+                .detais-content-description
+                  p.detais-content-description__text 取扱ブランド
+                  p.detais-content-description__text EEL/alk phenix/MONTANE/MOSODELIA/blanc/Waltz for rolca/James Mortimer/yarmo/honnete/BASISBROEK/3sixteen/
+                  p.detais-content-description__text Blundstone/Sanders/OLD PORT MOCCASIN/LUNGE/KARHU/TRIOP/
+                  p.detais-content-description__text BACH/mannine/handson grip/RHYTHMOS/
+                  p.detais-content-description__text 他多数
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

@@ -1,0 +1,29 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s5_delivery_in_stock_selection)
+  body.main-page.has-chat
+    +header-staff()
+    main.dashboard-container(role='main')
+      +sidebar('sidebar1_1')
+      section.dashboard-content.page-inventory-request-not-support
+        .comment.comment-view
+          +chatHeading()
+          .nano.chat-content
+            .nano-content
+              +userChatMessage()
+              +userChatMessageTextOnly()
+              +adminChatMessageTextOnly()
+              +adminChatMessage('has-no-bg-color', true, false)
+              +adminChatMessage('has-no-bg-color', false, false, true)
+        .comment.comment-form
+          +chatForm()
+    +footer()
+    +snackbarStaff()
+    +import-script()

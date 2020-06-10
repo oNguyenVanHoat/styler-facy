@@ -1,0 +1,240 @@
+//
+// Pages :: S30 & S54 Account Info And Registration Application
+// --------------------------------------------------
+
+.page-account-info {
+  .inner-content {
+    background: $white;
+    border-radius: $border-radius-mini;
+    box-shadow: 0 1px 10px rgba($black, .05);
+
+    &.introduction,
+    &.basic-info,
+    &.account-management {
+      margin-bottom: 48px;
+    }
+
+    &.introduction {
+      padding-top: 40px;
+      padding-bottom: 32px;
+
+      @include respond-to(desktop-and-down) {
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+
+      @include respond-to(tablet-and-down) {
+        padding: 32px;
+      }
+
+      @include respond-to(phone-and-down) {
+        margin-bottom: 32px;
+        padding: 15px;
+      }
+
+      @include respond-to(smallphone-and-down) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &.basic-info,
+    &.account-management {
+      padding-top: 48px;
+      padding-bottom: 40px;
+
+      @include respond-to(tablet-and-down) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+      }
+
+      @include respond-to(phone-and-down) {
+        margin-bottom: 32px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+    }
+
+    &.account-info {
+      margin-bottom: 32px;
+      padding: 56px 0;
+
+      @include respond-to(tablet-and-down) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+      }
+
+      @include respond-to(phone-and-down) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+    }
+
+    &.service-terms {
+      padding-top: 32px;
+      padding-bottom: 56px;
+
+      @include respond-to(tablet-and-down) {
+        padding-bottom: 32px;
+      }
+
+      @include respond-to(phone-and-down) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  .section-title {
+    margin-bottom: 24px;
+    color: $black-lighter;
+    font-weight: $font-weight-light;
+  }
+
+  .progressing-bar {
+    .picker-step {
+      &__item {
+        width: 30%;
+      }
+    }
+  }
+
+  .checkbox-wrapper {
+    display: flex;
+    margin-top: 6px;
+
+    label {
+      margin-bottom: 0;
+    }
+
+    .checkbox-custom {
+      &:not(:first-child) {
+        margin-left: 28px;
+      }
+    }
+  }
+
+  .introduction {
+    .title {
+      margin-bottom: 22px;
+      color: $black-lighter;
+      font-weight: $font-weight-bold;
+    }
+
+    .short-description {
+      margin-bottom: 32px;
+      color: $black-lighter;
+      font-size: $font-size-medium;
+      line-height: 32px;
+      font-weight: $font-weight-light;
+      -webkit-font-smoothing: antialiased;
+
+      @include respond-to(tablet-and-down) {
+        margin-bottom: 24px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .basic-info,
+  .account-management {
+    .field-wrap {
+      margin-bottom: 32px;
+    }
+
+    .title-field {
+      margin-bottom: 24px;
+    }
+
+    .btn-wrap {
+      margin-top: 14px;
+    }
+
+    .no-notice {
+      margin-bottom: 55px;
+    }
+  }
+
+  .account-info {
+    .field-wrapper {
+      margin-bottom: 50px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .service-terms {
+    .notice {
+      margin-top: 17px;
+      color: $red;
+      font-size: $font-size-base;
+      font-weight: $font-weight-light;
+
+      @include respond-to(smallphone-and-down) {
+        margin-top: 10px;
+        line-height: 24px;
+      }
+    }
+
+    &--list {
+      max-height: 438px;
+      margin-bottom: 48px;
+      border: 1px solid $white-darker;
+      border-radius: $border-radius-small;
+
+      @include respond-to(phone-and-down) {
+        margin-bottom: 32px;
+      }
+    }
+
+    .title {
+      margin-bottom: 20px;
+      color: $black-lighter;
+      font-weight: $font-weight-bold;
+    }
+
+    .subtitle {
+      margin-bottom: 15px;
+      color: $black-lighter;
+      font-size: $font-size-base;
+      font-weight: $font-weight-light;
+      line-height: 24px;
+    }
+
+    .terms-details {
+      &--item {
+        margin-bottom: 10px;
+        color: $black-lighter;
+        text-align: justify;
+        font-size: $font-size-base;
+        font-weight: $font-weight-light;
+        line-height: 24px;
+
+        @include respond-to(phone-and-down) {
+          line-height: 14px;
+        }
+      }
+    }
+
+    .terms-present {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    .terms-content {
+      line-height: 32px;
+    }
+
+    .inner {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      @include respond-to(tablet-and-up) {
+        max-width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

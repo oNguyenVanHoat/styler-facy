@@ -1,0 +1,247 @@
+{
+  "head": {
+    "elements": {
+      "title": "UI Elements"
+    },
+    "page_list": {
+      "title": "Page List"
+    },
+    "s1_default_message_list": {
+      "title": "S1 Default (Message List)"
+    },
+    "s2_stock_request_not_supported": {
+      "title": "S2 Stock Request Not Supported"
+    },
+    "s16_cancellation_approval_not_supported": {
+      "title": "S16 Cancellation Approval Not Supported"
+    },
+    "s7_withdrawal_request_not_supported": {
+      "title": "S7 Withdrawal Request Not Supported"
+    },
+    "s3_inventory_request_not_supported": {
+      "title": "S3 Inventory Request Not Supported"
+    },
+    "s10_picker_request_selection": {
+      "title": "S10 Picker Request Selection"
+    },
+    "s5_delivery_in_stock_selection": {
+      "title": "S5 Delivery In Stock Selection"
+    },
+    "s28_staff_list": {
+      "title": "S28 Staff List"
+    },
+    "s9_retrieval_request_registration": {
+      "title": "S9 Retrieval Request Registration"
+    },
+    "s6_delivery_in_stock_none_selected": {
+      "title": "S6 Delivery: In Stock None Selected"
+    },
+    "s17_cancellation_approval_not_supported_message_detail": {
+      "title": "S17 Cancellation Approval Not Supported → Message Details"
+    },
+    "s8_withdrawal_request_not_supported_message_details": {
+      "title": "S8 Withdrawal Request Not Supported → Message Details"
+    },
+    "s11_pick_order_request_selection_remove_modal": {
+      "title": "S11 Pick Order Request Selection: Remove Modal"
+    },
+    "s30_account_registration_application": {
+      "title": "S30 Account Registration Application"
+    },
+    "s13_pick_up_date_selection": {
+      "title": "S13 Pick-Up Date Selection"
+    },
+    "s4_in_stock_availability_confirmation_modal": {
+      "title": "S4 In Stock Availability Confirmation Modal"
+    },
+    "s14_confirmation_of_collection_details": {
+      "title": "S14 Confirmation of collection details"
+    },
+    "s33_account_setting": {
+      "title": "S33 Account Setting"
+    },
+    "s24_past_suggestion_list": {
+      "title": "S24 Past Suggestion List"
+    },
+    "s18_cancellation_approval": {
+      "title": "S18 Cancellation Approval"
+    },
+    "s19_list_of_expected_shopping_days": {
+      "title": "S19 List Of Expected Shopping Days"
+    },
+    "s34_login_information": {
+      "title": "S34 Login Information"
+    },
+    "s15_take_over_content_transmission_completed": {
+      "title": "S15 Take Over Content Transmission Completed"
+    },
+    "s29_profile_infomation": {
+      "title": "S29 Profile Infomation"
+    },
+    "s22_delivery_transaction_list": {
+      "title": "S22 Delivery Transaction List"
+    },
+    "s41_event_list": {
+      "title": "S41 Event list"
+    },
+    "s20_visit_store_list": {
+      "title": "S20 Visit Store List"
+    },
+    "s21_transaction_details": {
+      "title": "S21 Transaction Details"
+    },
+    "s25_details_of_proposal": {
+      "title": "S25 Details Of Proposal"
+    },
+    "s23_delivery_transaction_details": {
+      "title": "S23 Delivery Transaction Details"
+    },
+    "s43_comment_list": {
+      "title": "S43 Comment List"
+    },
+    "s42_event_details": {
+      "title": "S42 Event Details"
+    },
+    "s47_select_from_past_suggestion_items": {
+      "title": "S47 Select From Past Suggestion Items"
+    },
+    "s39_shop_list": {
+      "title": "S39 Shop List"
+    },
+    "s45_t_shirt_cut_and_sewn": {
+      "title": "S45 T-shirt Cut and Sewn"
+    },
+    "s50_create_new_event": {
+      "title": "S50 Create New Event"
+    },
+    "s51_new_event_creation_input_completion_screen": {
+      "title": "S51 New Event Creation (Input Completion Screen)"
+    },
+    "s44_comment_details": {
+      "title": "S44 Comment Details"
+    },
+    "s49_proposal_content_confirmation": {
+      "title": "S49 Proposal Content Confirmation"
+    },
+    "s48_created_from_suggested": {
+      "title": "S48 Created From Suggested"
+    },
+    "s40_shop_details": {
+      "title": "S40 Shop Details"
+    },
+    "s35_followers": {
+      "title": "S35 Followers"
+    },
+    "s36_new_arrival_post": {
+      "title": "S36 New Arrival Post"
+    },
+    "s37_post_details": {
+      "title": "S37 Post Details"
+    },
+    "s46_create_new_proposal": {
+      "title": "S46 Create New Proposal"
+    },
+    "s57_shop_accounts_information_confirmation": {
+      "title": "S57 Shop Accounts Information Confirmation"
+    },
+    "s55_shop_accounts_information_confirmation": {
+      "title": "S55 Shop Accounts Information Confirmation"
+    },
+    "s53_new_shop_registration": {
+      "title": "S53 New Shop Registration"
+    },
+    "s54_shop_account_info": {
+      "title": "S54 Shop Account Information"
+    },
+    "s56_shop_accounts_information_personal": {
+      "title": "S56 Shop Account's Information"
+    },
+    "s58_shop_account_registration_finish": {
+      "title": "S58 Shop Account Registration Finish"
+    },
+    "s31_account_registration_application_details_confirmation": {
+      "title": "S31 Account Registration Application Details Confirmation"
+    },
+    "s32_account_registration_completed": {
+      "title": "S32 Account Registration Completed"
+    },
+    "s59_bank_account_filling_comfirmation": {
+      "title": "S59 Bank Account Filling Confirmation"
+    },
+    "s60_bank_account_filling_edit_acc_info": {
+      "title": "S60 Bank Account Filling Edit Account Info"
+    },
+    "s60_bank_account_filling_edit_profile": {
+      "title": "S60 Bank Account Filling Edit Profile"
+    },
+    "s60_bank_account_filling_edit_bank": {
+      "title": "S60 Bank Account Filling Edit Bank"
+    },
+    "s52_event_content_confirmation": {
+      "title": "S52 Event Content Confirmation"
+    },
+    "s61_modal_gallery": {
+      "title": "S61 Modal Gallery"
+    },
+    "s63_modal_create_products_related": {
+      "title": "S63 Modal Create Products Related"
+    },
+    "s62_modal_select_products": {
+      "title": "S62 Modal Select Products"
+    },
+    "h4_ranking": {
+      "title": "H4 Ranking"
+    },
+    "top_page": {
+      "title": "Top Page"
+    },
+    "top_shop_page": {
+      "title": "Top Shop Page"
+    },
+    "h4_item_detail": {
+      "title": "H4 Item Detail"
+    },
+    "s69_size_chart": {
+      "title": "Size Chart"
+    },
+    "h4_item_detail_sidebar": {
+      "title": "H4 Item Detail Sidebar"
+    },
+    "STYL_3716_user_orders": {
+      "title": "STYL-3716 User Orders"
+    },
+    "STYL_3717_user_order_detail": {
+      "title": "STYL-3717 User Order Detail"
+    },
+    "STYL_3718_user_order_shipping": {
+      "title": "STYL-3718 User Order Shipping"
+    },
+    "STYL_3812_pickup_order": {
+      "title": "STYL-3812 Pickup Order"
+    },
+    "STYL_3676_user_notification": {
+      "title": "STYL-3676 User Notification"
+    },
+    "STYL_3827_user_conversation": {
+      "title": "STYL-3827 User Conversation"
+    },
+    "STYL_3980_pop_up_select": {
+      "title": "STYL-3980 Pop-up Select"
+    },
+    "STYL_4001_select_address_user": {
+      "title": "STYL-4001 Select Address User"
+    },
+    "STYL_4001_choose_card": {
+      "title": "STYL-4001 Choose Card"
+    },
+    "STYL_4001_choose_card_error": {
+      "title": "STYL-4001 Choose Card Error"
+    },
+    "STYL_4001_page_confirm": {
+      "title": "STYL-4001 Page Confirm"
+    },
+    "STYL_4001_page_finish": {
+      "title": "STYL-4001 Page Finish"
+    }
+  }
+}

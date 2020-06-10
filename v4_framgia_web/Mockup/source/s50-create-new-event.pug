@@ -1,0 +1,66 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s50_create_new_event)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar('sidebar4_1')
+
+      section.dashboard-content.page-create-new-event
+        form.form-customize
+          .inner.add-new-event
+            .row
+              .col-md-5.col-sm-5
+                .account-avatar
+                  .account-avatar-img
+                    i.ic-customize-img.sty-icon-camera-icon
+                    .account-avatar-text
+                      p.account-avatar-text__name イベント画像をアップロード
+                      p.account-avatar-text__size （容量5MB以内を推奨）
+                    .box-warning-error
+                      span.error-message イベント名に誤りがあります。
+              .col-md-6.col-sm-6
+                .field-wrapper
+                  +input-field('イベント名', '必須', '', 'イベント名を入力してください', '', '')
+                  .box-warning
+                    span.warning 12/40
+                  .box-warning-error
+                    span.error-message イベント名に誤りがあります。
+                .field-wrapper.field-datetime
+                  +input-field('開始日', '必須', 'datetime-start', '終了日を入力してください', '', '')
+                  i.ic-customize-time.item-header__no-color.sty-icon-event
+                  .box-warning-error
+                    span.error-message イベント名に誤りがあります。
+                .field-wrapper.field-datetime
+                  +input-field('終了日', '', 'datetime-end', '終了日を入力してください', '', '')
+                  i.ic-customize-time.item-header__no-color.sty-icon-event
+                  span.warning 終了日の設定は任意です
+                .field-wrapper
+                  +input-field('開催場所', '必須', '', '開催場所の住所を入力してください', '', '')
+                  .box-warning
+                    span.warning 12/40
+                  .box-warning-error
+                    span.error-message イベント名に誤りがあります。
+                .field-wrapper.field-info
+                  +textarea('イベントの内容', '必須', 'イベントの内容を入力してください', '')
+                  .box-warning-error
+                    span.error-message イベント名に誤りがあります。
+                  .box-warning
+                    span.warning 0/1000
+
+          .group-button.text-center
+            +button('提案実行', 'submit')(class='button--primary button--w370')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

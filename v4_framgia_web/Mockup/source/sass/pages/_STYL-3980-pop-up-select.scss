@@ -1,0 +1,103 @@
+//
+// Pages :: STYL-3980 Pop-up Select
+// --------------------------------------------------
+
+.modal-select {
+  .modal-body {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .select-title {
+    line-height: 21px;
+    margin-top: 20px;
+  }
+
+  .select-close {
+    color: $red;
+    padding-top: 25px;
+    display: block;
+  }
+
+  .modal-header {
+    font-size: $font-size-medium;
+  }
+
+  .modal-content {
+    padding-top: 20;
+    padding-right: 30px;
+    padding-bottom: 0;
+    padding-left: 30px;
+    border-radius: $border-radius-base;
+
+    @include respond-to(smallphone-and-down) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .button-select {
+    font-size: $font-size-base;
+    letter-spacing: .6px;
+    font-weight: $font-weight-light;
+  }
+
+  .disable {
+    background: $silver;
+  }
+
+  .gender {
+    height: auto;
+    margin-top: 10px;
+    border: 0;
+    line-height: 45px;
+
+    &-item {
+      display: block;
+      width: auto;
+      border: 0;
+      padding-left: 2px;
+    }
+  }
+
+  .gender-radio {
+    + label {
+      text-align: left;
+
+      span {
+        padding-left: 35px;
+
+        &:before {
+          margin-left: 0;
+          font-size: $font-size-medium - 1;
+          left: 2px;
+          color: $white;
+        }
+
+        &:after {
+          content: '';
+          width: 22px;
+          height: 22px;
+          border: 2px solid $dusty-gray;
+          border-radius: $border-radius-mini;
+          position: absolute;
+          z-index: 8;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    &:checked {
+      + label {
+        span {
+          &:after {
+            border-color: $black;
+            background: $black;
+          }
+        }
+      }
+    }
+  }
+}

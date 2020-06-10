@@ -1,0 +1,140 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s63_modal_create_products_related)
+  body.main-page.has-chat
+    +header-guest()
+    main.dashboard-container(role='main')
+      +sidebar('sidebar1_1')
+      section.dashboard-content.page-inventory-request-not-support
+        .comment.comment-view
+          +chatHeading()
+          .nano.chat-content
+            .nano-content
+              +userChatMessage()
+              +userChatMessageTextOnly()
+              +adminChatMessageTextOnly()
+              +adminChatMessage('has-no-bg-color')
+              +adminChatMessage('has-bg-color')
+        .comment.comment-form
+          +chatFormHasTriggerModal()
+
+    +footer()
+    +snackbarGuest()
+
+    //- Modal Request Selection
+    +modal('modal-request-suggest', 'modal-md')(class='modal-request-suggest modal-vertical-middle')
+      +inject('modal-header')
+        .modal-suggest
+          i(class='sty-icon-delete icon-close-modal' data-dismiss='modal')
+      +inject('modal-body')
+      +inject('modal-footer')
+        .text-center
+          +button('新規作成')(class='btn button--primary button--w160' data-toggle='modal' data-target='#modal-suggest-proposal' data-dismiss='modal')
+          +button('履歴選択', '')(class='button--cancel button--w160')
+
+    //- Modal Suggest proposal
+    +modal('modal-suggest-proposal', '')(class='modal-suggest-proposal modal-vertical-middle')
+      +inject('modal-header')
+        .modal-suggest
+          i(class='sty-icon-delete icon-close-modal' data-dismiss='modal')
+      +inject('modal-body')
+        .nano
+          .nano-content
+            .page-created-new-proposal.form-modal-create
+              .inner
+                .row
+                  .col-md-5
+                    .proposal-avatar
+                      .proposal-avatar-img
+                        +input-upload-file('upload-file-img', 'upload-img', '', 'file', '', 'multiple')
+                        img(src='images/images-people.png' alt='' class='images-avartar')
+                        i.proposal-customize-img.sty-icon-camera-icon
+                        .proposal-avatar-text
+                          p.proposal-avatar-text__name 商品画像をアップロード
+                          p.proposal-avatar-text__size （横幅370px以上、容量5MB以内を推奨）
+                        .proposal-avatar-bottom
+                          p.proposal-avatar-bottom__text 最大10枚の写真をアップロードできます
+                    .thumbnail
+                      .thumbnail-list
+                        .thumbnail-item
+                          img(src='images/thumbnail01.png' alt='' class='thumbnail-item__img')
+                          i.icon-close
+                        .thumbnail-item
+                          img(src='images/thumbnail02.png' alt='' class='thumbnail-item__img')
+                          i.icon-close
+                        .thumbnail-item
+                          img(src='images/thumbnail01.png' alt='' class='thumbnail-item__img')
+                          i.icon-close
+                        .thumbnail-item
+                          img(src='images/thumbnail02.png' alt='' class='thumbnail-item__img')
+                          i.icon-close
+                        .thumbnail-item
+                          img(src='images/thumbnail01.png' alt='' class='thumbnail-item__img')
+                          i.icon-close
+                        .thumbnail-item
+                          img(src='images/thumbnail02.png' alt='' class='thumbnail-item__img')
+                          i.icon-close
+                        .thumbnail-item
+                          img(src='images/thumbnail01.png' alt='' class='thumbnail-item__img')
+                          i.icon-close
+                        .thumbnail-item
+                          img(src='images/thumbnail02.png' alt='' class='thumbnail-item__img')
+                          i.icon-close
+                        .thumbnail-item
+                          +input-upload-file('upload-file-img', 'upload-img', '', 'file', '', 'multiple')
+                          i.proposal-customize-img.sty-icon-camera-icon
+                  .col-md-6
+                    form.form-customize.form-customize-proposal
+                      .field-wrapper
+                        +input-field('ブランド名', '必須', '', 'ブランド名を入力してください', '', '','','','0/40')
+                      .field-wrapper
+                        +input-field('商品名', '必須', '', '商品名を入力してください', '', '','','','0/40')
+                      .field-wrapper
+                        .box-label
+                          label(for='') タイプ
+                            span.text 必須
+                        .box-gender-proposal
+                          ul.gender
+                            li.gender-item.gender-item--checked
+                              +radio-button-gender('read-only-gender', 'read-only-men', 'メンズ', 'checked')
+                            li.gender-item
+                              +radio-button-gender('read-only-gender', 'read-only-women', 'レディース', '')
+                            li.gender-item
+                              +radio-button-gender('read-only-gender', 'read-only-unisex', 'ユニセックス', '')
+
+                      .field-wrapper
+                        +input-field('販売価格', '必須', '', '販売価格を入力してください', '', '','','円（税込）','販売価格は、数字のみ入力できます')
+                      .field-wrapper
+                        label(for='') カラー
+                          span.text 必須
+                        .box-size
+                          .box-label
+                            input(type='text' class='ic-gray' value='' data-role='tagsinput' placeholder='入力してください')
+                      .field-wrapper
+                        label(for='') サイズ
+                          span.text 必須
+                        .box-size
+                          .box-label
+                            input(type='text' class='ic-gray' value='' data-role='tagsinput' placeholder='入力してください')
+
+                      .field-wrapper
+                        +input-field('素材', '必須', '', '素材を入力してください　', '', '','','','0/40')
+
+                      .field-wrapper.field-info
+                        +textarea('商品説明', '必須', '商品説明を入力してください', '','','0/1000')
+                        span.warning 0/1000
+                      .field-wrapper
+                        +selectBox('カテゴリー', '', 'Tシャツ・カットソー', '', '', 'Tシャツ・カットソー1', 'Tシャツ・カットソー2')
+      +inject('modal-footer')
+        .text-center
+          +button('提案実行')(class='btn button--primary button--w170')
+
+    +import-script()

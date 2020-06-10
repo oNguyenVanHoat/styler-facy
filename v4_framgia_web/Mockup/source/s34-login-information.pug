@@ -1,0 +1,44 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s34_login_information)
+  body.main-page
+    +header-staff()
+
+    main.dashboard-container(role='main')
+      +sidebar()
+
+      section.dashboard-content.page-login-information
+        form.form-customize
+          .inner
+            h3.account-title.text-center ログイン情報
+            .row
+              .col-md-6.col-md-offset-3
+                .field-wrapper.field-login
+                  p.field-login__title 現在のメールアドレス
+                  p.field-login__text tsubasa.koseki@styler.link
+                .field-wrapper
+                  +input-field('新しいメールアドレス', '', '', 'メールを入力してください', '', '')
+                  span.warning 0/40
+                .field-wrapper
+                  +input-field('新しいパスワード', '', '', 'パスワードを入力してください', '', 'password')
+                .field-wrapper
+                  +input-field('パスワード再入力', '', '', 'パスワードを再入力してください', '', 'password')
+                .field-wrapper
+                  p.field-notice ※パスワードは半角英数字で８文字以上入力してください
+
+          .group-button.text-center
+            +button('キャンセル')(class='button--cancel button--w270')
+            +button('更新', 'submit')(class='button--primary button--w270')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

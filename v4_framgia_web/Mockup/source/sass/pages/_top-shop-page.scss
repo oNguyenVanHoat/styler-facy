@@ -1,0 +1,105 @@
+//
+// Pages :: Top Page - Top Shop Page
+// --------------------------------------------------
+.top-shop-page {
+  .container-box-shop {
+    @include respond-to(smallphone-and-down) {
+      padding: 0;
+    }
+  }
+
+  .box-item-shop-block {
+    background-color: $white;
+    box-shadow: 0 1px 10px rgba($black, .05);
+    margin-bottom: 30px;
+    padding: 0;
+
+    @include respond-to(smallphone-and-down) {
+      box-shadow: none;
+      border-top: 8px solid $border-top-page;
+      margin-bottom: 0;
+    }
+
+    .cut-and-sewn-item {
+      box-shadow: 0 1px 10px rgba($black, .05);
+
+      @include respond-to(smallphone-and-down) {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .box-sewn-list {
+    .text {
+      line-height: 32px;
+
+      @include respond-to(smallphone-and-down) {
+        line-height: 25px;
+      }
+    }
+  }
+
+  .box-content-images {
+    max-width: 100%;
+    position: relative;
+
+    .item-images-3 {
+      display: flex;
+      position: relative;
+
+      &__item {
+        width: 50%;
+        height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        @include respond-to(smallphone-and-down) {
+          height: 105px;
+        }
+
+        &:nth-child(1) {
+          height: 400px;
+
+          @include respond-to(smallphone-and-down) {
+            height: 210px;
+          }
+        }
+
+        &:nth-child(2) {
+          position: absolute;
+          left: 50%;
+          top: 0;
+        }
+
+        &:nth-child(3) {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+        }
+      }
+    }
+  }
+}
+
+.container-top-shop-page {
+  &:last-child {
+    .box-item-shop-block {
+      &:last-child {
+        @include respond-to(tablet-and-down) {
+          margin-bottom: 70px;
+        }
+
+        @include respond-to(smallphone-and-down) {
+          margin-bottom: 40px;
+        }
+
+        .cut-and-sewn-comment {
+          &__box-option-active {
+            top: -85px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.s56_shop_accounts_information_personal)
+  body.main-page
+    +header-logo-only()
+
+    main.dashboard-container(role='main')
+      section.dashboard-content.page-account-info
+        form.form-customize
+
+          .inner-content.introduction.text-center
+            h3.title FACY 新規ショップ登録申請
+            .short-description
+              p こちらのページでお申し込みいただくと、FACYで商品を販売することができます。
+              p ご登録の指定口座へ毎週金曜日（休日の場合は翌週営業日）に販売代金（販売手数料を差し引いた金額）をお振込いたします。
+            .progressing-bar
+              .picker-step__list
+                .picker-step__line
+                .picker-step__item.picker-step__item--active
+                  span.picker-step__button.picker-step__button--first
+                  p.picker-step__text 口座登録
+                .picker-step__item
+                  span.picker-step__button
+                  p.picker-step__text 確認
+                .picker-step__item
+                  span.picker-step__button
+                  p.picker-step__text 完了
+
+          h3.section-title.text-center 口座管理者基本情報入力
+
+          .inner-content.account-management
+            .container
+              .row
+                .col-md-3.col-sm-5.col-md-offset-3.col-sm-offset-1
+                  .field-wrap
+                    +input-field('氏名', '必須', '', 'スタイラー太郎', '', '', '', '', '17/40')
+                .col-md-3.col-sm-5
+                  .field-wrap
+                    +input-field('氏名（カタカナ）', '必須', '', 'スタイラータロウ', '', '', '', '', '17/40')
+              .row
+                .col-md-3.col-sm-5.col-md-offset-3.col-sm-offset-1
+                  .no-notice
+                    +selectBox('性別', '必須', '男', '', '', 'Option A', 'Option B')
+              .row
+                .col-md-3.col-sm-5.col-md-offset-3.col-sm-offset-1
+                  .no-notice.field-birthday
+                    p.field-birthday__title 生年月日
+                    .field-birthday__content
+                      +input-field('', '', '', '1990', '', '')
+                      span.field-birthday__space.field-birthday__space--left /
+                      +input-field('', '', '', '01', '', '')
+                      span.field-birthday__space.field-birthday__space--right /
+                      +input-field('', '', '', '01', '', '')
+              .row
+                .col-md-3.col-sm-5.col-md-offset-3.col-sm-offset-1
+                  .field-wrap
+                    +input-field('郵便番号', '必須', '', '1234567', '', '', '', '', '')
+              .row
+                .col-md-3.col-sm-5.col-md-offset-3.col-sm-offset-1
+                  .no-notice
+                    +selectBox('都道府県', '必須', '', '', '', 'Option A', 'Option B')
+              .row
+                .col-md-3.col-sm-5.col-md-offset-3.col-sm-offset-1
+                  .field-wrap
+                    +input-field('市区', '必須', '', '渋谷区', '', '', '', '', '17/40')
+                .col-md-3.col-sm-5
+                  .field-wrap
+                    +input-field('市区（カタカナ）', '必須', '', 'シブヤク', '', '', '', '', '17/40')
+              .row
+                .col-md-3.col-sm-5.col-md-offset-3.col-sm-offset-1
+                  .field-wrap
+                    +input-field('町村', '必須', '', '神南', '', '', '', '', '17/40')
+                .col-md-3.col-sm-5
+                  .field-wrap
+                    +input-field('町村（カタカナ）', '必須', '', 'ジンナン', '', '', '', '', '17/40')
+              .row
+                .col-md-3.col-sm-5.col-md-offset-3.col-sm-offset-1
+                  .field-wrap
+                    +input-field('丁目番地号', '必須', '', '１丁目１０番地６号', '', '', '', '', '17/40')
+                .col-md-3.col-sm-5
+                  .field-wrap
+                    +input-field('丁目番地号（カタカナ）', '必須', '', 'イッチョウメジュウバンチロクゴウ', '', '', '', '', '17/40')
+              .row
+                .col-md-3.col-sm-5.col-md-offset-3.col-sm-offset-1
+                  .field-wrap
+                    +input-field('建物情報', '', '', 'バルビゾン９８　４０１', '', '', '', '', '17/40')
+                .col-md-3.col-sm-5
+                  .field-wrap
+                    +input-field('建物情報（カタカナ）', '', '', 'バルビゾンキュウジュウハチ　ヨンゼロイチ', '', '', '', '', '17/40')
+              .row
+                .col-md-6.col-sm-10.col-md-offset-3.col-sm-offset-1
+                  .field-wrap
+                    +input-field('メールアドレス ', '必須', '', 'info@styler.link', '', '', '', '', '17/40')
+              .row
+                .col-md-3.col-sm-5.col-md-offset-3.col-sm-offset-1
+                  .no-notice
+                    +input-field('電話番号', '必須', '', '1234567', '', '', '', '', '9/12')
+              .row
+                .col-md-6.col-sm-10.col-md-offset-3.col-sm-offset-1
+                  .form-group
+                    label 本人確認書類
+                      span.text 必須
+                  .btn-wrap
+                    +button-icon('画像をアップロードする', 'sty-icon-ic-photo')(class='button--primary button--w250')
+
+          h3.section-title.text-center 口座情報入力
+
+          .inner-content.account-info
+            .container
+              .row
+                .col-md-6.col-sm-10.col-md-offset-3.col-sm-offset-1
+                  .field-wrapper
+                    +selectBox('銀行名', '必須', 'スタイラー銀行', '', '', 'Option A', 'Option B')
+                  .field-wrapper
+                    +selectBox('支店名', '必須', 'スタイラー支店', '', '', 'Option A', 'Option B')
+                  .field-wrapper
+                    +input-field('口座番号', '必須', '', '1234567', '', '')
+                  .field-wrapper
+                    +input-field('口座番号（確認）', '必須', '', '1234567', '', '')
+                  .field-wrapper
+                    +input-field('口座名義カナ', '必須', '', 'カ）スタイラー', '', '')
+
+          .inner-content.service-terms
+            .inner
+              .nano.service-terms--list
+                .nano-content
+                  h4.title 利用規約（ショップ会員用）
+                  p.subtitle スタイラー株式会社（以下「弊社」といいます。）はショップ会員に対してアプリケーションおよびウェブマガジン
+                    |
+                    br
+                    | 「S MAGAZINE」（以下、総称は
+
+                  ul.terms-details
+                    li.terms-details--item
+                      span.terms-present １　（弊社サービスのご利用と規約への同意）
+                      p.terms-content ショップ会員は、本利用規約に同意いただくことにより、本利用規約の定めに従って本サービスをご利用いただくことができます。本利用規約の定めに従って本サービスをご利用いただくことができます。
+                    li.terms-details--item
+                      span.terms-present ２　（本サービスの内容に関する非保証）
+                      p.terms-content （１）弊社は、本サービスの品質にできる限りの注意を払っていますが、本サービスにより提供される情報の完全性、正確性、有用性、最新性、真
+                      p.terms-content （２）当社は、本サービスの確実な提供またはアクセス結果などにつき保証するものではありません。
+                    li.terms-details--item
+                      span.terms-present ３　（本サービスの内容に関する変更）
+                      p.terms-content 弊社は、弊社の判断において、ショップ会員への事前の通知なくして、本サービスの内容もしくは仕様を変更し、または、本サービスの提供を停止
+                    li.terms-details--item
+                      span.terms-present ４　（本サービスの利用制限）
+                      p.terms-content （１）弊社は、サービスのご利用を、一定の年齢以上の方に限定すること、弊社が定めるショップ会員情報の入力などの手続きを経て一定の要件を
+                      p.terms-content （２）弊社は、反社会的勢力など（暴力団員、総会屋、社会運動など標ぼうゴロ、特殊知能暴力集団その他これに準ずる者を意味
+                    li.terms-details--item
+                      span.terms-present ５　（ショップ会員情報の登録・修正）
+                      p.terms-content （１）ショップ会員にショップ会員情報を登録していただく場合、（ア）真実かつ正確な情報を登録していただくこと、（イ）登録内容が最新となる
+
+              .text-center.service-terms__checkbox
+                +checkbox-custom('read-only-third', 'read-only-third', '利用規約に同意する', '', '利用規約に同意する')(class='checkbox-terms')
+                p.notice ※チェックをする前に必ずご利用規約をお読みください
+
+          .group-button.text-center
+            +button('キャンセル')(class='button--cancel button--w270')
+            +button('次へ', 'submit')(class='button--primary button--w270')
+
+    +footer()
+
+    +snackbarStaff()
+
+    +import-script()

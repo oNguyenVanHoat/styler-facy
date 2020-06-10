@@ -1,0 +1,103 @@
+include modules/head/head
+include modules/elements/elements
+include modules/import-script/import-script
+include modules/media/media
+
+doctype html
+html
+  +head(head.elements)
+  body
+    .main-container
+      .container
+        .row
+          h1.page-header UI Elements
+          .well.bg-white
+            h3.u-mb20 Icons
+            .lead.u-pt10
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-category
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-event
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-arrow-up
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-list
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-message
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-ic-question
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-ic-photo
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-ic-date
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-ic-clothitem
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-ic-favorite
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-arrow-down
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-check-circle
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-add-circle-disable
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-check-success
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-access-time
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-camera-icon
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-arrow-right
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-phone
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-favorite
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-like
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-arrow-left-calendar
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-arrow-right-calendar
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-eye-icon
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-circle-black
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-camera-gray-icon
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-add-triangle
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-location
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-comment
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-menu-sidebar
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-user-icon
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-gender-categories-checked
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-fill
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-delete
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-post-comment
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-post-watch
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-post-more
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-post-add
+              i.visible-lg-inline-block.visible-md-inline-block.well.sty-icon-arrow-right-outline
+          .well.bg-white
+            h3.u-mb20 Checkbox
+            .lead
+              +checkbox-custom('read-only-third', 'read-only-third', '利用規約に同意する', '', '利用規約に同意する')(class='checkbox-terms')
+            +checkbox-custom('read-only', 'read-only', '未読のみ', '', '未読のみ')
+          .well.bg-white
+            h3.u-mb20 Button
+            .row
+              .col-md-12.lead
+                +button-icon('変更', '')(class='button--primary')
+                +button-icon('変更', 'sty-icon-ic-clothitem')(class='button--primary button--w250')
+                +button-icon('変更', 'sty-icon-ic-question')(class='button--bordered button--w250')
+                +button('変更')(class='button--bordered button--primary-md button--bordered-primary')
+                +button('変更')(class='button--bordered button--primary-md button--bordered-danger')
+              .col-md-12.lead
+                +button('引取日を選択')(class='button--primary button--picker-step button--w370')
+                +button('引取先登録をキャンセル')(class='button--cancel button--w270')
+                +button('取引リストを開く')(class='button--cancel button--w370')
+              .col-md-12.lead
+                +button-icon('承認', '')(class='button--primary button--w170')
+                +button-icon('非承認', '')(class='button--primary button--primary-danger button--w170')
+                +button('購入手続きが完了しています。')(class='button button--bubble button--w320 procedure-is-complete-button')
+                +button-link-icon('写真を送る', 'sty-icon-camera-gray-icon')(class='button-primary button--bordered button--left-icon')
+          .well.bg-white
+            h3.u-mb20 Media
+            .row
+              .col-md-12.lead
+                +media('西村剛', 'お待たせ致しました。お問い合わせありがとうございます。', '上記内容で商品の在庫がございました')
+          .well.bg-white
+            h3.u-mb20 Form
+            .row
+              .col-md-12.lead
+                .form-customize
+                  +input-field('郵便番号', '必須', '', '1500041', '', '', '名前に誤りがあります。')
+                  +selectBox('都道府県', '必須', '北海道', '', '都道府県誤りがあります。', 'Option first', 'Option second')
+          .well.bg-white
+            h3.u-mb20 Label
+            .row
+              .col-md-12.lead
+                span.label-primary.label-primary--sm.label-primary--gentleman メンズ
+                span.label-primary.label-primary--sm.label-primary--lady レディーズ
+                span.label-primary.label-primary--md.label-primary--gray ニット・スウェット
+          .well.bg-white
+            h3.u-mb20 Title
+            .row
+              h2.main-title FACY 新規ショップ登録申請
+
+
+    +import-script()

@@ -1,0 +1,136 @@
+.shop-account-confirmation {
+  .title {
+    text-align: center;
+    font-size: $font-size-extra-large;
+    font-weight: $font-weight-bold;
+  }
+
+  .text-inner {
+    text-align: center;
+    line-height: 32px;
+    font-size: $font-size-medium;
+    color: $black-lighter;
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+    @include respond-to(phone-and-down) {
+      padding-top: 10px;
+    }
+  }
+
+  .box-item-block {
+    @include respond-to(tablet-and-down) {
+      padding: 0 15px;
+    }
+
+    &.info-facy {
+      margin-bottom: 32px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      @include respond-to(phone-and-down) {
+        padding-top: 20px;
+        margin-bottom: 0;
+        padding-bottom: 26px;
+      }
+    }
+
+    &.info-facy-custom {
+      padding-bottom: 0;
+    }
+  }
+
+  .title-facy-infomation {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: $font-size-extra-large;
+  }
+
+  .info-facy {
+    .field-wrapper {
+      margin-bottom: 50px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .filed-wrapper-custom {
+      margin-bottom: 35px;
+    }
+  }
+
+  .box-infomation {
+    .infomation-people {
+      line-height: 32px;
+      margin-bottom: 16px;
+      display: flex;
+
+      @include respond-to(phone-and-down) {
+        margin-bottom: 10px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .label-name {
+      color: $gray-light;
+      font-size: $font-size-medium;
+      width: 115px;
+      min-width: 115px;
+      font-weight: $font-weight-light;
+      margin-bottom: 0;
+      line-height: 32px;
+    }
+
+    .text-name {
+      font-size: $font-size-medium;
+      color: $black-lighter;
+      line-height: 32px;
+    }
+
+    .shop-account-images {
+      vertical-align: top;
+      margin-top: 10px;
+
+      @include respond-to(smallphone-and-down) {
+        width: 240px;
+      }
+    }
+  }
+
+  .group-button {
+    margin-top: 40px;
+
+    @include respond-to(phone-and-down) {
+      margin-top: 20px;
+    }
+
+    .button-shop-account {
+      @include respond-to(smallphone-and-down) {
+        margin: 0 0 15px;
+        width: 100%;
+      }
+
+      @include respond-to(phone-and-down) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.picker-step {
+  &__itemShop {
+    z-index: 99;
+    width: 35%;
+    text-align: center;
+  }
+
+  .box-item-block {
+    box-shadow: none;
+    padding: 40px 0;
+  }
+}

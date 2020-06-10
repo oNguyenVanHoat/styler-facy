@@ -1,0 +1,239 @@
+//
+// Components :: Modals
+// --------------------------------------------------
+
+.modal-customize {
+  .modal-content {
+    border: 0;
+    border-radius: $border-radius-mini;
+    box-shadow: 0 1px 10px rgba($black, .05);
+  }
+
+  .modal-lg {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .modal-ip {
+    @include respond-to(phone-and-up) {
+      width: 500px;
+    }
+  }
+
+  .modal-sm {
+    width: calc(100% - 20px);
+
+    @include respond-to(phone-and-up) {
+      width: 392px;
+    }
+  }
+
+  .modal-xs {
+    @include respond-to(phone-and-up) {
+      width: 340px;
+    }
+  }
+
+  .modal-md {
+    @include respond-to(phone-and-up) {
+      width: 640px;
+    }
+  }
+
+  .modal-header {
+    border-bottom: 0;
+  }
+
+  .modal-body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .modal-footer {
+    border-top: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    .button {
+      @include respond-to(phone-and-down) {
+        margin-left: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .subtitle {
+    color: $black-lighter;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-light;
+    line-height: 32px;
+  }
+}
+
+.modal-vertical-middle {
+  text-align: center;
+  padding: 0;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+  }
+
+  .modal-dialog {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+}
+
+//
+// Modals Gallery - S61
+// --------------------------------------------------
+
+.modal-suggest {
+  .icon-close-modal {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+}
+
+.modal-request-suggest {
+  .modal-header {
+    padding: 0;
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+
+  .modal-suggest {
+    padding: 0;
+  }
+
+  .modal-footer {
+    padding-top: 70px;
+    padding-bottom: 50px;
+
+    .button {
+      height: 60px;
+      margin: 0 10px;
+
+      @include respond-to(smallphone-and-down) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.modal-open {
+  .modal-suggest-shop {
+    overflow: hidden;
+    margin-left: 15px;
+  }
+}
+
+.modal-nano-scroller {
+  margin: 15px 0 15px 15px;
+
+  @include respond-to(desktop-and-down) {
+    margin: 15px;
+  }
+}
+
+.modal-suggest-shop {
+  .modal-suggest-title {
+    font-size: $font-size-average;
+    color: $black-lighter;
+    font-weight: $font-weight-general;
+  }
+
+  .category-item {
+    height: 150px;
+    margin-bottom: 32px;
+    text-align: center;
+    padding: 0 16px;
+
+    @include respond-to(tablet-and-down) {
+      height: 80px;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      height: 50px;
+    }
+
+    @include respond-to(tablet-and-down) {
+      width: 50%;
+      float: left;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 0;
+    }
+
+    .category-link {
+      background: $background-result;
+      height: 150px;
+      display: inherit;
+      line-height: 150px;
+      font-size: $font-size-medium;
+      color: $black-lighter;
+      border-radius: $border-radius-mini;
+      transition: background-color .3s;
+
+      @include respond-to(tablet-and-down) {
+        height: 80px;
+        line-height: 80px;
+      }
+
+      @include respond-to(smallphone-and-down) {
+        height: 50px;
+        line-height: 50px;
+      }
+
+      &:hover,
+      &:focus {
+        background: $blue-darker;
+        color: $white;
+        box-shadow: 0 0 4px 0 rgba($black, .24);
+      }
+    }
+  }
+
+  .modal-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+
+    .category-list {
+      height: calc(100vh - 125px);
+    }
+  }
+
+  &:before {
+    @include respond-to(phone-and-down) {
+      display: none;
+    }
+  }
+
+  .modal-dialog {
+    height: 100%;
+
+    @include respond-to(phone-and-down) {
+      margin: 0;
+    }
+
+    .modal-body {
+      height: 100%;
+    }
+  }
+}
+

@@ -1,0 +1,125 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/sidebar/sidebar
+include modules/elements/elements
+include modules/modals/modals
+include modules/import-script/import-script
+
+doctype html
+html
+  +head(head.STYL_4001_select_address_user)
+  body.main-page.no-sidebar.no-footer
+    +header-customer()
+    main.dashboard-container(role='main')
+      section.dashboard-content.page-proposal.page-select-address
+        .container
+          .address
+            h2.address-title.text-center アイテムの購入
+            table.table.table-product
+              thead
+                tr
+                  th アイテム
+                  th
+                  th 個数
+              tbody
+                tr
+                  td.product-img
+                    img(src='images/product_01.png' alt='' class='product-img--item')
+                  td.product-des
+                    h4.product-des--title NEEDLES
+                    p.product-des--sub KNIT BOMBER CAP
+                    p.product-des--price ¥14,040（税込）
+                    p.product-des_size 
+                      span.product-des_size--name サイズ：
+                      span.product-des_size--text L
+                    p.product-des_size 
+                      span.product-des_size--name カラー：
+                      span.product-des_size--text ゼファ・レッド
+                  td.product-number
+                    p.product-number--text １個
+            .picker-step__group
+              .picker-step__list
+                .picker-step__line
+                .picker-step__item.picker-step__item--active
+                  span.picker-step__button.picker-step__button--first
+                  p.picker-step__text お届け先
+                .picker-step__item
+                  span.picker-step__button
+                  p.picker-step__text 決済方法
+                .picker-step__item
+                  span.picker-step__button
+                  p.picker-step__text 確認
+                .picker-step__item
+                  span.picker-step__button.picker-step__button--last
+                  p.picker-step__text 完了
+
+              h3.transport-title.text-center お届け先を選択
+              table.table.table-transport
+                tbody
+                  tr.transport
+                    td.radio-wrapper
+                      ul.gender
+                        li.gender-item
+                          +radio-button-gender('radio-select', 'address-one', '', 'checked')
+                    td.transport-des
+                      p.transport-des--office オフィス
+                      p.transport-des--name スタイラー　太郎
+                      p.transport-des--taro スタイラー　タロウ
+                      p.transport-des--content 〒150-0041
+                      p.transport-des--content  東京都渋谷区神南1-10-6
+                      p.transport-des--content 090-0000-0000
+                    td.button
+                      a(href='#' class='button-change') 変更
+                      a(href='#' class='button-delete') 削除
+                  tr.transport
+                    td.radio-wrapper
+                      ul.gender
+                        li.gender-item
+                          +radio-button-gender('radio-select', 'address-three', '', '')
+                    td.transport-des
+                      p.transport-des--office オフィス
+                      p.transport-des--name スタイラー　太郎
+                      p.transport-des--taro スタイラー　タロウ
+                      p.transport-des--content 〒150-0041
+                      p.transport-des--content  東京都渋谷区神南1-10-6
+                      p.transport-des--content 090-0000-0000
+                    td.button
+                      a(href='#' class='button-change') 変更
+                      a(href='#' class='button-delete') 削除
+              .button-address.text-center
+                +button-link('お届け先を追加する')(data-toggle='modal' data-target='#modal-address' class='button--primary button--cancel button--w305')
+    section.snackbar-booking.snackbar-address
+      .snackbar-booking__button.snackbar-address__button
+        +button-link('支払い方法へ進む')(class='button--primary button--primary-danger button--w305')
+
+    //- Modal address
+    +modal('modal-address', 'modal-sm')(class='modal-address modal-color-size modal-vertical-middle')
+      +inject('modal-header')
+        .modal-suggest
+          h4.modal-title 配送先住所
+      +inject('modal-body')
+        .field-wrapper
+          +input-field('氏名', '*', '', 'スタイラー太郎', '', '')
+        .field-wrapper
+          +input-field('フリガナ', '*', '', 'スタイラータロウ', '', '')
+        .field-wrapper
+          +input-field('郵便番号', '*', '', '150004', '', '')
+        .field-wrapper
+          +selectBox('都道府県', '*', '都道府県を選択してください', '', '', 'Option 1', 'Option 2')
+        .field-wrapper
+          +input-field('住所', '*', '', '渋谷区神南1-10-6', '', '')
+        .field-wrapper
+          +input-field('建物名', '*', '', 'バルビゾン98 401', '', '')
+        .field-wrapper
+          +input-field('電話番号', '*', '', '0312345678', '', '')
+        .field-wrapper
+          +input-field('お届け先名称', '*', '', '自宅、会社など', '', '')
+      +inject('modal-footer')
+        .text-center
+          +button('OK')(class='button--primary button--w305')
+
+
+    +footer()
+
+    +import-script()

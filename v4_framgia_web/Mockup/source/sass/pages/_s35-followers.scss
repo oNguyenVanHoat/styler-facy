@@ -1,0 +1,21 @@
+//
+// Pages :: S35 Followers
+// --------------------------------------------------
+
+.list-item {
+  &__button {
+    .button {
+      width: 100%;
+      font-size: $font-size-medium;
+    }
+  }
+
+  .sty-icon-message {
+    color: $white;
+    font-size: $font-size-average;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}

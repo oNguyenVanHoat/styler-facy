@@ -44,7 +44,7 @@
     "gulp-watch": "^4.3.9",
     "htmlhint-stylish": "^1.0.3",
     "install": "^0.8.1",
-    "jquery": "^2.2.1",
+    "jquery": "^3.5.0",
     "masonry-layout": "^4.2.0",
     "nanoscroller": "^0.8.7",
     "npm": "^3.10.6",

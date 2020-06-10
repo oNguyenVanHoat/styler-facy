@@ -47,7 +47,7 @@
     "jquery": "^2.2.1",
     "masonry-layout": "^4.2.0",
     "nanoscroller": "^0.8.7",
-    "npm": "^3.10.6",
+    "npm": "^6.13.4",
     "postcss-discard-comments": "^2.0.4",
     "pug": "^2.0.0-beta6",
     "run-sequence": "^1.2.2",
